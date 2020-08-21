@@ -3,62 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://blog.genesu.me/categories/</loc>
+    <loc>https://blog.genesu.me/categories/</loc>
     <lastmod>2020-08-21T10:54:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.genesu.me/categories/category/</loc>
+    <loc>https://blog.genesu.me/categories/category/</loc>
     <lastmod>2020-08-21T10:54:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.genesu.me/2020/08/first-public-post/</loc>
+    <loc>https://blog.genesu.me/2020/08/first-public-post/</loc>
     <lastmod>2020-08-21T10:54:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.genesu.me/post/</loc>
+    <loc>https://blog.genesu.me/post/</loc>
     <lastmod>2020-08-21T10:54:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.genesu.me/categories/subcategory/</loc>
+    <loc>https://blog.genesu.me/categories/subcategory/</loc>
     <lastmod>2020-08-21T10:54:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.genesu.me/tags/tag1/</loc>
+    <loc>https://blog.genesu.me/tags/tag1/</loc>
     <lastmod>2020-08-21T10:54:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.genesu.me/tags/tag2/</loc>
+    <loc>https://blog.genesu.me/tags/tag2/</loc>
     <lastmod>2020-08-21T10:54:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.genesu.me/tags/</loc>
+    <loc>https://blog.genesu.me/tags/</loc>
     <lastmod>2020-08-21T10:54:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.genesu.me/</loc>
+    <loc>https://blog.genesu.me/</loc>
     <lastmod>2020-08-21T10:54:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.genesu.me/about-me/</loc>
+    <loc>https://blog.genesu.me/about-me/</loc>
     <lastmod>2020-08-21T10:29:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.genesu.me/page/</loc>
+    <loc>https://blog.genesu.me/page/</loc>
     <lastmod>2020-08-21T10:29:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.genesu.me/archives/</loc>
+    <loc>https://blog.genesu.me/archives/</loc>
   </url>
   
 </urlset>
