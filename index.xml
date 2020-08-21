@@ -6,20 +6,10 @@
     <description>Recent content on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2020 00:53:47 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Jan 1970 08:33:35 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.genesu.me/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Test</title>
-      <link>https://blog.genesu.me/2020/08/test/</link>
-      <pubDate>Sat, 22 Aug 2020 00:53:47 +0800</pubDate>
-      
-      <guid>https://blog.genesu.me/2020/08/test/</guid>
-      <description>&lt;p&gt;第一句話&lt;br&gt;
-第二句話&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Use Markdown Toc</title>
@@ -42,6 +32,15 @@
 有一天可以為自己付出所獲得感到值得。
 以上跟關於我無關，
 測試最後一行。</description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://blog.genesu.me/1/01/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.genesu.me/1/01/test/</guid>
+      <description>&lt;p&gt;This post is used to show how tag plugins are displayed. See &lt;a href=&#34;https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#tags&#34;&gt;docs&lt;/a&gt; for more info.&lt;/p&gt;</description>
     </item>
     
   </channel>

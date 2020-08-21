@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 高級伴讀書僮</title>
-    <link>https://blog.genesu.me/post/</link>
-    <description>Recent content in Posts on 高級伴讀書僮</description>
+    <title>test on 高級伴讀書僮</title>
+    <link>https://blog.genesu.me/tags/test/</link>
+    <description>Recent content in test on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jan 1970 08:33:35 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.genesu.me/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.genesu.me/tags/test/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Use Markdown Toc</title>
-      <link>https://blog.genesu.me/1970/01/use-markdown-toc/</link>
-      <pubDate>Thu, 01 Jan 1970 08:33:35 +0800</pubDate>
-      
-      <guid>https://blog.genesu.me/1970/01/use-markdown-toc/</guid>
-      <description>&lt;p&gt;第一句話&lt;br&gt;
-第二句話&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Test</title>
