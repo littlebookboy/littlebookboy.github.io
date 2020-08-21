@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on 高級伴讀書僮</title>
+    <link>https://littlebookboy.github.io/page/</link>
+    <description>Recent content in Pages on 高級伴讀書僮</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Aug 2020 10:29:06 +0800</lastBuildDate>
+    
+	<atom:link href="https://littlebookboy.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>https://littlebookboy.github.io/about-me/</link>
+      <pubDate>Fri, 21 Aug 2020 10:29:06 +0800</pubDate>
+      
+      <guid>https://littlebookboy.github.io/about-me/</guid>
+      <description>關於我 bala bala</description>
+    </item>
+    
+  </channel>
+</rss>
