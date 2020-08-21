@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>高級伴讀書僮</title>
-    <link>https://blog.genesu.me/</link>
-    <description>Recent content on 高級伴讀書僮</description>
+    <title>go on 高級伴讀書僮</title>
+    <link>https://blog.genesu.me/tags/go/</link>
+    <description>Recent content in go on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Aug 2020 00:53:47 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.genesu.me/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.genesu.me/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -29,19 +29,6 @@
       <guid>https://blog.genesu.me/1970/01/use-markdown-toc/</guid>
       <description>&lt;p&gt;第一句話&lt;br&gt;
 第二句話&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://blog.genesu.me/about-me/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.genesu.me/about-me/</guid>
-      <description>相信只要願意把時間投資給自己，
-持續修正並前進，
-有一天可以為自己付出所獲得感到值得。
-以上跟關於我無關，
-測試最後一行。</description>
     </item>
     
   </channel>

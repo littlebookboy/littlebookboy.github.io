@@ -6,7 +6,6 @@
     <description>Recent content in Pages on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2020 10:29:06 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.genesu.me/page/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +13,14 @@
     <item>
       <title>About Me</title>
       <link>https://blog.genesu.me/about-me/</link>
-      <pubDate>Fri, 21 Aug 2020 10:29:06 +0800</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://blog.genesu.me/about-me/</guid>
-      <description>關於我 bala bala</description>
+      <description>相信只要願意把時間投資給自己，
+持續修正並前進，
+有一天可以為自己付出所獲得感到值得。
+以上跟關於我無關，
+測試最後一行。</description>
     </item>
     
   </channel>
