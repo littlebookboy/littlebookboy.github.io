@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Archives on 高級伴讀書僮</title>
-    <link>https://littlebookboy.github.io/archives/</link>
+    <link>http://blog.genesu.me/archives/</link>
     <description>Recent content in Archives on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://littlebookboy.github.io/archives/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://blog.genesu.me/archives/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

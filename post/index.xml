@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 高級伴讀書僮</title>
-    <link>https://littlebookboy.github.io/post/</link>
+    <link>http://blog.genesu.me/post/</link>
     <description>Recent content in Posts on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 21 Aug 2020 10:54:06 +0800</lastBuildDate>
     
-	<atom:link href="https://littlebookboy.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://blog.genesu.me/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First Public Post</title>
-      <link>https://littlebookboy.github.io/2020/08/first-public-post/</link>
+      <link>http://blog.genesu.me/2020/08/first-public-post/</link>
       <pubDate>Fri, 21 Aug 2020 10:54:06 +0800</pubDate>
       
-      <guid>https://littlebookboy.github.io/2020/08/first-public-post/</guid>
+      <guid>http://blog.genesu.me/2020/08/first-public-post/</guid>
       <description></description>
     </item>
     
