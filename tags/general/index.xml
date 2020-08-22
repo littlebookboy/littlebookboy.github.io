@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 高級伴讀書僮</title>
-    <link>https://blog.genesu.me/post/</link>
-    <description>Recent content in Posts on 高級伴讀書僮</description>
+    <title>general on 高級伴讀書僮</title>
+    <link>https://blog.genesu.me/tags/general/</link>
+    <description>Recent content in general on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Aug 2020 23:12:30 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.genesu.me/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.genesu.me/tags/general/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       <guid>https://blog.genesu.me/2020/08/22/%E9%A9%97%E8%AD%89-seo-autolink-hugo-shortcode/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://blog.genesu.me/2020/08/22/玩玩-seo-autolink-hugo-shortcode&#34;&gt;此篇&lt;/a&gt;文章的驗證文章，&lt;br /&gt;
 在本文內容中有提及另一篇文章的 seo 字眼時，會自動轉為文章連結。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>玩玩 seo-autolink - Hugo Shortcode</title>
-      <link>https://blog.genesu.me/2020/08/22/%E7%8E%A9%E7%8E%A9-seo-autolink-hugo-shortcode/</link>
-      <pubDate>Sat, 22 Aug 2020 22:34:30 +0800</pubDate>
-      
-      <guid>https://blog.genesu.me/2020/08/22/%E7%8E%A9%E7%8E%A9-seo-autolink-hugo-shortcode/</guid>
-      <description>&lt;p&gt;今天要來測試一下 &lt;a href=&#34;(https://gohugohq.com/partials/autolinking-shortcode-for-articles/)&#34;&gt;seo-autolink&lt;/a&gt; 這個 hugo shortcode，&lt;br /&gt;
-可以幫助你快速建置內文 seo link。&lt;/p&gt;</description>
     </item>
     
   </channel>
