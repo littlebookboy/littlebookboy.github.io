@@ -4,57 +4,57 @@
   
   <url>
     <loc>https://blog.genesu.me/categories/</loc>
-    <lastmod>1970-01-01T08:33:35+08:00</lastmod>
+    <lastmod>2020-08-22T14:12:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/tags/go/</loc>
-    <lastmod>1970-01-01T08:33:35+08:00</lastmod>
+    <lastmod>2020-08-22T14:12:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/tags/hugo/</loc>
-    <lastmod>1970-01-01T08:33:35+08:00</lastmod>
+    <lastmod>2020-08-22T14:12:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/tags/laravel/</loc>
-    <lastmod>1970-01-01T08:33:35+08:00</lastmod>
+    <lastmod>2020-08-22T14:12:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/post/</loc>
-    <lastmod>1970-01-01T08:33:35+08:00</lastmod>
+    <lastmod>2020-08-22T14:12:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/tags/</loc>
-    <lastmod>1970-01-01T08:33:35+08:00</lastmod>
+    <lastmod>2020-08-22T14:12:44+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.genesu.me/1970/01/use-markdown-toc/</loc>
-    <lastmod>1970-01-01T08:33:35+08:00</lastmod>
+    <loc>https://blog.genesu.me/2020/08/22/test/</loc>
+    <lastmod>2020-08-22T14:12:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/categories/%E5%B7%A5%E5%85%B7%E6%87%89%E7%94%A8/</loc>
-    <lastmod>1970-01-01T08:33:35+08:00</lastmod>
+    <lastmod>2020-08-22T14:12:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/categories/%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98/</loc>
-    <lastmod>1970-01-01T08:33:35+08:00</lastmod>
+    <lastmod>2020-08-22T14:12:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>1970-01-01T08:33:35+08:00</lastmod>
+    <lastmod>2020-08-22T14:12:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/</loc>
-    <lastmod>1970-01-01T08:33:35+08:00</lastmod>
+    <lastmod>2020-08-22T14:12:44+08:00</lastmod>
   </url>
   
   <url>
@@ -67,18 +67,6 @@
   
   <url>
     <loc>https://blog.genesu.me/page/</loc>
-  </url>
-  
-  <url>
-    <loc>https://blog.genesu.me/tags/tag-plugins/</loc>
-  </url>
-  
-  <url>
-    <loc>https://blog.genesu.me/1/01/test/</loc>
-  </url>
-  
-  <url>
-    <loc>https://blog.genesu.me/tags/test/</loc>
   </url>
   
 </urlset>
