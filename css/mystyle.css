@@ -1,3 +1,11 @@
+.sidebar-button-link {
+    color: #ebebeb !important;
+}
+
+.sidebar-button-link:hover {
+    color: #ffffff !important;
+}
+
 a,
 a:hover {
     color: #3eaf7c !important;
