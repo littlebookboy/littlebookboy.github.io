@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hugo-shortcode on 高級伴讀書僮</title>
-    <link>https://blog.genesu.me/tags/hugo-shortcode/</link>
-    <description>Recent content in hugo-shortcode on 高級伴讀書僮</description>
+    <title>dev on 高級伴讀書僮</title>
+    <link>https://blog.genesu.me/categories/dev/</link>
+    <description>Recent content in dev on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Aug 2020 23:12:30 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.genesu.me/tags/hugo-shortcode/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.genesu.me/categories/dev/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
