@@ -6,6 +6,10 @@
     color: #ffffff !important;
 }
 
+a.link-word-wrap-break-word {
+    word-wrap: break-word !important;
+}
+
 a,
 a:hover {
     color: #3eaf7c !important;
