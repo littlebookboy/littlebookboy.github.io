@@ -6,10 +6,20 @@
     <description>Recent content on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2020 23:12:30 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 15:30:25 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.genesu.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using Hugo - [01] 索引</title>
+      <link>https://blog.genesu.me/2020/08/23/using-hugo-01-%E7%B4%A2%E5%BC%95/</link>
+      <pubDate>Sun, 23 Aug 2020 15:30:25 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/2020/08/23/using-hugo-01-%E7%B4%A2%E5%BC%95/</guid>
+      <description>&lt;p&gt;這個系列文章會整理數篇我在準備開始寫部落格時，&lt;br /&gt;
+從工具選擇、架設，以及使用過程中，用到、學到的東西。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>驗證 seo-autolink - Hugo Shortcode</title>

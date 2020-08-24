@@ -4,22 +4,42 @@
   
   <url>
     <loc>https://blog.genesu.me/categories/</loc>
-    <lastmod>2020-08-22T23:12:30+08:00</lastmod>
+    <lastmod>2020-08-23T15:30:25+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/categories/dev/</loc>
-    <lastmod>2020-08-22T23:12:30+08:00</lastmod>
+    <lastmod>2020-08-23T15:30:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.genesu.me/tags/hugo-shortcode/</loc>
-    <lastmod>2020-08-22T23:12:30+08:00</lastmod>
+    <loc>https://blog.genesu.me/tags/github/</loc>
+    <lastmod>2020-08-23T15:30:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/tags/hugo/</loc>
+    <lastmod>2020-08-23T15:30:25+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/post/</loc>
-    <lastmod>2020-08-22T23:12:30+08:00</lastmod>
+    <lastmod>2020-08-23T15:30:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/tags/</loc>
+    <lastmod>2020-08-23T15:30:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/2020/08/23/using-hugo-01-%E7%B4%A2%E5%BC%95/</loc>
+    <lastmod>2020-08-23T15:30:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/</loc>
+    <lastmod>2020-08-23T15:30:25+08:00</lastmod>
   </url>
   
   <url>
@@ -28,17 +48,12 @@
   </url>
   
   <url>
-    <loc>https://blog.genesu.me/tags/</loc>
+    <loc>https://blog.genesu.me/tags/shortcode/</loc>
     <lastmod>2020-08-22T23:12:30+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/2020/08/22/%E9%A9%97%E8%AD%89-seo-autolink-hugo-shortcode/</loc>
-    <lastmod>2020-08-22T23:12:30+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.genesu.me/</loc>
     <lastmod>2020-08-22T23:12:30+08:00</lastmod>
   </url>
   
