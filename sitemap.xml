@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://blog.genesu.me/categories/dev/</loc>
-    <lastmod>2020-08-24T22:19:22+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.genesu.me/post/</loc>
     <lastmod>2020-08-24T22:19:22+08:00</lastmod>
   </url>
@@ -28,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://blog.genesu.me/categories/talking/</loc>
+    <lastmod>2020-08-24T22:19:22+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.genesu.me/2020/08/24/%E7%82%BA%E4%BD%95%E6%88%91%E8%A6%81%E5%AF%AB%E6%96%87%E7%AB%A0/</loc>
     <lastmod>2020-08-24T22:19:22+08:00</lastmod>
   </url>
@@ -35,6 +35,11 @@
   <url>
     <loc>https://blog.genesu.me/</loc>
     <lastmod>2020-08-24T22:19:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/categories/dev/</loc>
+    <lastmod>2020-08-23T15:30:25+08:00</lastmod>
   </url>
   
   <url>
