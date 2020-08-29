@@ -12,22 +12,22 @@
     
     
     <item>
-      <title>Hugo seo-autolink 測試結果</title>
-      <link>https://blog.genesu.me/2020/08/22/hugo-seo-autolink-%E6%B8%AC%E8%A9%A6%E7%B5%90%E6%9E%9C/</link>
+      <title>Hugo seo-autolink 測試結果 (Result)</title>
+      <link>https://blog.genesu.me/2020/08/22/hugo-seo-autolink-%E6%B8%AC%E8%A9%A6%E7%B5%90%E6%9E%9C-result/</link>
       <pubDate>Sat, 22 Aug 2020 23:12:30 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/08/22/hugo-seo-autolink-%E6%B8%AC%E8%A9%A6%E7%B5%90%E6%9E%9C/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://blog.genesu.me/2020/08/22/玩玩-seo-autolink-hugo-shortcode&#34;&gt;此篇&lt;/a&gt;文章的驗證文章，&lt;br /&gt;
+      <guid>https://blog.genesu.me/2020/08/22/hugo-seo-autolink-%E6%B8%AC%E8%A9%A6%E7%B5%90%E6%9E%9C-result/</guid>
+      <description>&lt;p&gt;本文是 &lt;a href=&#34;https://blog.genesu.me/2020/08/22/hugo-seo-autolink-效果測試-test/&#34;&gt;hugo seo-autolink 效果測試 (Test)&lt;/a&gt; 的測試結果，&lt;br /&gt;
 在本文內容中有提及另一篇文章的 seo 字眼時，會自動轉為文章連結。&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Hugo seo-autolink 效果測試</title>
-      <link>https://blog.genesu.me/2020/08/22/hugo-seo-autolink-%E6%95%88%E6%9E%9C%E6%B8%AC%E8%A9%A6/</link>
+      <title>Hugo seo-autolink 效果測試 (Test)</title>
+      <link>https://blog.genesu.me/2020/08/22/hugo-seo-autolink-%E6%95%88%E6%9E%9C%E6%B8%AC%E8%A9%A6-test/</link>
       <pubDate>Sat, 22 Aug 2020 22:34:30 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/08/22/hugo-seo-autolink-%E6%95%88%E6%9E%9C%E6%B8%AC%E8%A9%A6/</guid>
-      <description>&lt;p&gt;今天要來測試一下 &lt;a href=&#34;(https://gohugohq.com/partials/autolinking-shortcode-for-articles/)&#34;&gt;seo-autolink&lt;/a&gt; 這個 hugo shortcode，&lt;br /&gt;
+      <guid>https://blog.genesu.me/2020/08/22/hugo-seo-autolink-%E6%95%88%E6%9E%9C%E6%B8%AC%E8%A9%A6-test/</guid>
+      <description>&lt;p&gt;今天要來測試一下 &lt;a href=&#34;https://gohugohq.com/partials/autolinking-shortcode-for-articles/&#34;&gt;seo-autolink&lt;/a&gt; 這個 hugo shortcode，&lt;br /&gt;
 可以幫助你快速建置內文 seo link。&lt;/p&gt;</description>
     </item>
     
