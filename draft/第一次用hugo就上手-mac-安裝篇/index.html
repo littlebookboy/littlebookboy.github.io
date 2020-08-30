@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Gene (Littlebookboy)">
+<meta name="keywords" content="Hugo, Mac, QuickStart, 佈景, 文章分類, develop, backend">
+<meta name="description" content="第一次用 Hugo 就上手 - Mac 安裝篇">
+
+
+<meta property="og:description" content="第一次用 Hugo 就上手 - Mac 安裝篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一次用 Hugo 就上手 - Mac 安裝篇">
+<meta name="twitter:title" content="第一次用 Hugo 就上手 - Mac 安裝篇">
+<meta property="og:url" content="https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/">
+<meta property="twitter:url" content="https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/">
+<meta property="og:site_name" content="高級伴讀書僮">
+<meta property="og:description" content="第一次用 Hugo 就上手 - Mac 安裝篇">
+<meta name="twitter:description" content="第一次用 Hugo 就上手 - Mac 安裝篇">
+<meta property="og:locale" content="zh-tw">
+
+  
+    <meta property="article:published_time" content="2020-08-29T11:02:39">
+  
+  
+    <meta property="article:modified_time" content="2020-08-29T11:02:39">
+  
+  
+  
+    
+      <meta property="article:section" content="dev">
+    
+  
+  
+    
+      <meta property="article:tag" content="Hugo">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8%20Hugo%20%E5%B0%B1%E4%B8%8A%E6%89%8B%20-%20%E5%AE%89%E8%A3%9D%E7%AF%87.jpg">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8%20Hugo%20%E5%B0%B1%E4%B8%8A%E6%89%8B%20-%20%E5%AE%89%E8%A3%9D%E7%AF%87.jpg">
+
+
+
+
+  <meta property="og:image" content="https://blog.genesu.me/images/avataaars.png">
+  <meta property="twitter:image" content="https://blog.genesu.me/images/avataaars.png">
+
+
+    <title>第一次用 Hugo 就上手 - Mac 安裝篇</title>
+
+    <link rel="icon" href="images/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://blog.genesu.me/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://blog.genesu.me/css/mystyle.css">
+      
+    
+
+    
+      
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-176081577-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://blog.genesu.me/">高級伴讀書僮</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://blog.genesu.me/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://blog.genesu.me/images/avataaars.png" alt="作者的圖片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://blog.genesu.me/#about">
+          <img class="sidebar-profile-picture" src="https://blog.genesu.me/images/avataaars.png" alt="作者的圖片" />
+        </a>
+        <h4 class="sidebar-profile-name">Gene (Littlebookboy)</h4>
+        
+          <h5 class="sidebar-profile-bio">Writing, Learning, and Keep Going</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.genesu.me/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首頁</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.genesu.me/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分類</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.genesu.me/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">標籤</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.genesu.me/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">所有文章</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.genesu.me/about-me">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">關於我</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/littlebookboy" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.genesu.me/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              post-header-cover--partial"
+       style="background-image:url('https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8%20Hugo%20%E5%B0%B1%E4%B8%8A%E6%89%8B%20-%20%E5%AE%89%E8%A3%9D%E7%AF%87.jpg')"
+       data-behavior="5">
+    
+  </div>
+
+
+      <div id="main" data-behavior="5"
+        class="hasCover
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      第一次用 Hugo 就上手 - Mac 安裝篇
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-08-29T11:02:39&#43;08:00">
+        
+  
+  
+  
+  
+    2020-08-29 11:02:39 UTC&#43;8
+  
+
+      </time>
+    
+    
+  
+  
+    <span>分類</span>
+    
+      <a class="category-link" href="https://blog.genesu.me/categories/dev">dev</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>紀錄下我使用 Hugo 架設個人部落格的過程，本篇主要講安裝，與基本使用。</p>
+
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+另外，文中提到佈景 (Theme) 的部分，因為我有再額外調整一些 config 設置與樣式，所以佈景相關紀錄會寫另一篇獨立的文章 - <a href="https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/" title="第一次用 Hugo 就上手 - Mac 安裝篇">Hugo 佈景套用與設置</a>。
+
+</p>
+
+<h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
+<ul>
+<li><a href="#install-安裝">Install 安裝</a></li>
+<li><a href="#usage-基本使用">Usage 基本使用</a></li>
+<li><a href="#post-文章相關設置">Post 文章相關設置</a>
+<ul>
+<li><a href="#post-status-文章狀態">Post Status 文章狀態</a></li>
+<li><a href="#post-archetypes-文章模板">Post Archetypes 文章模板</a></li>
+</ul></li>
+<li><a href="#references-參考連結">References 參考連結</a></li>
+<li><a href="#todos-坑">Todos 坑</a></li>
+</ul>
+</nav>
+
+<h1 id="install-安裝">Install 安裝</h1>
+
+<p>我的作業系統為 <code>macOS Catalina 10.15.6</code>，若需其他環境的安裝方式請參考 
+<a href="https://gohugo.io/getting-started/installing" target="_blank">Hugo Getting Started - Installing</a>
+。</p>
+
+<p>安裝步驟如下:</p>
+
+<ul>
+<li><p>安裝 Hugo，在此我使用 Homebrew，建議盡量統一一種安裝習慣，我習慣是可以透過 Homebrew 安裝時，就不選其它的安裝方式，除非有其他考量；這樣讓自己的安裝習慣一致後，日後在重建工作環境，或是查找原本是如何安裝某指令時，不會變得太複雜。</p>
+<pre><code class="language-shell script" data-lang="shell script">brew install hugo</code></pre></li>
+
+<li><p>安裝成功後，可測試一下是否可執行 Hugo 指令:</p>
+<pre><code class="language-shell script" data-lang="shell script">hugo version
+
+# output: 
+# Hugo Static Site Generator v0.74.3/extended darwin/amd64 BuildDate: unknown</code></pre></li>
+
+<li><p>建立新站點 (Site)</p>
+<pre><code class="language-shell script" data-lang="shell script"># hugo new site your-site-name
+# for example
+hugo new site my-hugo-blog</code></pre></li>
+
+<li><p>選擇佈景</p>
+
+<p>你可以到 
+<a href="https://themes.gohugo.io/" target="_blank">Hugo Themes</a>
+ 選一個你看上去順眼的佈景。因為我個人習慣是先選到一個比較符合我想要的感覺的佈景，才會決定使用這個工具，所以挑了一段時間，在此建議幾個方向提供參考:
+<p></p>
+
+<ol>
+<li>整體樣式: 是否有你曾經看過、喜歡的技術部落格的樣式，你想要用跟他一樣，或是雷同的</li>
+<li>風格定位: 例如你是要專門撰寫技術文章，或是 landinig page，可以透過 Hugo Theme 右側列出的 
+<a href="https://themes.gohugo.io/tags/blog/" target="_blank">tag</a>
+ 去挑選</li>
+<li>內外佈局: 是否需要有側邊欄 (或是導航列)，我會看文章 read more 之後的感覺與首頁文章列表的佈局</li>
+<li>選單圖案: 佈景提供的 Menu 與 icon 的樣式、感覺</li>
+<li>markdown sample: 通常佈景都會有 demo 與 markdown 樣式的範例文章可參考</li>
+<li>code block style: 佈景提供的 code block 樣式是不是你喜歡的樣子，是否提供行號顯示，或是是否方便你去調整配置替換</li>
+<li>plugin integration: 例如支援數學公式，流程圖繪製，評論系統 comment system 的整合度等 (不需要自行另外集成)
+<br /></li>
+</ol>
+
+<p>其他還有一些細節是在你試著選用的過程，去調適佈景作者提供的參數後，你才知道哪些是可隨你意思做動的部分，建議是從佈局與整體感覺先選幾個，然後每種都試試看，我在還沒開始寫文章時，就先用了 
+<a href="https://jekyllrb.com/" target="_blank">jekyll</a>
+，但因為選不到我想要的佈景，所以又跳來 Hugo 選，試用了 
+<a href="https://themes.gohugo.io/hugo-theme-even/" target="_blank">Even</a>
+ 與 
+<a href="https://themes.gohugo.io/hugo-tranquilpeak-theme/" target="_blank">Tranquilpeak</a>
+ 後才決定用後者。</p></li>
+
+<li><p>安裝佈景</p>
+
+<p>以我自己使用的佈景為例，我是沒有透過 git submodule 的方式安裝，而是直接 clone 到本地，放到與透過 submodule 設置結果同樣的路徑位置:</p>
+<pre><code class="language-shell script" data-lang="shell script"># 在專案資料夾底下
+git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranquilpeak
+
+# themes 資料夾是用來專門放置佈景的
+# 特地將 hugo-tranquilpeak-theme 重命名為 tranquilpeak，在設置 config 時指定佈景名稱比較方便</code></pre>
+<div class="alert info ">
+  <p>通常每個佈景都會有自己的配置方式，你可以先讀一下佈景的 README.md 後，在跟著佈景的安裝方式走一遍，也可看看佈景有哪些東西供你做調整配置 (config.toml)。</p>
+</div></li>
+</ul>
+
+<h1 id="usage-基本使用">Usage 基本使用</h1>
+
+<ul>
+<li><p>新增文章</p>
+<pre><code class="language-shell script" data-lang="shell script">hugo new post/my-first-post.md
+
+# 官方使用 posts
+# 但我這邊都改用 post，似乎會與 Hugo 版本新舊而有差異，但我沒有仔細追查，若有人知道差異歡迎留言跟我分享一下。</code></pre></li>
+
+<li><p>本地執行 Hugo Server 看看結果</p>
+<pre><code class="language-shell script" data-lang="shell script">hugo server -D
+
+# or `hugo server` running without `draft: true` post
+hugo server</code></pre></li>
+
+<li><p>本地打包 Hugo</p>
+
+<p>本地打包就是把你當前的 Hugo 專案，包成一整個可執行的靜態資源，產出到資料夾 <code>public</code>，你也可以透過指定 <code>publishdir</code> 來變更產出資料夾名稱。</p>
+<pre><code class="language-shell script" data-lang="shell script">hugo
+
+# output (like):
+#                     | ZH-TW
+#  -------------------+--------
+#    Pages            |     2
+#    Paginator pages  |     0
+#    Non-page files   |     0
+#    Static files     |     9
+#    Processed images |     0
+#    Aliases          |     2
+#    Sitemaps         |     1
+#    Cleaned          |     0
+#  
+#  Total in 72 ms</code></pre></li>
+
+<li><p>發佈到線上 Web Server</p>
+
+<p>最後要放到線上，公開你的部落格，設置個人網址這部分，會另外在寫一篇文章說明: <span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/" title="第一次用 Hugo 就上手 - Mac 安裝篇">Hugo 發佈到 GitHub Page</a>
+</span>。</p></li>
+</ul>
+
+<h1 id="post-文章相關設置">Post 文章相關設置</h1>
+
+<h2 id="post-status-文章狀態">Post Status 文章狀態</h2>
+
+<p>以下列出官方定義文章的幾種滿足條件後可能的狀態，但我目前只有用到 <code>草稿</code> 的部分:
+<p></p>
+
+<ul>
+<li>發布或未發布: Content with a future <code>publishdate</code> value</li>
+<li>草稿或已完成: Content with <code>draft: true or false</code> status</li>
+<li>有效或已過期: Content with a past <code>expirydate</code> value</li>
+</ul>
+
+<p>而我自己在寫文時，我把文章區分為 <code>page</code>、<code>post</code>，以及 <code>draft</code>:
+<p></p>
+
+<ul>
+<li><code>draft</code> 草稿文章 - 尚未完成的文章，本地編譯時需帶參數 <code>-D</code> 才可以看到此類型文章</li>
+<li><code>post</code> 已完成文章 - 草稿完成時，將文章改為已完成 (其實就是變更 
+<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Front Matter</a>
+ 設定 <code>draft</code> 狀態 <code>true</code> -&gt; <code>false</code>)</li>
+<li><code>page</code> 單頁面，例如關於我 (about-me)，履歷 (CV)，landing page 等等，這類頁面通常不掛分類 (category) 與標籤 (tag)</li>
+</ul>
+
+<h2 id="post-archetypes-文章模板">Post Archetypes 文章模板</h2>
+
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+根據上述區分方式，準備各自的模板，模板文件會放在 /archetypes 中 (結構部分可參考 <a href="https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/" title="第一次用 Hugo 就上手 - Mac 安裝篇">Hugo 資料結構</a>)
+
+</p>
+
+<h1 id="references-參考連結">References 參考連結</h1>
+
+<p>我盡量把我準備過程中，造訪過的連結都放在這，建議若你現在不需要，不一定要全都看懂才開始。
+<p></p>
+
+<ul>
+<li>
+<a href="https://gohugo.io/getting-started/quick-start/" target="_blank">Hugo Quick Start</a>
+</li>
+<li>
+<a href="https://gohugo.io/getting-started/installing" target="_blank">Hugo Getting Started - Installing</a>
+</li>
+<li>
+<a href="https://gohugo.io/getting-started/usage/" target="_blank">Hugo Getting Started - Usage</a>
+</li>
+<li>
+<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
+</li>
+<li>
+<a href="https://themes.gohugo.io/hugo-tranquilpeak-theme/" target="_blank">Hugo Theme - Tranquilpeak</a>
+</li>
+<li>
+<a href="https://tranquilpeak.kakawait.com/2015/06/who-is-using-tranquilpeak-hugo-theme/" target="_blank">Hugo Themes Tranquilpeak Showcases</a>
+</li>
+<li>
+<a href="https://gohugo.io/getting-started/directory-structure/" target="_blank">Hugo Directory Structure</a>
+</li>
+<li>
+<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank">Hugo hosting-on-github</a>
+</li>
+</ul>
+
+<h1 id="todos-坑">Todos 坑</h1>
+
+<p>文中有些連結尚未補上對應文章，在此先留著記錄，日後再補上:
+<p></p>
+
+<ul>
+<li><a href="#">Hugo 佈景套用與設置</a></li>
+<li><a href="#">Hugo 資料結構</a></li>
+<li><a href="#">Hugo 發佈到 GitHub Page</a></li>
+</ul>
+
+<hr />
+
+<multiple-line-output>
+    
+<br>
+文章作者: 
+<a href="https://blog.genesu.me/archives">littlebookboy</a>
+<br>
+永久鏈結: <page-rel-permalink><a class="link-word-wrap-break-word" href="https://blog.genesu.me//draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/" target="_blank">https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/</a></page-rel-permalink>
+<br>
+許可協議: 
+<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
+
+
+</multiple-line-output>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">標籤</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.genesu.me/tags/hugo/">Hugo</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 Gene (Littlebookboy). All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2Fdraft%2F%25E7%25AC%25AC%25E4%25B8%2580%25E6%25AC%25A1%25E7%2594%25A8hugo%25E5%25B0%25B1%25E4%25B8%258A%25E6%2589%258B-mac-%25E5%25AE%2589%25E8%25A3%259D%25E7%25AF%2587%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2Fdraft%2F%25E7%25AC%25AC%25E4%25B8%2580%25E6%25AC%25A1%25E7%2594%25A8hugo%25E5%25B0%25B1%25E4%25B8%258A%25E6%2589%258B-mac-%25E5%25AE%2589%25E8%25A3%259D%25E7%25AF%2587%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://blog.genesu.me/images/avataaars.png" alt="作者的圖片" />
+    
+    <h4 id="about-card-name">Gene (Littlebookboy)</h4>
+    
+      <div id="about-card-bio">Writing, Learning, and Keep Going</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Backend Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Taichung, Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://blog.genesu.me/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://blog.genesu.me/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/blog.genesu.me\/draft\/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87\/';
+          
+            this.page.identifier = '\/draft\/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'blog-genesu-me';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

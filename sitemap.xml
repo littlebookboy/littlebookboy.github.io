@@ -4,17 +4,37 @@
   
   <url>
     <loc>https://blog.genesu.me/categories/</loc>
-    <lastmod>2020-08-22T23:12:30+08:00</lastmod>
+    <lastmod>2020-08-29T11:02:39+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/categories/dev/</loc>
-    <lastmod>2020-08-22T23:12:30+08:00</lastmod>
+    <lastmod>2020-08-29T11:02:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/draft/</loc>
+    <lastmod>2020-08-29T11:02:39+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/tags/hugo/</loc>
-    <lastmod>2020-08-22T23:12:30+08:00</lastmod>
+    <lastmod>2020-08-29T11:02:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/tags/</loc>
+    <lastmod>2020-08-29T11:02:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/</loc>
+    <lastmod>2020-08-29T11:02:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/</loc>
+    <lastmod>2020-08-29T11:02:39+08:00</lastmod>
   </url>
   
   <url>
@@ -34,16 +54,6 @@
   
   <url>
     <loc>https://blog.genesu.me/tags/shortcode/</loc>
-    <lastmod>2020-08-22T23:12:30+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.genesu.me/tags/</loc>
-    <lastmod>2020-08-22T23:12:30+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.genesu.me/</loc>
     <lastmod>2020-08-22T23:12:30+08:00</lastmod>
   </url>
   
