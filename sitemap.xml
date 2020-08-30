@@ -13,12 +13,12 @@
   </url>
   
   <url>
-    <loc>https://blog.genesu.me/draft/</loc>
+    <loc>https://blog.genesu.me/tags/hugo/</loc>
     <lastmod>2020-08-29T11:02:39+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.genesu.me/tags/hugo/</loc>
+    <loc>https://blog.genesu.me/post/</loc>
     <lastmod>2020-08-29T11:02:39+08:00</lastmod>
   </url>
   
@@ -28,7 +28,7 @@
   </url>
   
   <url>
-    <loc>https://blog.genesu.me/draft/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8hugo%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/</loc>
+    <loc>https://blog.genesu.me/2020/08/29/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8-hugo-%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/</loc>
     <lastmod>2020-08-29T11:02:39+08:00</lastmod>
   </url>
   
@@ -39,11 +39,6 @@
   
   <url>
     <loc>https://blog.genesu.me/2020/08/22/hugo-seo-autolink-%E6%B8%AC%E8%A9%A6%E7%B5%90%E6%9E%9C-result/</loc>
-    <lastmod>2020-08-22T23:12:30+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.genesu.me/post/</loc>
     <lastmod>2020-08-22T23:12:30+08:00</lastmod>
   </url>
   
