@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
-<meta name="keywords" content="Hugo, Mac, QuickStart, 佈景, 文章分類, develop, backend">
+<meta name="keywords" content="hugo, mac, quickstart, theme, 佈景, 文章, post, github, github page, develop, backend">
 <meta name="description" content="第一次用 Hugo 就上手 - Mac 安裝篇">
 
 
@@ -284,7 +284,7 @@ if (!doNotTrack) {
 <ul>
 <li><a href="#install-安裝">Install 安裝</a></li>
 <li><a href="#usage-基本使用">Usage 基本使用</a></li>
-<li><a href="#post-文章相關設置">Post 文章相關設置</a>
+<li><a href="#post-文章">Post 文章</a>
 <ul>
 <li><a href="#post-status-文章狀態">Post Status 文章狀態</a></li>
 <li><a href="#post-archetypes-文章模板">Post Archetypes 文章模板</a></li>
@@ -372,10 +372,25 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
 <li><p>新增文章</p>
 
 <p>稍微說明一下，<code>post/xxx.md</code> 這個結構是: <code>資料夾/檔案名稱+markdown 副檔名</code>，指令執行之後，檔案會長在 <code>/content</code> 底下，例如 <code>/content/post/filename.md</code></p>
-<pre><code class="language-shell script" data-lang="shell script">hugo new post/my-first-post.md
 
-# 官方使用 posts
-# 但我這邊都改用 post，似乎會與 Hugo 版本新舊而有差異，但我沒有仔細追查，若有人知道差異歡迎留言跟我分享一下。</code></pre></li>
+<div class="alert info ">
+  <p>官方使用 posts，如果佈景沒有特別限制，應該看個人偏好自訂就好 (記得
+<a href="https://github.com/olOwOlo/hugo-theme-even#installation" target="_blank">Even</a>
+ 有限制不能用 posts)，例如你想用 post 也可以。</p>
+</div>
+
+<div class="alert warning ">
+  <p>NOTE: For this theme, you should use post instead of posts, namely hugo new post/some-content.md.</p>
+</div>
+<pre><code class="language-shell script" data-lang="shell script">hugo new post/my-first-post.md</code></pre></li>
+
+<li><p>刪除文章</p>
+
+<p>Hugo 刪除文章的方式就是<span class="highlight-text yellow">直接把檔案給移除</span>就好。</p>
+
+<div class="alert warning ">
+  <p>需注意，若是已經發布 public 資料包到線上的話，且你的 public 是使用 GitHub Page (有版本控制)，則你 clone 下來的 public 會存有舊的文章，需移除乾淨再重新打包，這會在 Hugo 發佈到 GitHub Page 說明。</p>
+</div></li>
 
 <li><p>本地執行 <code>hugo server</code> 看看結果</p>
 
@@ -438,11 +453,11 @@ hugo server</code></pre></li>
 
 
 
-<a href="https://blog.genesu.me/2020/08/29/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8-hugo-%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/" title="第一次用 Hugo 就上手 - Mac 安裝篇">Hugo 發佈到 GitHub Page</a>
-</span>。</p></li>
+第一次用 Hugo 就上手 - <a href="https://blog.genesu.me/2020/08/29/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8-hugo-%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/" title="第一次用 Hugo 就上手 - Mac 安裝篇">Hugo 發佈到 GitHub Page</a>
+</span>篇。</p></li>
 </ul>
 
-<h1 id="post-文章相關設置">Post 文章相關設置</h1>
+<h1 id="post-文章">Post 文章</h1>
 
 <h2 id="post-status-文章狀態">Post Status 文章狀態</h2>
 
@@ -497,7 +512,7 @@ hugo server</code></pre></li>
 
 
 
-根據上述區分方式，準備各自的模板，模板文件會放在 /archetypes 中 (結構部分可參考 <a href="https://blog.genesu.me/2020/08/29/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8-hugo-%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/" title="第一次用 Hugo 就上手 - Mac 安裝篇">Hugo 資料結構</a>)，以下是我的 post 模板範例:
+根據上述區分方式，準備各自的模板，模板文件會放在 /archetypes 中 (結構部分可參考「第一次用 Hugo 就上手 - <a href="https://blog.genesu.me/2020/08/29/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8-hugo-%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/" title="第一次用 Hugo 就上手 - Mac 安裝篇">Hugo 資料結構</a>篇」)，以下是我的 post 模板範例:
 
 </p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
@@ -512,6 +527,83 @@ keywords: [&#34;post&#34;]
 ---
 
 <span style="color:#75715e">&lt;!--more--&gt;</span></code></pre></div>
+<p>這是首頁看起來的樣子:</p>
+
+
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+<div class="figure fig-100" >
+  
+    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.42.14.png" title="首頁" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.42.14.png"  alt="首頁">
+  
+    </a>
+  
+   
+    <span class="caption">首頁</span>
+  
+</div>
+
+  <div style="clear:both;"></div>
+
+
+<p>這是點了 More 查看內文的樣子:</p>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+<div class="figure fig-100" >
+  
+    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.43.27.png" title="內文" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.43.27.png"  alt="內文">
+  
+    </a>
+  
+   
+    <span class="caption">內文</span>
+  
+</div>
+
+
 <h1 id="references-參考連結">References 參考連結</h1>
 
 <p>我盡量把我準備過程中，造訪過的連結都放在這，建議若你現在不需要，不一定要全都看懂才開始。
@@ -534,7 +626,10 @@ keywords: [&#34;post&#34;]
 <a href="https://themes.gohugo.io/hugo-tranquilpeak-theme/" target="_blank">Hugo Theme - Tranquilpeak</a>
 </li>
 <li>
-<a href="https://tranquilpeak.kakawait.com/2015/06/who-is-using-tranquilpeak-hugo-theme/" target="_blank">Hugo Themes Tranquilpeak Showcases</a>
+<a href="https://tranquilpeak.kakawait.com/2015/06/who-is-using-tranquilpeak-hugo-theme/" target="_blank">Who's using Tranquilpeak Hugo Theme</a>
+</li>
+<li>
+<a href="https://louisbarranqueiro.github.io/hexo-theme-tranquilpeak/2014/10/29/Tags-plugins-showcase/" target="_blank">Hugo Themes Tranquilpeak Tags-plugins-showcase</a>
 </li>
 <li>
 <a href="https://gohugo.io/getting-started/directory-structure/" target="_blank">Hugo Directory Structure</a>
@@ -550,9 +645,9 @@ keywords: [&#34;post&#34;]
 <p></p>
 
 <ul>
-<li><a href="#">Hugo 佈景套用與設置</a></li>
-<li><a href="#">Hugo 發佈到 GitHub Page</a></li>
-<li><a href="#">Hugo 資料結構</a></li>
+<li><a href="#">第一次用 Hugo 就上手 - Hugo 佈景套用與設置篇</a></li>
+<li><a href="#">第一次用 Hugo 就上手 - Hugo 發佈到 GitHub Page 篇</a></li>
+<li><a href="#">第一次用 Hugo 就上手 - Hugo 資料結構篇</a></li>
 </ul>
 
 <hr />
