@@ -26,7 +26,9 @@
       <pubDate>Sat, 22 Aug 2020 22:34:30 +0800</pubDate>
       
       <guid>https://blog.genesu.me/2020/08/22/hugo-seo-autolink-%E6%95%88%E6%9E%9C%E6%B8%AC%E8%A9%A6-test/</guid>
-      <description>&lt;p&gt;今天要來測試一下 &lt;a href=&#34;https://gohugohq.com/partials/autolinking-shortcode-for-articles/&#34;&gt;seo-autolink&lt;/a&gt; 這個 hugo shortcode，可以幫助你快速建置內文 seo link。&lt;/p&gt;</description>
+      <description>&lt;p&gt;今天要來測試一下 
+&lt;a href=&#34;https://gohugohq.com/partials/autolinking-shortcode-for-articles/&#34; target=&#34;_blank&#34;&gt;seo-autolink&lt;/a&gt;
+ 這個 hugo shortcode，可以幫助你快速建置內文 seo link。&lt;/p&gt;</description>
     </item>
     
   </channel>
