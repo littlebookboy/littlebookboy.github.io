@@ -6,23 +6,10 @@
     <description>Recent content in Tech on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 13:01:09 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2020 11:02:39 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.genesu.me/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>貼身打造個人部落格 - 網站發布篇</title>
-      <link>https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-web-server/</link>
-      <pubDate>Tue, 01 Sep 2020 13:01:09 +0800</pubDate>
-      
-      <guid>https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-web-server/</guid>
-      <description>&lt;p&gt;架設好 
-&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
- 部落格，接著要把它放到網路上公開 (
-&lt;a href=&#34;https://pages.github.com/&#34; target=&#34;_blank&#34;&gt;GitHub Page&lt;/a&gt;
-) 讓人瀏覽。&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>貼身打造個人部落格 - 安裝篇</title>
