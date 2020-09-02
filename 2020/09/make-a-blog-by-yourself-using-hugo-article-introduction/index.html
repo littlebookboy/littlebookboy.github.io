@@ -7,26 +7,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
-<meta name="keywords" content="tutorials, hugo, mac, quickstart, theme, 佈景, 文章, post, develop, backend">
-<meta name="description" content="分享我使用 Hugo 架設個人部落格的過程，本篇主要講安裝、基本使用，以及一些新手(我)可能會經歷到的細節">
+<meta name="keywords" content="tutorials, hugo, mac, 文章, post, develop, backend">
+<meta name="description" content="本篇介紹 Hugo 的文章模板、分類、標籤使用，以及我的文章歸類習慣">
 
 
-<meta property="og:description" content="分享我使用 Hugo 架設個人部落格的過程，本篇主要講安裝、基本使用，以及一些新手(我)可能會經歷到的細節">
+<meta property="og:description" content="本篇介紹 Hugo 的文章模板、分類、標籤使用，以及我的文章歸類習慣">
 <meta property="og:type" content="article">
-<meta property="og:title" content="貼身打造個人部落格 - 01. 安裝篇">
-<meta name="twitter:title" content="貼身打造個人部落格 - 01. 安裝篇">
-<meta property="og:url" content="https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/">
-<meta property="twitter:url" content="https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/">
+<meta property="og:title" content="貼身打造個人部落格 - 02. 文章操作">
+<meta name="twitter:title" content="貼身打造個人部落格 - 02. 文章操作">
+<meta property="og:url" content="https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
+<meta property="twitter:url" content="https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
 <meta property="og:site_name" content="高級伴讀書僮">
-<meta property="og:description" content="分享我使用 Hugo 架設個人部落格的過程，本篇主要講安裝、基本使用，以及一些新手(我)可能會經歷到的細節">
-<meta name="twitter:description" content="分享我使用 Hugo 架設個人部落格的過程，本篇主要講安裝、基本使用，以及一些新手(我)可能會經歷到的細節">
+<meta property="og:description" content="本篇介紹 Hugo 的文章模板、分類、標籤使用，以及我的文章歸類習慣">
+<meta name="twitter:description" content="本篇介紹 Hugo 的文章模板、分類、標籤使用，以及我的文章歸類習慣">
 <meta property="og:locale" content="zh-tw">
 
   
-    <meta property="article:published_time" content="2020-08-29T11:02:39">
+    <meta property="article:published_time" content="2020-09-02T20:28:23">
   
   
-    <meta property="article:modified_time" content="2020-08-29T11:02:39">
+    <meta property="article:modified_time" content="2020-09-02T20:28:23">
   
   
   
@@ -60,14 +60,14 @@
   <meta property="twitter:image" content="https://blog.genesu.me/images/avataaars.png">
 
 
-    <title>貼身打造個人部落格 - 01. 安裝篇</title>
+    <title>貼身打造個人部落格 - 02. 文章操作</title>
 
     <link rel="icon" href="images/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/">
+    <link rel="canonical" href="https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -244,19 +244,19 @@ if (!doNotTrack) {
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      貼身打造個人部落格 - 01. 安裝篇
+      貼身打造個人部落格 - 02. 文章操作
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-08-29T11:02:39&#43;08:00">
+      <time itemprop="datePublished" datetime="2020-09-02T20:28:23&#43;08:00">
         
   
   
   
   
-    2020-08-29 11:02:39 UTC&#43;8
+    2020-09-02 20:28:23 UTC&#43;8
   
 
       </time>
@@ -270,213 +270,213 @@ if (!doNotTrack) {
     
   
 
-    約 10 分鐘
+    約 5 分鐘
   </div>
 
 </div>
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>本篇為分享我使用 
+              <p>本篇介紹 
 <a href="https://gohugo.io/" target="_blank">Hugo</a>
- 架設個人部落格的歷程，主要會講安裝，與基本使用，還有身為 Hugo 小白的我的一些心得。</p>
-
-<p>另外，因個人需要有調整一些佈景 (Theme) 的 config 設置，我覺得另外寫一篇文章會比較詳細 (欠著待補的文章統一列在 <a href="https://blog.genesu.me/2020/08/29/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8-hugo-%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/#todos-%E5%9D%91">坑</a> 中)。</p>
+ 的文章模板、分類、標籤使用，以及我的文章歸類習慣。</p>
 
 <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
 <ul>
-<li><a href="#introduction-說在前面">Introduction 說在前面</a></li>
-<li><a href="#install-安裝">Install 安裝</a></li>
-<li><a href="#usage-基本使用">Usage 基本使用</a>
-<ul>
-<li><a href="#create-post-新增文章">Create Post 新增文章</a></li>
-<li><a href="#delete-post-刪除文章">Delete Post 刪除文章</a></li>
-<li><a href="#local-running-本地執行">Local Running 本地執行</a></li>
-<li><a href="#本地打包-hugo">本地打包 Hugo</a></li>
-<li><a href="#發佈到線上-web-server">發佈到線上 Web Server</a></li>
-</ul></li>
+<li><a href="#post-status-文章狀態">Post Status 文章狀態</a></li>
+<li><a href="#post-archetypes-文章模板">Post Archetypes 文章模板</a></li>
+<li><a href="#post-categories-文章分類與-tags-文章標籤">Post Categories 文章分類與 Tags 文章標籤</a></li>
 <li><a href="#references-參考連結">References 參考連結</a></li>
-<li><a href="#修訂內容">修訂內容</a></li>
 <li><a href="#todos-坑">Todos 坑</a></li>
 </ul>
 </nav>
 
-<h1 id="introduction-說在前面">Introduction 說在前面</h1>
+<h1 id="post-status-文章狀態">Post Status 文章狀態</h1>
 
-<p>文中有些超連結文字，可能會導致你一直想點開往外查看，建議可以放到需要在更進一步了解在點過去看，因為我從來沒使用過 Hugo，所以從開始到架設完成的經歷會比較多<code>參考</code>。</p>
-
-<h1 id="install-安裝">Install 安裝</h1>
-
-<p>這邊的安裝說明是以 Mac 為主，我的作業系統是 <code>macOS Catalina</code>，若需其他系統環境的安裝方式，請參考 
-<a href="https://gohugo.io/getting-started/installing" target="_blank">Hugo Getting Started - Installing</a>
-。</p>
-
-<p>安裝步驟如下:</p>
-
-<ul>
-<li><p>安裝 Hugo (CLI)</p>
-
-<p>我選擇透過 
-<a href="https://brew.sh/index_zh-tw" target="_blank">Homebrew</a>
- 安裝 Hugo。平常我習慣盡量統一用同一種方式、途徑安裝新東西，除非有其他考量(或是 brew 沒有)；安裝習慣一致後，日後遇到工作環境重置，要查找原本是如何安裝某指令時，不會忘記我曾經是怎麼安裝的，遇到的雜症會少一點。</p>
-<pre><code class="language-shell script" data-lang="shell script">brew install hugo</code></pre></li>
-
-<li><p>安裝成功後，執行以下指令，測試一下 hugo 指令是否可正常運作:</p>
-<pre><code class="language-shell script" data-lang="shell script">hugo version
-
-# output: 
-# Hugo Static Site Generator v0.74.3/extended darwin/amd64 BuildDate: unknown
-# 這邊你可以看到我裝好的版本是 v0.74.3，若你有一天遇到新版有問題時，也歡迎留言跟我分享。</code></pre></li>
-
-<li><p>建立新站點 (Site)</p>
-<pre><code class="language-shell script" data-lang="shell script"># hugo new site your-site-name
-# for example
-hugo new site my-hugo-blog</code></pre></li>
-
-<li><p>選擇佈景 (Themes)</p>
-
-<p>你可以到 
-<a href="https://themes.gohugo.io/" target="_blank">Hugo Themes</a>
- 選幾個看起來 ok 的佈景；我習慣是要先選到一個比較符合我想要的感覺的佈景，才會決定使用這個工具，所以在還沒開始做這些動作時，光是佈景就挑了好幾天，為節省正在觀看文章的你一點時間，在此提供幾個方向做參考:
+<p>以下列出
+<a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content" target="_blank">官方定義</a>
+文章的幾種滿足條件後可能的狀態，我目前只有用到 <code>草稿</code> 的部分:
 <p></p>
 
-<ol>
-<li>整體樣式: 你曾經看過的部落格樣式，你想要用跟他相似的，或是想用成一樣的</li>
-<li>文章風格: 例如你要專寫技術文章，可以透過 Hugo Theme 右側列出的 
-<a href="https://themes.gohugo.io/tags/blog/" target="_blank">tag</a>
- 去查找</li>
-<li>內外佈局: 文章展開 (more) 前後的感覺，是否要有側邊欄 (Menu)，或導航列 (Navbar) 等</li>
-<li>選單圖案: 佈景提供的 Menu 連結搭配的 icon 樣式、排列，與感覺</li>
-<li>markdown style: 佈景 demo 通常會有 
-<a href="https://louisbarranqueiro.github.io/hexo-theme-tranquilpeak/2015/05/28/Elements-showcase/" target="_blank">markdown showcase</a>
- 文章供你參考</li>
-<li>code block style: 佈景的 
-<a href="https://louisbarranqueiro.github.io/hexo-theme-tranquilpeak/2015/03/23/highlighted-code-showcase/" target="_blank">code block</a>
- 是否方便透過 config 替換樣式、顯示行號</li>
-<li>shortcode: 額外工具，例如 
-<a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#highlight-text" target="_blank">Highlight Text</a>
-、數學公式、流程圖繪製、
-<a href="https://analytics.google.com/analytics/web/" target="_blank">GA</a>
-、評論系統等
-<br /></li>
-</ol>
-
-<div class="alert info ">
-  <p>此處的連結參考都是以佈景 hugo-theme-tranquilpeak 為主。</p>
-</div>
-
-<p>在你備選的幾個佈景輪流試用中，根據每種佈景作者提供的參數，去切換參數設置看看，你才知道哪些是可隨你意思做動的部分，而哪些是你以後寫文章會需要常用到的。</p>
-
-<p>我是從「佈局」與「整體感覺」先挑出幾個候選，然後每種我覺得會用到的工具都設定試試看；在還沒決定工具之前，我先用了 
-<a href="https://jekyllrb.com/" target="_blank">jekyll</a>
-，但選不到我想要的佈景，且看了幾套後覺得 <del>go 很潮</del> Hugo 標榜速度超快，所以跳來 Hugo，試用了 
-<a href="https://themes.gohugo.io/hugo-theme-even/" target="_blank">Even</a>
- 與 
-<a href="https://themes.gohugo.io/hugo-tranquilpeak-theme/" target="_blank">Tranquilpeak</a>
- 之後，才決定用後者。</p></li>
-
-<li><p>安裝佈景</p>
-
-<p>以我自己使用的佈景為例，我沒有透過 git submodule 的方式安裝，而是直接 clone 到本地，將 clone 下來的專案放到 hugo site 資料夾 themes 底下，跟透過 submodule 設置是同樣意思。</p>
-<pre><code class="language-shell script" data-lang="shell script"># 在專案資料夾底下
-git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranquilpeak
-
-# themes 資料夾是用來專門放置佈景的
-# 特地將 hugo-tranquilpeak-theme 重命名為 tranquilpeak，在設置 config 時指定佈景名稱比較方便</code></pre>
-<div class="alert info ">
-  <p>通常每個佈景都會有自己的配置方式，你可以先讀一下佈景的 README.md 後，在跟著佈景的安裝方式走一遍，也可看看佈景有哪些東西供你做調整配置 (config.toml)。</p>
-</div></li>
+<ul>
+<li>發布或未發布: Content with a future <code>publishdate</code> value</li>
+<li>草稿或已完成: Content with <code>draft: true or false</code> status</li>
+<li>有效或已過期: Content with a past <code>expirydate</code> value</li>
 </ul>
 
-<h1 id="usage-基本使用">Usage 基本使用</h1>
+<p>而我自己在寫文時，我把文章區分為 <code>page</code>、<code>post</code>，以及 <code>draft</code>:
+<p></p>
 
-<p>hugo 指令搞定後，site 建立完成，佈景設置好，基本的就剩「文章操作」、「發布上線」這兩件事。</p>
+<ul>
+<li>draft 草稿文章 - 尚未完成的文章，本地編譯時需帶參數 <code>-D</code> 才可以看到此類型文章</li>
+<li>post 已完成文章 - 將草稿改為已完成 (設置 
+<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Front Matter</a>
+ <code>draft</code> 狀態 <code>true</code> -&gt; <code>false</code>)</li>
+<li>page 單頁面 - 例如關於我 (about-me)，履歷 (CV)，登陸頁 (Landing Page) 等等，這類頁面通常不掛分類 (category) 與標籤 (tag)</li>
+</ul>
 
-<h2 id="create-post-新增文章">Create Post 新增文章</h2>
-<pre><code class="language-shell script" data-lang="shell script">hugo new post/my-first-post.md</code></pre><pre><code>稍微說明一下，`post/xxx.md` 這個結構是: `資料夾/檔案名稱+markdown 副檔名`，指令執行之後，檔案會長在 `/content` 底下，例如 `/content/post/filename.md`
+<h1 id="post-archetypes-文章模板">Post Archetypes 文章模板</h1>
+
+<p>我根據 post status 準備了各自的模板，模板文件會放在 <code>/archetypes</code> 中，以下是以草稿模板範例:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;
+author: littlebookboy
+type: post
+date: {{ .Date }}
+draft: true
+categories: [&#34;dev&#34;]
+tags: [&#34;general&#34;]
+keywords: [&#34;post&#34;]
+---
+
+<span style="color:#75715e">&lt;!--more--&gt;</span></code></pre></div>
+<p>透過 <code>hugo server -D</code>，查看首頁:</p>
+
+
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+<div class="figure fig-100" >
+  
+    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.42.14.png" title="首頁" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.42.14.png"  alt="首頁">
+  
+    </a>
+  
+   
+    <span class="caption">首頁</span>
+  
+</div>
+
+  <div style="clear:both;"></div>
+
+
+<p>這是點了繼續閱讀 (More) 查看內文的樣子:</p>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+<div class="figure fig-100" >
+  
+    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.43.27.png" title="內文" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.43.27.png"  alt="內文">
+  
+    </a>
+  
+   
+    <span class="caption">內文</span>
+  
+</div>
+
+
+<h1 id="post-categories-文章分類與-tags-文章標籤">Post Categories 文章分類與 Tags 文章標籤</h1>
+
+<p>在 
+<a href="https://gohugo.io/content-management/front-matter/#front-matter-variables" target="_blank">Front Matter</a>
+ 區域中，有文章分類與文章標籤可設置，例如:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">categories: [&#34;Tech&#34;, &#34;Daily&#34;]
+tags: [&#34;Hugo&#34;, &#34;GitHub&#34;]</code></pre></div>
+<p>或是</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">categories: 
+  <span style="color:#66d9ef">-</span> Tech
+  <span style="color:#66d9ef">-</span> Daily 
+tags: 
+  <span style="color:#66d9ef">-</span> Hugo
+  - GitHub</code></pre></div>
+<p>透過設置分類與標籤，在查找某篇文章時，除了透過名稱之外，還可以用較為模糊的方式查找文章。那這些分類、標籤，甚至系列該如何運用呢？舉個例子:
+<p></p>
+
+<ul>
+<li>category: 最模糊、抽象的大方向，例如生活、工作、心得、迷因、行銷、技術、遊戲、開箱</li>
+<li>tags: 具體名詞(你最常用的檢索字)，例如 3C、課後心得、台北景點{專有名稱}、<del>西斯</del></li>
+<li>series: 可被歸類成一個系列的文章，例如「美食分享」、「攝影技巧」、「運動健身」</li>
+</ul>
+
+<p>在我看到官網「舉例」可以把 categories 移除時，我的看法是因為這東西「與 tags 太像」，但要怎麼分類使用，要<span class="highlight-text yellow">以你的習慣為主</span>，我的習慣是:
+<p></p>
+
+<ul>
+<li>category:
+
+<ul>
+<li><code>Talking</code> - 聊天，記錄比較偏「個人」的東西，例如成長、生活變化、紀錄雜事等</li>
+<li><code>Tech</code> - 科技、技術，也是聊天，但內容都是技術的東西，有時會把求解過程歸為此類</li>
+<li><code>Experience</code> - 此分類我偏向為「讀書」心得</li>
+<li><code>Tutorials</code> - 教學，把我會的東西整理成 step by step 的文章，若偏 <code>Tech</code> 技術相關，就看內容比例去定義用哪一個，如果分類不出來，可能要思考拆文，或改成加上標籤，我只有 tags 會一文多標。</li>
+</ul></li>
+<li>tags:
+
+<ul>
+<li>Hugo</li>
+<li>Laravel</li>
+<li>MySQL</li>
+<li>PHP</li>
+<li>LineBot</li>
+</ul></li>
+<li>series:
+
+<ul>
+<li>貼身打造個人部落格</li>
+<li>Laravel 源碼追追追(之類的)</li>
+</ul></li>
+</ul>
 
 <div class="alert info ">
-  <p>官方使用 posts，如果佈景沒有特別限制，依個人偏好自訂即可 (記得
-<a href="https://github.com/olOwOlo/hugo-theme-even#installation" target="_blank">Even</a>
- 有限制不能用 posts)，例如 post/my-post.md。</p>
-</div></code></pre>
-<h2 id="delete-post-刪除文章">Delete Post 刪除文章</h2>
-<pre><code>Hugo 刪除文章的方式就是<span class="highlight-text yellow">直接把檔案給移除</span>就好。
+  <p>在
+<a href="https://gohugo.io/content-management/taxonomies/#default-taxonomies" target="_blank">Hugo Taxonomy</a>
+ 有提到，你不需要額外設定你的 config，在 Hugo 目前版本中，已經預設替你啟用了 category 與 tags (不然其實是要自己啟用的)，你也可以透過 disableKinds 來停用 Taxonomy，或是透過
+<a href="https://gohugo.io/content-management/taxonomies/#example-removing-default-taxonomies" target="_blank">覆蓋設定</a>
+的方式來自訂分類，或是
+<a href="https://gohugo.io/content-management/taxonomies/#example-adding-a-custom-taxonomy-named-series" target="_blank">新建</a>
+一個你想要的分類。</p>
+</div>
 
-<div class="alert warning ">
-  <p>若是已經發布 public 資料包到線上的話，且你的 public 是使用 GitHub Page (有版本控制)，則你 clone 下來的 public 會存有舊的文章，需移除乾淨再重新打包，這會在 Hugo 發佈到 GitHub Page 說明。</p>
-</div></code></pre>
-<h2 id="local-running-本地執行">Local Running 本地執行</h2>
-
-<p>在你尚未把網站發布公開，或是文章還沒完成發表 (Publish) 前，通常會在本地寫文章、修修改改，直到吿一個段落；你可以透過執行以下指令，並打開 
-<a href="http://localhost:1313" target="_blank">localhost:1313</a>
- 查看網站發表後的樣子:</p>
-<pre><code class="language-shell script" data-lang="shell script">hugo server -D
-
-# or `hugo server` running without `draft: true` post</code></pre>
-<p>hugo 目前版本都已有 
-<a href="https://gohugo.io/getting-started/usage/" target="_blank">Live Reload</a>
- 模式，我們不用特別下指令 (舊版貌似要用 watch 還是啥)，也就是 server running 期間，修改配置、文章，都會馬上渲染生效。</p>
-
-<h2 id="本地打包-hugo">本地打包 Hugo</h2>
-
-<p>本地打包就是把你當前的 Hugo 專案，包成一整個可被訪問的靜態資源，產出到資料夾 <code>public</code>，日後你要把網站整個發布到線上時，就是把 <code>public</code> 整包丟到你的 web server 上，不用在另行編譯；你也可以透過指定 <code>publishdir</code> 來變更產出的資料夾名稱。</p>
-<pre><code class="language-shell script" data-lang="shell script">hugo
-
-# output (like):
-#                     | ZH-TW
-#  -------------------+--------
-#    Pages            |     2
-#    Paginator pages  |     0
-#    Non-page files   |     0
-#    Static files     |     9
-#    Processed images |     0
-#    Aliases          |     2
-#    Sitemaps         |     1
-#    Cleaned          |     0
-#  
-#  Total in 72 ms</code></pre>
-<h2 id="發佈到線上-web-server">發佈到線上 Web Server</h2>
-
-<p>最後，關於要把網站放到線上、公開讓別人閱覽，以及設置個人網址這部分，會另外在寫一篇文章說明，請參閱 <a href="https://blog.genesu.me/2020/08/29/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8-hugo-%E5%B0%B1%E4%B8%8A%E6%89%8B-mac-%E5%AE%89%E8%A3%9D%E7%AF%87/#todos-%E5%9D%91">坑</a>。</p>
+<p>最後，如果你需要再更近一步分出:「category 類別 &gt; sub-category 子類別」，你可以透過設置 <code>hierarchicalCategories</code> 為 <code>true</code> (佈景提供)，佈景會自動幫你分出子類別。</p>
 
 <h1 id="references-參考連結">References 參考連結</h1>
 
-<p>我盡量把我準備過程中，造訪過的連結都放在這，建議若你現在不需要，不一定要全都看懂才開始。
-<p></p>
-
 <ul>
 <li>
-<a href="https://gohugo.io/getting-started/quick-start/" target="_blank">Hugo Quick Start</a>
+<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
 </li>
-<li>
-<a href="https://gohugo.io/getting-started/installing" target="_blank">Hugo Getting Started - Installing</a>
-</li>
-<li>
-<a href="https://gohugo.io/getting-started/usage/" target="_blank">Hugo Getting Started - Usage</a>
-</li>
-<li>
-<a href="https://themes.gohugo.io/hugo-tranquilpeak-theme/" target="_blank">Hugo Theme - Tranquilpeak</a>
-</li>
-<li>
-<a href="https://tranquilpeak.kakawait.com/2015/06/who-is-using-tranquilpeak-hugo-theme/" target="_blank">Who's using Tranquilpeak Hugo Theme</a>
-</li>
-<li>
-<a href="https://louisbarranqueiro.github.io/hexo-theme-tranquilpeak/2014/10/29/Tags-plugins-showcase/" target="_blank">Hugo Themes Tranquilpeak Tags-plugins-showcase</a>
-</li>
-<li>
-<a href="https://gohugo.io/getting-started/directory-structure/" target="_blank">Hugo Directory Structure</a>
-</li>
-<li>
-<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank">Hugo hosting-on-github</a>
-</li>
-</ul>
-
-<h1 id="修訂內容">修訂內容</h1>
-
-<ul>
-<li>2020-09-02 新增「文章分類」與「文章標籤」用法</li>
-<li>2020-09-02 把「文章」部分內容拆出去「文章操作」</li>
 </ul>
 
 <h1 id="todos-坑">Todos 坑</h1>
@@ -499,7 +499,7 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
 文章作者: 
 <a href="https://blog.genesu.me/archives">littlebookboy</a>
 <br>
-永久鏈結: <page-rel-permalink><a class="link-word-wrap-break-word" href="https://blog.genesu.me//2020/08/make-a-blog-by-yourself-using-hugo-installation/" target="_blank">https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/</a></page-rel-permalink>
+永久鏈結: <page-rel-permalink><a class="link-word-wrap-break-word" href="https://blog.genesu.me//2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/" target="_blank">https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/</a></page-rel-permalink>
 <br>
 許可協議: 
 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
@@ -530,7 +530,7 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/" data-tooltip="貼身打造個人部落格 - 02. 文章操作">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -538,7 +538,7 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/08/hugo-seo-autolink-testing-result/" data-tooltip="Hugo seo-autolink 測試結果 (Result)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/" data-tooltip="貼身打造個人部落格 - 01. 安裝篇">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -556,13 +556,13 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -610,7 +610,7 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/" data-tooltip="貼身打造個人部落格 - 02. 文章操作">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -618,7 +618,7 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/08/hugo-seo-autolink-testing-result/" data-tooltip="Hugo seo-autolink 測試結果 (Result)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/" data-tooltip="貼身打造個人部落格 - 01. 安裝篇">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -636,13 +636,13 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -672,13 +672,13 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2020%2F08%2Fmake-a-blog-by-yourself-using-hugo-installation%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2020%2F09%2Fmake-a-blog-by-yourself-using-hugo-article-introduction%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2020%2F08%2Fmake-a-blog-by-yourself-using-hugo-installation%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2020%2F09%2Fmake-a-blog-by-yourself-using-hugo-article-introduction%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
@@ -770,9 +770,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/blog.genesu.me\/2020\/08\/make-a-blog-by-yourself-using-hugo-installation\/';
+          this.page.url = 'https:\/\/blog.genesu.me\/2020\/09\/make-a-blog-by-yourself-using-hugo-article-introduction\/';
           
-            this.page.identifier = '\/2020\/08\/make-a-blog-by-yourself-using-hugo-installation\/'
+            this.page.identifier = '\/2020\/09\/make-a-blog-by-yourself-using-hugo-article-introduction\/'
           
         };
         (function() {
