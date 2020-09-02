@@ -23,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://blog.genesu.me/categories/tech/</loc>
+    <loc>https://blog.genesu.me/categories/tutorials/</loc>
     <lastmod>2020-08-29T11:02:39+08:00</lastmod>
   </url>
   
@@ -49,6 +49,11 @@
   
   <url>
     <loc>https://blog.genesu.me/tags/shortcode/</loc>
+    <lastmod>2020-08-22T23:12:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/categories/tech/</loc>
     <lastmod>2020-08-22T23:12:30+08:00</lastmod>
   </url>
   

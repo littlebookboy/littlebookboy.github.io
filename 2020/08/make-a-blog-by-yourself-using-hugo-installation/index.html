@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
-<meta name="keywords" content="hugo, mac, quickstart, theme, 佈景, 文章, post, github, github page, develop, backend">
+<meta name="keywords" content="tutorials, hugo, mac, quickstart, theme, 佈景, 文章, post, github, github page, develop, backend">
 <meta name="description" content="分享我使用 Hugo 架設個人部落格的過程，本篇主要講安裝、基本使用，以及一些新手(我)可能會經歷到的細節">
 
 
@@ -31,7 +31,7 @@
   
   
     
-      <meta property="article:section" content="Tech">
+      <meta property="article:section" content="Tutorials">
     
   
   
@@ -266,11 +266,11 @@ if (!doNotTrack) {
   
     <span>分類</span>
     
-      <a class="category-link" href="https://blog.genesu.me/categories/tech">Tech</a>
+      <a class="category-link" href="https://blog.genesu.me/categories/tutorials">Tutorials</a>
     
   
 
-    約 11 分鐘
+    約 14 分鐘
   </div>
 
 </div>
@@ -293,7 +293,9 @@ if (!doNotTrack) {
 <li><a href="#post-status-文章狀態">Post Status 文章狀態</a></li>
 <li><a href="#post-archetypes-文章模板">Post Archetypes 文章模板</a></li>
 </ul></li>
+<li><a href="#post-categories-文章分類與-tags-文章標籤">Post Categories 文章分類與 Tags 文章標籤</a></li>
 <li><a href="#references-參考連結">References 參考連結</a></li>
+<li><a href="#修訂內容">修訂內容</a></li>
 <li><a href="#todos-坑">Todos 坑</a></li>
 </ul>
 </nav>
@@ -322,7 +324,8 @@ if (!doNotTrack) {
 <pre><code class="language-shell script" data-lang="shell script">hugo version
 
 # output: 
-# Hugo Static Site Generator v0.74.3/extended darwin/amd64 BuildDate: unknown</code></pre></li>
+# Hugo Static Site Generator v0.74.3/extended darwin/amd64 BuildDate: unknown
+# 這邊你可以看到我裝好的版本是 v0.74.3，若你有一天遇到新版有問題時，也歡迎留言跟我分享。</code></pre></li>
 
 <li><p>建立新站點 (Site)</p>
 <pre><code class="language-shell script" data-lang="shell script"># hugo new site your-site-name
@@ -563,6 +566,70 @@ keywords: [&#34;post&#34;]
 </div>
 
 
+<h1 id="post-categories-文章分類與-tags-文章標籤">Post Categories 文章分類與 Tags 文章標籤</h1>
+
+<p>在 
+<a href="https://gohugo.io/content-management/front-matter/#front-matter-variables" target="_blank">Front Matter</a>
+ 區域中，有文章分類與文章標籤可設置，例如:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">categories: [&#34;Tech&#34;, &#34;Daily&#34;]
+tags: [&#34;Hugo&#34;, &#34;GitHub&#34;]</code></pre></div>
+<p>或是</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">categories: 
+  <span style="color:#66d9ef">-</span> Tech
+  <span style="color:#66d9ef">-</span> Daily 
+tags: 
+  <span style="color:#66d9ef">-</span> Hugo
+  - GitHub</code></pre></div>
+<p>透過設置分類與標籤，在查找某篇文章時，除了透過名稱之外，還可以用較為模糊的方式查找文章。那這些分類、標籤，甚至系列該如何運用呢？舉個例子:
+<p></p>
+
+<ul>
+<li>category: 最模糊、抽象的大方向，例如生活、工作、心得、迷因、行銷、技術、遊戲、開箱</li>
+<li>tags: 具體名詞(你最常用的檢索字)，例如 3C、課後心得、台北景點{專有名稱}、<del>西斯</del></li>
+<li>series: 可被歸類成一個系列的文章，例如「美食分享」、「攝影技巧」、「運動健身」</li>
+</ul>
+
+<p>在我看到官網「舉例」可以把 categories 移除時，我的看法是因為這東西「與 tags 太像」，但要怎麼分類使用，要<span class="highlight-text yellow">以你的習慣為主</span>，我的習慣是:
+<p></p>
+
+<ul>
+<li>category:
+
+<ul>
+<li><code>Talking</code> - 聊天，記錄比較偏「個人」的東西，例如成長、生活變化、紀錄雜事等</li>
+<li><code>Tech</code> - 科技、技術，也是聊天，但內容都是技術的東西，有時會把求解過程歸為此類</li>
+<li><code>Experience</code> - 此分類我偏向為「讀書」心得</li>
+<li><code>Tutorials</code> - 教學，把我會的東西整理成 step by step 的文章，若偏 <code>Tech</code> 技術相關，就看內容比例去定義用哪一個，如果分類不出來，可能要思考拆文，或改成加上標籤，我只有 tags 會一文多標。</li>
+</ul></li>
+<li>tags:
+
+<ul>
+<li>Hugo</li>
+<li>Laravel</li>
+<li>MySQL</li>
+<li>PHP</li>
+<li>LineBot</li>
+</ul></li>
+<li>series:
+
+<ul>
+<li>貼身打造個人部落格</li>
+<li>Laravel 源碼追追追(之類的)</li>
+</ul></li>
+</ul>
+
+<div class="alert info ">
+  <p>在
+<a href="https://gohugo.io/content-management/taxonomies/#default-taxonomies" target="_blank">Hugo Taxonomy</a>
+ 有提到，你不需要額外設定你的 config，在 Hugo 目前版本中，已經預設替你啟用了 category 與 tags (不然其實是要自己啟用的)，你也可以透過 disableKinds 來停用 Taxonomy，或是透過
+<a href="https://gohugo.io/content-management/taxonomies/#example-removing-default-taxonomies" target="_blank">覆蓋設定</a>
+的方式來自訂分類，或是
+<a href="https://gohugo.io/content-management/taxonomies/#example-adding-a-custom-taxonomy-named-series" target="_blank">新建</a>
+一個你想要的分類。</p>
+</div>
+
+<p>最後，如果你需要再更近一步分出:「category 類別 &gt; sub-category 子類別」，你可以透過設置 <code>hierarchicalCategories</code> 為 <code>true</code> (佈景提供)，佈景會自動幫你分出子類別。</p>
+
 <h1 id="references-參考連結">References 參考連結</h1>
 
 <p>我盡量把我準備過程中，造訪過的連結都放在這，建議若你現在不需要，不一定要全都看懂才開始。
@@ -598,6 +665,12 @@ keywords: [&#34;post&#34;]
 </li>
 </ul>
 
+<h1 id="修訂內容">修訂內容</h1>
+
+<ul>
+<li>2020-09-02 新增「文章分類」與「文章標籤」用法</li>
+</ul>
+
 <h1 id="todos-坑">Todos 坑</h1>
 
 <p>其他文章日後再補上:
@@ -607,7 +680,7 @@ keywords: [&#34;post&#34;]
 <li><a href="#">貼身打造個人部落格 - 佈景篇 (醞釀中)</a></li>
 <li><a href="#">貼身打造個人部落格 - 網站發布篇 (醞釀中)</a></li>
 <li><a href="#">貼身打造個人部落格 - Hugo 資料結構篇 (醞釀中)</a></li>
-<li><a href="#">貼身打造個人部落格 - Hugo Shortcodes 使用篇 (醞釀中)</a></li>
+<li><a href="#">貼身打造個人部落格 - Hugo Shortcodes 篇 (醞釀中)</a></li>
 </ul>
 
 <hr />
