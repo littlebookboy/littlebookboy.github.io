@@ -7,19 +7,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
-<meta name="keywords" content="tutorials, hugo, mac, 文章, post, develop, backend">
-<meta name="description" content="介紹 Hugo 的文章模板、分類、標籤使用，以及我的文章歸類習慣">
+<meta name="keywords" content="tutorials, hugo, mac, 文章, post, front matter, config setting, develop, backend">
+<meta name="description" content="介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明">
 
 
-<meta property="og:description" content="介紹 Hugo 的文章模板、分類、標籤使用，以及我的文章歸類習慣">
+<meta property="og:description" content="介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明">
 <meta property="og:type" content="article">
-<meta property="og:title" content="貼身打造個人部落格 - 02. 文章分類">
-<meta name="twitter:title" content="貼身打造個人部落格 - 02. 文章分類">
-<meta property="og:url" content="https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
-<meta property="twitter:url" content="https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
+<meta property="og:title" content="貼身打造個人部落格 - 02. 文章 Front Matter">
+<meta name="twitter:title" content="貼身打造個人部落格 - 02. 文章 Front Matter">
+<meta property="og:url" content="https://blog.genesu.me/2020/09/hugo-front-matter/">
+<meta property="twitter:url" content="https://blog.genesu.me/2020/09/hugo-front-matter/">
 <meta property="og:site_name" content="高級伴讀書僮">
-<meta property="og:description" content="介紹 Hugo 的文章模板、分類、標籤使用，以及我的文章歸類習慣">
-<meta name="twitter:description" content="介紹 Hugo 的文章模板、分類、標籤使用，以及我的文章歸類習慣">
+<meta property="og:description" content="介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明">
+<meta name="twitter:description" content="介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明">
 <meta property="og:locale" content="zh-tw">
 
   
@@ -60,14 +60,14 @@
   <meta property="twitter:image" content="https://blog.genesu.me/images/avataaars.png">
 
 
-    <title>貼身打造個人部落格 - 02. 文章分類</title>
+    <title>貼身打造個人部落格 - 02. 文章 Front Matter</title>
 
     <link rel="icon" href="images/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
+    <link rel="canonical" href="https://blog.genesu.me/2020/09/hugo-front-matter/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -244,7 +244,7 @@ if (!doNotTrack) {
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      貼身打造個人部落格 - 02. 文章分類
+      貼身打造個人部落格 - 02. 文章 Front Matter
     </h1>
   
   
@@ -270,23 +270,26 @@ if (!doNotTrack) {
     
   
 
-    約 6 分鐘
+    約 11 分鐘
   </div>
 
 </div>
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>本篇介紹 
-<a href="https://gohugo.io/" target="_blank">Hugo</a>
- 的文章模板、分類、標籤使用，以及我的文章歸類習慣。</p>
+              <p>介紹 
+<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
+，包括模板、分類、標籤，與我目前的用法及設置參數說明。</p>
 
 <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
 <ul>
-<li><a href="#post-status-文章狀態">Post Status 文章狀態</a></li>
+<li><a href="#front-matter">Front Matter</a>
+<ul>
+<li><a href="#我的-front-matter">我的 Front Matter</a></li>
 <li><a href="#post-archetypes-文章模板">Post Archetypes 文章模板</a></li>
-<li><a href="#post-categories-文章分類與-tags-文章標籤">Post Categories 文章分類與 Tags 文章標籤</a></li>
-<li><a href="#front-matter">Front Matter</a></li>
+<li><a href="#post-status-文章狀態">Post Status 文章狀態</a></li>
+<li><a href="#post-categories-and-tags-文章分類與標籤">Post Categories and Tags 文章分類與標籤</a></li>
+</ul></li>
 <li><a href="#references-參考連結">References 參考連結</a></li>
 <li><a href="#modification-修訂內容">Modification 修訂內容</a></li>
 <li><a href="#todos-坑">Todos 坑</a></li>
@@ -294,33 +297,127 @@ if (!doNotTrack) {
 </ul>
 </nav>
 
-<h1 id="post-status-文章狀態">Post Status 文章狀態</h1>
+<h1 id="front-matter">Front Matter</h1>
 
-<p>以下列出
-<a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content" target="_blank">官方定義</a>
-文章的幾種滿足條件後可能的狀態，我目前只有用到 <code>草稿</code> 的部分:
-<p></p>
+<p>Front Matter 指的是: 每篇文章檔案內容中，放在檔案內容最前面那塊以 <span class="highlight-text cyan">---</span> 分隔的區塊內容。</p>
+
+<p>當你每次在產生新文章 (create new post.md) 時，Hugo 會從 <code>./archetypes</code> 找尋對應的文章模板，複製模板新建文章；被建置的每篇文章的 Front Matter 中的這些參數 {Params} 讓我們可以很方便去客製化每篇文章要長成什麼樣子，或是做其他運用，例如文章網址設置，SEO 關鍵字設置等。</p>
+
+<h2 id="我的-front-matter">我的 Front Matter</h2>
+
+<p>此篇文章我使用的 
+<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
+ 設置如下:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">title: &#34;貼身打造個人部落格 - 02. 文章 Front Matter&#34;
+description: &#34;介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明&#34;
+slug: &#34;hugo-front-matter&#34;
+author: littlebookboy
+type: post
+date: 2020-09-02T20:28:23+08:00
+draft: false
+categories: [&#34;Tutorials&#34;]
+tags: [&#34;Hugo&#34;]
+keywords: [&#34;tutorials&#34;, &#34;hugo&#34;, &#34;mac&#34;, &#34;文章&#34;, &#34;post&#34;, &#34;front matter&#34;, &#34;config setting&#34;]
+coverImage: https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/pexels-pixabay-207662.jpg
+metaAlignment: center
+coverMeta: out
+coverSize: partial</code></pre></div>
+<p>在開始說明每項參數前，以下若有提到關於 <code>config</code> setting 的部分一併列在此處 (為了排版)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">[permalinks]
+  post = &#34;/:year/:month/:slug/&#34;
+  page = &#34;/:slug/&#34;
+
+[params]
+  # 請注意，時間格式日期的 {數字} 不可變更，不然生成文章時，當前時間會秀逗
+  # 請參考 https://www.jianshu.com/p/c7f7fbb16932
+  dateFormat = &#34;2006-01-02 15:04:05 UTC+8&#34;</code></pre></div>
+<ul>
+<li><p>title 文章標題</p>
 
 <ul>
-<li>發布或未發布: Content with a future <code>publishdate</code> value</li>
-<li>草稿或已完成: Content with <code>draft: true or false</code> status</li>
-<li>有效或已過期: Content with a past <code>expirydate</code> value</li>
-</ul>
+<li>在 <code>config</code> 中設置 
+<a href="https://gohugo.io/content-management/urls/" target="_blank"> permalinks</a>
+<code>:title</code> 或是 <code>:slug</code> 時，會決定你的網址長什麼樣子，我設置 <code>type: post</code> 頁面網址為 <code>/:year/:month/:title/</code>。</li>
+<li><code>confit</code> 設置 <code>post = &quot;/:year...&quot;</code> 此處的 <code>post</code> 需對應文章 front matter 的 <code>type: post</code></li>
+<li>若 front matter 中沒有設置 <code>slug</code> 而 <code>permalinks</code> 指定用 <code>:slug</code> 時，預設會去抓 <code>title</code> (官方預設機制，非佈景實作)</li>
+<li>我的習慣是用 <code>slug</code> 決定網址，格式為英文烤肉串 <code>foo-bar-baz</code> 表示，而文章的 <code>filename</code> 與 <code>title</code> 取一樣 (檔案好找)，這樣<span class="highlight-text yellow">不會影響網址</span>，且 Google 建立索引貌似比較快 (體感速度)。</li>
+</ul></li>
 
-<p>而我自己在寫文時，我把文章區分為 <code>page</code>、<code>post</code>，以及 <code>draft</code>:
-<p></p>
+<li><p>description 文章概要</p>
 
 <ul>
-<li>draft 草稿文章 - 尚未完成的文章，本地編譯時需帶參數 <code>-D</code> 才可以看到此類型文章</li>
-<li>post 已完成文章 - 將草稿改為已完成 (設置 
-<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Front Matter</a>
- <code>draft</code> 狀態 <code>true</code> -&gt; <code>false</code>)</li>
-<li>page 單頁面 - 例如關於我 (about-me)，履歷 (CV)，登陸頁 (Landing Page) 等等，這類頁面通常不掛分類 (category) 與標籤 (tag)</li>
+<li>標示文章的概要，這個會被抓去做 seo 塞在 HTML 的 header 中</li>
+<li>文章被轉貼時，會顯示在下面的那一小段文字</li>
+<li>通常我會把這段文字寫在「閱讀更多」之前，方便看看每篇文章內容是什麼，概念上是盡量用兩行講完整篇文章的重點或方向</li>
+</ul></li>
+
+<li><p>slug 文章網址</p>
+
+<ul>
+<li>若 config 設置中 permalinks 指定 :slug 時，網址才會跟著轉換</li>
+<li>建議「建站之初」就要先定調，否則推上線又要改會有點小麻煩，主要是 sitemap 都提交後，若你有變更網址，要到 google search console 去重新提交索引，不然不知道要等多久以後才會在抓到你文章位址。</li>
+</ul></li>
+
+<li><p>author 文章作者</p>
+
+<ul>
+<li>標示文章的作者，這個會被抓去做 seo 塞在 HTML 的 header 中</li>
+</ul></li>
+
+<li><p>type 文章類別</p>
+
+<ul>
+<li>我目前有 <code>post</code>、<code>page</code>，以及 <code>draft</code> 三種類別</li>
+</ul></li>
+
+<li><p>date 文章創建日期</p>
+
+<ul>
+<li>目前是寫在模板中設置變數 <code>{{ .Date }}</code>，於每次生成文章時，會自動帶入當前時間</li>
+</ul></li>
+
+<li><p>draft 草稿狀態</p>
+
+<ul>
+<li>設為 true 時為草稿，發布或本地預覽時，需要添加 <code>-D</code> 參數才能看到這類文章</li>
+<li>設為 false 為正式文章，當 <code>date</code> 超過現在時間，發布或本地預覽就算不帶其他參數，都會看到這類文章</li>
+<li>請參考 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#post-status-文章狀態">Post Status 文章狀態</a></li>
+</ul></li>
+
+<li><p>categories 文章分類</p>
+
+<ul>
+<li>請參考 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#post-categories-and-tags-文章分類與標籤">Post Categories and Tags 文章分類與標籤</a></li>
+</ul></li>
+
+<li><p>tags 文章標籤</p>
+
+<ul>
+<li>請參考 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#post-categories-and-tags-文章分類與標籤">Post Categories and Tags 文章分類與標籤</a></li>
+</ul></li>
+
+<li><p>keywords 關鍵字</p>
+
+<ul>
+<li>標示文章的關鍵字，這個會被抓去做 seo 塞在 HTML 的 header 中</li>
+</ul></li>
+
+<li><p>其他參數</p>
+
+<ul>
+<li><code>coverImage</code> 佈景設置文章 cover image 的地方</li>
+<li><code>metaAlignment</code> 佈景設置文章 title 的位置</li>
+<li><code>coverMeta</code> 佈景設置文章 title 要放在 cover image 中央，還是外面</li>
+<li><code>coverSize</code> 佈景設置文章 cover image 要大張還是小張</li>
+<li>請參考 
+<a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#front-matter-settings" target="_blank">Tranquilpeak - Front-matter settings</a>
+</li>
+</ul></li>
 </ul>
 
-<h1 id="post-archetypes-文章模板">Post Archetypes 文章模板</h1>
+<h2 id="post-archetypes-文章模板">Post Archetypes 文章模板</h2>
 
-<p>我根據 post status 準備了各自的模板，模板文件會放在 <code>/archetypes</code> 中，以下是以草稿模板範例:</p>
+<p>我根據 post status 準備了各自的模板，模板文件會放在 <code>/archetypes</code> 中，以下是草稿模板範例:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
 title: &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;
 author: littlebookboy
@@ -333,7 +430,7 @@ keywords: [&#34;post&#34;]
 ---
 
 <span style="color:#75715e">&lt;!--more--&gt;</span></code></pre></div>
-<p>透過 <code>hugo server -D</code>，查看首頁:</p>
+<p>當你新增文章 <code>hugo new draft/my-first-post.md</code> 後，可透過 <code>hugo server -D</code>，查看首頁:</p>
 
 
  
@@ -410,7 +507,31 @@ keywords: [&#34;post&#34;]
 </div>
 
 
-<h1 id="post-categories-文章分類與-tags-文章標籤">Post Categories 文章分類與 Tags 文章標籤</h1>
+<h2 id="post-status-文章狀態">Post Status 文章狀態</h2>
+
+<p>以下列出
+<a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content" target="_blank">官方定義</a>
+文章的幾種滿足條件後可能的狀態，我目前只有用到 <code>草稿</code> 的部分:
+<p></p>
+
+<ul>
+<li>發布或未發布: Content with a future <code>publishdate</code> value</li>
+<li>草稿或已完成: Content with <code>draft: true or false</code> status</li>
+<li>有效或已過期: Content with a past <code>expirydate</code> value</li>
+</ul>
+
+<p>而我自己在寫文時，我把文章區分為 <code>page</code>、<code>post</code>，以及 <code>draft</code>:
+<p></p>
+
+<ul>
+<li>draft 草稿文章 - 尚未完成的文章，本地編譯時需帶參數 <code>-D</code> 才可以看到此類型文章</li>
+<li>post 已完成文章 - 將草稿改為已完成 (設置 
+<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Front Matter</a>
+ <code>draft</code> 狀態 <code>true</code> -&gt; <code>false</code>)</li>
+<li>page 單頁面 - 例如關於我 (about-me)，履歷 (CV)，登陸頁 (Landing Page) 等等，這類頁面通常不掛分類 (category) 與標籤 (tag)</li>
+</ul>
+
+<h2 id="post-categories-and-tags-文章分類與標籤">Post Categories and Tags 文章分類與標籤</h2>
 
 <p>在 
 <a href="https://gohugo.io/content-management/front-matter/#front-matter-variables" target="_blank">Front Matter</a>
@@ -474,13 +595,6 @@ tags:
 
 <p>最後，如果你需要再更近一步分出:「category 類別 &gt; sub-category 子類別」，你可以透過設置 <code>hierarchicalCategories</code> 為 <code>true</code> (佈景提供)，佈景會自動幫你分出子類別。</p>
 
-<h1 id="front-matter">Front Matter</h1>
-
-<p>(待補)
-之後會補上我目前有使用到的 
-<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
- 設置，以及一開始設置時間、與產生文章、config 設置是怎麼連動。</p>
-
 <h1 id="references-參考連結">References 參考連結</h1>
 
 <p>我盡量把我準備過程中，造訪過的連結都放在這，建議若你現在不需要，不一定要全都看懂才開始。
@@ -493,13 +607,19 @@ tags:
 <li>
 <a href="https://gohugo.io/content-management/taxonomies/" target="_blank">Hugo Taxonomies</a>
 </li>
+<li>
+<a href="https://gohugo.io/content-management/urls/" target="_blank">Hugo URL Management</a>
+</li>
+<li>
+<a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#front-matter-settings" target="_blank">Hugo Theme Tranquilpeak - Front-matter settings</a>
+</li>
 </ul>
 
 <h1 id="modification-修訂內容">Modification 修訂內容</h1>
 
 <ul>
-<li>2020-09-04 追加章節 <a href="https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/#front-matter">Front Matter</a></li>
-<li>2020-09-04 新增系列主題文章</li>
+<li>2020-09-04 追加章節 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#front-matter">Front Matter</a></li>
+<li>2020-09-04 新增 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#series-系列文章">Series 系列文章</a></li>
 </ul>
 
 <h1 id="todos-坑">Todos 坑</h1>
@@ -517,7 +637,7 @@ tags:
 <h1 id="series-系列文章">Series 系列文章</h1>
 
 <ul>
-<li><a href="https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/">貼身打造個人部落格 - 01. 安裝</a></li>
+<li><a href="https://blog.genesu.me/2020/08/hugo-installation/">貼身打造個人部落格 - 01. 安裝</a></li>
 <li>貼身打造個人部落格 - 02. 文章分類 (本篇)</li>
 </ul>
 
@@ -529,7 +649,7 @@ tags:
 文章作者: 
 <a href="https://blog.genesu.me/archives">littlebookboy</a>
 <br>
-永久鏈結: <page-rel-permalink><a class="link-word-wrap-break-word" href="https://blog.genesu.me//2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/" target="_blank">https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/</a></page-rel-permalink>
+永久鏈結: <page-rel-permalink><a class="link-word-wrap-break-word" href="https://blog.genesu.me//2020/09/hugo-front-matter/" target="_blank">https://blog.genesu.me/2020/09/hugo-front-matter/</a></page-rel-permalink>
 <br>
 許可協議: 
 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
@@ -568,7 +688,7 @@ tags:
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/" data-tooltip="貼身打造個人部落格 - 01. 安裝">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/08/hugo-installation/" data-tooltip="貼身打造個人部落格 - 01. 安裝">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -586,13 +706,13 @@ tags:
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2020/09/hugo-front-matter/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2020/09/hugo-front-matter/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -648,7 +768,7 @@ tags:
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/" data-tooltip="貼身打造個人部落格 - 01. 安裝">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/08/hugo-installation/" data-tooltip="貼身打造個人部落格 - 01. 安裝">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -666,13 +786,13 @@ tags:
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2020/09/hugo-front-matter/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2020/09/hugo-front-matter/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -702,13 +822,13 @@ tags:
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2020%2F09%2Fmake-a-blog-by-yourself-using-hugo-article-introduction%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2020%2F09%2Fhugo-front-matter%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2020%2F09%2Fmake-a-blog-by-yourself-using-hugo-article-introduction%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2020%2F09%2Fhugo-front-matter%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
@@ -800,9 +920,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/blog.genesu.me\/2020\/09\/make-a-blog-by-yourself-using-hugo-article-introduction\/';
+          this.page.url = 'https:\/\/blog.genesu.me\/2020\/09\/hugo-front-matter\/';
           
-            this.page.identifier = '\/2020\/09\/make-a-blog-by-yourself-using-hugo-article-introduction\/'
+            this.page.identifier = '\/2020\/09\/hugo-front-matter\/'
           
         };
         (function() {

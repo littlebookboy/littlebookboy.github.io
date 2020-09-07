@@ -12,22 +12,22 @@
     
     
     <item>
-      <title>貼身打造個人部落格 - 02. 文章分類</title>
-      <link>https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/</link>
+      <title>貼身打造個人部落格 - 02. 文章 Front Matter</title>
+      <link>https://blog.genesu.me/2020/09/hugo-front-matter/</link>
       <pubDate>Wed, 02 Sep 2020 20:28:23 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-article-introduction/</guid>
-      <description>&lt;p&gt;本篇介紹 
-&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
- 的文章模板、分類、標籤使用，以及我的文章歸類習慣。&lt;/p&gt;</description>
+      <guid>https://blog.genesu.me/2020/09/hugo-front-matter/</guid>
+      <description>&lt;p&gt;介紹 
+&lt;a href=&#34;https://gohugo.io/content-management/front-matter/&#34; target=&#34;_blank&#34;&gt;Hugo Front Matter&lt;/a&gt;
+，包括模板、分類、標籤，與我目前的用法及設置參數說明。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>貼身打造個人部落格 - 01. 安裝</title>
-      <link>https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/</link>
+      <link>https://blog.genesu.me/2020/08/hugo-installation/</link>
       <pubDate>Sat, 29 Aug 2020 11:02:39 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/08/make-a-blog-by-yourself-using-hugo-installation/</guid>
+      <guid>https://blog.genesu.me/2020/08/hugo-installation/</guid>
       <description>&lt;p&gt;本篇為分享我使用 
 &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
  架設個人部落格的歷程，主要會講安裝，與基本使用，還有身為 Hugo 小白的我的一些心得。&lt;/p&gt;</description>
