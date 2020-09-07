@@ -270,7 +270,7 @@ if (!doNotTrack) {
     
   
 
-    約 10 分鐘
+    約 11 分鐘
   </div>
 
 </div>
@@ -295,6 +295,7 @@ if (!doNotTrack) {
 <li><a href="#usage-基本使用">Usage 基本使用</a>
 <ul>
 <li><a href="#create-post-新增文章">Create Post 新增文章</a></li>
+<li><a href="#edit-post-編寫文章">Edit Post 編寫文章</a></li>
 <li><a href="#delete-post-刪除文章">Delete Post 刪除文章</a></li>
 <li><a href="#local-running-本地執行">Local Running 本地執行</a></li>
 <li><a href="#本地打包-hugo">本地打包 Hugo</a></li>
@@ -399,6 +400,25 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
 <a href="https://github.com/olOwOlo/hugo-theme-even#installation" target="_blank">Even</a>
  有限制不能用 posts)，例如 post/my-post.md。</p>
 </div>
+
+<h2 id="edit-post-編寫文章">Edit Post 編寫文章</h2>
+
+<p>文章內容主要是由 Markdown 語法編寫的，可參考 
+<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Markdown 語法說明</a>
+，我較常用的有:</p>
+
+<ul>
+<li><code>H1</code> - <code>H6</code> 標題: 運用此語法來產生 toc 目錄</li>
+<li><code>&gt;</code> 區塊引言: 我都使用佈景提供的 hl shortcode，比較少用 markdown 的 <code>&gt;</code></li>
+<li><code>*</code>, <code>-</code>, <code>+</code> 清單: 也就是在每行文字前面加上項目符號</li>
+<li><code>1.</code>, <code>2.</code> 有序清單: 也就是在每行文字前面加上有序序號，通常我不會遞增序號(從頭到尾都用 <code>1.</code>)，這樣方便抽換順序</li>
+<li>tab 縮排: 適當的使用縮排可以讓行與行之間有段落區別</li>
+<li>程式碼區塊: 我習慣使用三個 ` 成對去包住程式區塊，參考 
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code-and-syntax-highlighting" target="_blank">Code and Syntax Highlighting</a>
+</li>
+</ul>
+
+<p>蠻多的就不在此一一列舉。</p>
 
 <h2 id="delete-post-刪除文章">Delete Post 刪除文章</h2>
 
