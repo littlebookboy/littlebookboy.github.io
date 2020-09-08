@@ -13,10 +13,10 @@
     
     <item>
       <title>貼身打造個人部落格 - 03. 網站發布</title>
-      <link>https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-github-page-deploy/</link>
+      <link>https://blog.genesu.me/2020/09/hugo-site-deploy/</link>
       <pubDate>Wed, 02 Sep 2020 21:02:03 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/09/make-a-blog-by-yourself-using-hugo-github-page-deploy/</guid>
+      <guid>https://blog.genesu.me/2020/09/hugo-site-deploy/</guid>
       <description>&lt;p&gt;架設好 
 &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
  部落格，接著要把它放到網路上公開 (
