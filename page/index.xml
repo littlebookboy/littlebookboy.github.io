@@ -5,11 +5,7 @@
     <link>https://blog.genesu.me/page/</link>
     <description>Recent content in Pages on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://blog.genesu.me/page/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://blog.genesu.me/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://blog.genesu.me/about-me/</link>

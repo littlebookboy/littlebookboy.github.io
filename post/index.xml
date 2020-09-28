@@ -6,10 +6,15 @@
     <description>Recent content in Posts on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2020 21:02:03 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.genesu.me/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 28 Sep 2020 13:15:56 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第 12 屆 IT 邦幫忙鐵人賽文章連結彙整</title>
+      <link>https://blog.genesu.me/2020/09/12th-ithelp/</link>
+      <pubDate>Mon, 28 Sep 2020 13:15:56 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/2020/09/12th-ithelp/</guid>
+      <description>&lt;p&gt;今年因為一些機緣，&lt;del&gt;跳了個鐵人賽的坑&lt;/del&gt;參加了第 12 屆的 iT 邦幫忙鐵人賽，講「Hugo 貼身打造個人部落格」，本篇是文章連結列表。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>貼身打造個人部落格 - 03. 網站發布</title>

@@ -3,8 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog.genesu.me/categories/</loc>
-    <lastmod>2020-09-02T21:02:03+08:00</lastmod>
+    <loc>https://blog.genesu.me/tags/general/</loc>
+    <lastmod>2020-09-28T13:15:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/post/</loc>
+    <lastmod>2020-09-28T13:15:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/tags/</loc>
+    <lastmod>2020-09-28T13:15:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/2020/09/12th-ithelp/</loc>
+    <lastmod>2020-09-28T13:15:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/</loc>
+    <lastmod>2020-09-28T13:15:56+08:00</lastmod>
   </url>
   
   <url>
@@ -13,33 +33,8 @@
   </url>
   
   <url>
-    <loc>https://blog.genesu.me/post/</loc>
-    <lastmod>2020-09-02T21:02:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.genesu.me/tags/</loc>
-    <lastmod>2020-09-02T21:02:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.genesu.me/categories/tech/</loc>
-    <lastmod>2020-09-02T21:02:03+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.genesu.me/2020/09/hugo-site-deploy/</loc>
     <lastmod>2020-09-02T21:02:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.genesu.me/</loc>
-    <lastmod>2020-09-02T21:02:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.genesu.me/categories/tutorials/</loc>
-    <lastmod>2020-09-02T20:28:23+08:00</lastmod>
   </url>
   
   <url>
@@ -74,11 +69,6 @@
   
   <url>
     <loc>https://blog.genesu.me/tags/talking/</loc>
-    <lastmod>2020-08-21T22:19:22+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.genesu.me/categories/talking/</loc>
     <lastmod>2020-08-21T22:19:22+08:00</lastmod>
   </url>
   

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.75.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="hugo, mac, quickstart, theme, 佈景, 文章, post, github, github page, config setting, godaddy, develop, backend">
 <meta name="description" content="架設好 Hugo 部落格，接著要把它放到網路上公開 (GitHub Page) 讓人瀏覽">
@@ -29,10 +29,6 @@
     <meta property="article:modified_time" content="2020-09-02T21:02:03">
   
   
-  
-    
-      <meta property="article:section" content="Tech">
-    
   
   
     
@@ -153,16 +149,6 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.genesu.me/categories">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
-      
-      <span class="sidebar-button-desc">分類</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
       <a class="sidebar-button-link " href="https://blog.genesu.me/tags">
     
       <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
@@ -262,14 +248,6 @@ if (!doNotTrack) {
       </time>
     
     
-  
-  
-    <span>分類</span>
-    
-      <a class="category-link" href="https://blog.genesu.me/categories/tech">Tech</a>
-    
-  
-
     約 6 分鐘
   </div>
 
@@ -526,15 +504,15 @@ if (!doNotTrack) {
 <h2 id="public-底下新增文字檔案-cname">public 底下新增文字檔案 CNAME</h2>
 
 <p>內容如下</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">blog.genesu.me</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">blog.genesu.me</span></code></pre></div>
 <p>內容是放你自己買的網址，這邊我有包含子域名多跳一層，或許你不需要，可只用 <code>genesu.me</code> 即可。</p>
 
 <h2 id="設置-config-toml-baseurl">設置 config.toml baseURL</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># 使用 GitHub Page 預設網址</span>
-baseURL = <span style="color:#e6db74">&#34;https://littlebookboy.github.io/&#34;</span>
+<span style="color:#ae81ff">baseURL = &#34;https://littlebookboy.github.io/&#34;</span>
 
 <span style="color:#75715e"># or 有自訂購買的網址</span>
-baseURL = <span style="color:#e6db74">&#34;https://blog.genesu.me/&#34;</span></code></pre></div>
+<span style="color:#ae81ff">baseURL = &#34;https://blog.genesu.me/&#34;</span></code></pre></div>
 <h2 id="設置-github-repository-setting">設置 GitHub Repository Setting</h2>
 
 
@@ -732,7 +710,7 @@ CNAME blog littlebookboy.github.io</code></pre>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/09/12th-ithelp/" data-tooltip="第 12 屆 IT 邦幫忙鐵人賽文章連結彙整">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -812,7 +790,7 @@ CNAME blog littlebookboy.github.io</code></pre>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/09/12th-ithelp/" data-tooltip="第 12 屆 IT 邦幫忙鐵人賽文章連結彙整">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
