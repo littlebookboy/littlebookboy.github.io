@@ -6,7 +6,11 @@
     <description>Recent content in Talking on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2020 22:19:22 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/talking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Aug 2020 22:19:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.genesu.me/tags/talking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>為何我要寫文章</title>
       <link>https://blog.genesu.me/2020/08/why-do-i-write-articles/</link>
