@@ -6,24 +6,20 @@
     <description>Recent content in Tags on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2020 13:15:56 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.genesu.me/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 06 Oct 2020 18:15:57 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>General</title>
-      <link>https://blog.genesu.me/tags/general/</link>
-      <pubDate>Mon, 28 Sep 2020 13:15:56 +0800</pubDate>
+      <title>Learning</title>
+      <link>https://blog.genesu.me/tags/learning/</link>
+      <pubDate>Tue, 06 Oct 2020 18:15:57 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/tags/general/</guid>
+      <guid>https://blog.genesu.me/tags/learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
       <link>https://blog.genesu.me/tags/hugo/</link>
-      <pubDate>Wed, 02 Sep 2020 21:02:03 +0800</pubDate>
+      <pubDate>Mon, 28 Sep 2020 13:15:56 +0800</pubDate>
       
       <guid>https://blog.genesu.me/tags/hugo/</guid>
       <description></description>
