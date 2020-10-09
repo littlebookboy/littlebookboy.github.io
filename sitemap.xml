@@ -83,15 +83,15 @@
   </url>
   
   <url>
-    <loc>https://blog.genesu.me/about-me/</loc>
-  </url>
-  
-  <url>
     <loc>https://blog.genesu.me/archives/</loc>
   </url>
   
   <url>
     <loc>https://blog.genesu.me/page/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.genesu.me/about-me/</loc>
   </url>
   
 </urlset>

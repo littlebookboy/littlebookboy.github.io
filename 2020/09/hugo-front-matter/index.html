@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.75.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="tutorials, hugo, mac, 文章, post, front matter, config setting, develop, backend">
 <meta name="description" content="介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明">
@@ -248,7 +248,7 @@ if (!doNotTrack) {
       </time>
     
     
-    約 10 分鐘
+    約 11 分鐘
   </div>
 
 </div>
@@ -256,7 +256,9 @@ if (!doNotTrack) {
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>介紹 
-<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
+    
+    <a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
+    
 ，包括模板、分類、標籤，與我目前的用法及設置參數說明。</p>
 
 <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
@@ -283,7 +285,9 @@ if (!doNotTrack) {
 <h2 id="我的-front-matter">我的 Front Matter</h2>
 
 <p>此篇文章我使用的 
-<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
+    
+    <a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
+    
  設置如下:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">title: &#34;貼身打造個人部落格 - 02. 文章 Front Matter&#34;
 description: &#34;介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明&#34;
@@ -313,7 +317,9 @@ coverSize: partial</code></pre></div>
 
 <ul>
 <li>在 <code>config</code> 中設置 
-<a href="https://gohugo.io/content-management/urls/" target="_blank"> permalinks</a>
+    
+    <a href="https://gohugo.io/content-management/urls/" target="_blank"> permalinks</a>
+    
 <code>:title</code> 或是 <code>:slug</code> 時，會決定你的網址長什麼樣子，我設置 <code>type: post</code> 頁面網址為 <code>/:year/:month/:title/</code>。</li>
 <li><code>confit</code> 設置 <code>post = &quot;/:year...&quot;</code> 此處的 <code>post</code> 需對應文章 front matter 的 <code>type: post</code></li>
 <li>若 front matter 中沒有設置 <code>slug</code> 而 <code>permalinks</code> 指定用 <code>:slug</code> 時，預設會去抓 <code>title</code> (官方預設機制，非佈景實作)</li>
@@ -387,7 +393,9 @@ coverSize: partial</code></pre></div>
 <li><code>coverMeta</code> 佈景設置文章 title 要放在 cover image 中央，還是外面</li>
 <li><code>coverSize</code> 佈景設置文章 cover image 要大張還是小張</li>
 <li>請參考 
-<a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#front-matter-settings" target="_blank">Tranquilpeak - Front-matter settings</a>
+    
+    <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#front-matter-settings" target="_blank">Tranquilpeak - Front-matter settings</a>
+    
 </li>
 </ul></li>
 </ul>
@@ -487,7 +495,9 @@ keywords: [&#34;post&#34;]
 <h2 id="post-status-文章狀態">Post Status 文章狀態</h2>
 
 <p>以下列出
-<a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content" target="_blank">官方定義</a>
+    
+    <a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content" target="_blank">官方定義</a>
+    
 文章的幾種滿足條件後可能的狀態，我目前只有用到 <code>草稿</code> 的部分:
 <p></p>
 
@@ -503,7 +513,9 @@ keywords: [&#34;post&#34;]
 <ul>
 <li>draft 草稿文章 - 尚未完成的文章，本地編譯時需帶參數 <code>-D</code> 才可以看到此類型文章</li>
 <li>post 已完成文章 - 將草稿改為已完成 (設置 
-<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Front Matter</a>
+    
+    <a href="https://gohugo.io/content-management/front-matter/" target="_blank">Front Matter</a>
+    
  <code>draft</code> 狀態 <code>true</code> -&gt; <code>false</code>)</li>
 <li>page 單頁面 - 例如關於我 (about-me)，履歷 (CV)，登陸頁 (Landing Page) 等等，這類頁面通常不掛分類 (category) 與標籤 (tag)</li>
 </ul>
@@ -511,7 +523,9 @@ keywords: [&#34;post&#34;]
 <h2 id="post-categories-and-tags-文章分類與標籤">Post Categories and Tags 文章分類與標籤</h2>
 
 <p>在 
-<a href="https://gohugo.io/content-management/front-matter/#front-matter-variables" target="_blank">Front Matter</a>
+    
+    <a href="https://gohugo.io/content-management/front-matter/#front-matter-variables" target="_blank">Front Matter</a>
+    
  區域中，有文章分類與文章標籤可設置，例如:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">categories: [&#34;Tech&#34;, &#34;Daily&#34;]
 tags: [&#34;Hugo&#34;, &#34;GitHub&#34;]</code></pre></div>
@@ -561,13 +575,14 @@ tags:
 </ul>
 
 <div class="alert info ">
-  <p>在
-<a href="https://gohugo.io/content-management/taxonomies/#default-taxonomies" target="_blank">Hugo Taxonomy</a>
- 有提到，你不需要額外設定你的 config，在 Hugo 目前版本中，已經預設替你啟用了 category 與 tags (不然其實是要自己啟用的)，你也可以透過 disableKinds 來停用 Taxonomy，或是透過
-<a href="https://gohugo.io/content-management/taxonomies/#example-removing-default-taxonomies" target="_blank">覆蓋設定</a>
-的方式來自訂分類，或是
-<a href="https://gohugo.io/content-management/taxonomies/#example-adding-a-custom-taxonomy-named-series" target="_blank">新建</a>
-一個你想要的分類。</p>
+  <p><p>在</p>
+<pre><code>&lt;a href=&#34;https://gohugo.io/content-management/taxonomies/#default-taxonomies&#34; target=&#34;_blank&#34;&gt;Hugo Taxonomy&lt;/a&gt;</code></pre>
+<p>有提到，你不需要額外設定你的 config，在 Hugo 目前版本中，已經預設替你啟用了 category 與 tags (不然其實是要自己啟用的)，你也可以透過 disableKinds 來停用 Taxonomy，或是透過</p>
+<pre><code>&lt;a href=&#34;https://gohugo.io/content-management/taxonomies/#example-removing-default-taxonomies&#34; target=&#34;_blank&#34;&gt;覆蓋設定&lt;/a&gt;</code></pre>
+<p>的方式來自訂分類，或是</p>
+<pre><code>&lt;a href=&#34;https://gohugo.io/content-management/taxonomies/#example-adding-a-custom-taxonomy-named-series&#34; target=&#34;_blank&#34;&gt;新建&lt;/a&gt;</code></pre>
+<p>一個你想要的分類。</p>
+</p>
 </div>
 
 <p>最後，如果你需要再更近一步分出:「category 類別 &gt; sub-category 子類別」，你可以透過設置 <code>hierarchicalCategories</code> 為 <code>true</code> (佈景提供)，佈景會自動幫你分出子類別。</p>
@@ -579,16 +594,24 @@ tags:
 
 <ul>
 <li>
-<a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
+    
+    <a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
+    
 </li>
 <li>
-<a href="https://gohugo.io/content-management/taxonomies/" target="_blank">Hugo Taxonomies</a>
+    
+    <a href="https://gohugo.io/content-management/taxonomies/" target="_blank">Hugo Taxonomies</a>
+    
 </li>
 <li>
-<a href="https://gohugo.io/content-management/urls/" target="_blank">Hugo URL Management</a>
+    
+    <a href="https://gohugo.io/content-management/urls/" target="_blank">Hugo URL Management</a>
+    
 </li>
 <li>
-<a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#front-matter-settings" target="_blank">Hugo Theme Tranquilpeak - Front-matter settings</a>
+    
+    <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#front-matter-settings" target="_blank">Hugo Theme Tranquilpeak - Front-matter settings</a>
+    
 </li>
 </ul>
 
@@ -618,7 +641,9 @@ tags:
 <br>
 永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2020/09/hugo-front-matter/" target="_blank">https://blog.genesu.me/2020/09/hugo-front-matter/</a><br>
 許可協議: 
-<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
+    
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
+    
 
 
 </multiple-line-output>

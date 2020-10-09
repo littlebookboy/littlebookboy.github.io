@@ -5,14 +5,18 @@
     <link>https://blog.genesu.me/page/</link>
     <description>Recent content in Pages on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://blog.genesu.me/page/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    
+	<atom:link href="https://blog.genesu.me/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
-      <title>About Me</title>
+      <title>關於我</title>
       <link>https://blog.genesu.me/about-me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://blog.genesu.me/about-me/</guid>
-      <description>&amp;hellip;</description>
+      <description>  Back-end   Laravel Composer Package MySQL, SQLite, Redis PHPUnit Test Web Crawler (Dusk) AWS Docker      喜歡的食物  咖啡 無糖綠 雞腿飯 咖喱飯 牛肉麵 麻醬麵      特效出處 </description>
     </item>
     
   </channel>

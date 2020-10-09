@@ -6,7 +6,11 @@
     <description>Recent content on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2020 18:15:57 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Oct 2020 18:15:57 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.genesu.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>開點學習坑系列 2020-S4 總覽</title>
       <link>https://blog.genesu.me/2020/10/%E9%96%8B%E9%BB%9E%E5%AD%B8%E7%BF%92%E5%9D%91%E7%B3%BB%E5%88%97-2020-s4-%E7%B8%BD%E8%A6%BD/</link>
@@ -32,9 +36,13 @@
       
       <guid>https://blog.genesu.me/2020/09/hugo-site-deploy/</guid>
       <description>&lt;p&gt;架設好 
-&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
+    
+    &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
+    
  部落格，接著要把它放到網路上公開 (
-&lt;a href=&#34;https://pages.github.com/&#34; target=&#34;_blank&#34;&gt;GitHub Page&lt;/a&gt;
+    
+    &lt;a href=&#34;https://pages.github.com/&#34; target=&#34;_blank&#34;&gt;GitHub Page&lt;/a&gt;
+    
 ) 讓人瀏覽。&lt;/p&gt;</description>
     </item>
     
@@ -45,7 +53,9 @@
       
       <guid>https://blog.genesu.me/2020/09/hugo-front-matter/</guid>
       <description>&lt;p&gt;介紹 
-&lt;a href=&#34;https://gohugo.io/content-management/front-matter/&#34; target=&#34;_blank&#34;&gt;Hugo Front Matter&lt;/a&gt;
+    
+    &lt;a href=&#34;https://gohugo.io/content-management/front-matter/&#34; target=&#34;_blank&#34;&gt;Hugo Front Matter&lt;/a&gt;
+    
 ，包括模板、分類、標籤，與我目前的用法及設置參數說明。&lt;/p&gt;</description>
     </item>
     
@@ -56,7 +66,9 @@
       
       <guid>https://blog.genesu.me/2020/08/hugo-installation/</guid>
       <description>&lt;p&gt;本篇為分享我使用 
-&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
+    
+    &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
+    
  架設個人部落格的歷程，主要會講安裝，與基本使用，還有身為 Hugo 小白的我的一些心得。&lt;/p&gt;</description>
     </item>
     
@@ -76,7 +88,9 @@
       
       <guid>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing/</guid>
       <description>&lt;p&gt;今天要來測試一下 
-&lt;a href=&#34;https://gohugohq.com/partials/autolinking-shortcode-for-articles/&#34; target=&#34;_blank&#34;&gt;seo-autolink&lt;/a&gt;
+    
+    &lt;a href=&#34;https://gohugohq.com/partials/autolinking-shortcode-for-articles/&#34; target=&#34;_blank&#34;&gt;seo-autolink&lt;/a&gt;
+    
  這個 hugo shortcode，可以幫助你快速建置內文 seo link。&lt;/p&gt;</description>
     </item>
     
@@ -90,12 +104,12 @@
     </item>
     
     <item>
-      <title>About Me</title>
+      <title>關於我</title>
       <link>https://blog.genesu.me/about-me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://blog.genesu.me/about-me/</guid>
-      <description>&amp;hellip;</description>
+      <description>  Back-end   Laravel Composer Package MySQL, SQLite, Redis PHPUnit Test Web Crawler (Dusk) AWS Docker      喜歡的食物  咖啡 無糖綠 雞腿飯 咖喱飯 牛肉麵 麻醬麵      特效出處 </description>
     </item>
     
   </channel>

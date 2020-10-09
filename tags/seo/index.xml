@@ -6,7 +6,11 @@
     <description>Recent content in SEO on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2020 23:12:30 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/seo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Aug 2020 23:12:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.genesu.me/tags/seo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Hugo seo-autolink 測試結果 (Result)</title>
       <link>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing-result/</link>
@@ -23,7 +27,9 @@
       
       <guid>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing/</guid>
       <description>&lt;p&gt;今天要來測試一下 
-&lt;a href=&#34;https://gohugohq.com/partials/autolinking-shortcode-for-articles/&#34; target=&#34;_blank&#34;&gt;seo-autolink&lt;/a&gt;
+    
+    &lt;a href=&#34;https://gohugohq.com/partials/autolinking-shortcode-for-articles/&#34; target=&#34;_blank&#34;&gt;seo-autolink&lt;/a&gt;
+    
  這個 hugo shortcode，可以幫助你快速建置內文 seo link。&lt;/p&gt;</description>
     </item>
     

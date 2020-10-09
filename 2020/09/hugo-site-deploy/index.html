@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.75.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="hugo, mac, quickstart, theme, 佈景, 文章, post, github, github page, config setting, godaddy, develop, backend">
 <meta name="description" content="架設好 Hugo 部落格，接著要把它放到網路上公開 (GitHub Page) 讓人瀏覽">
@@ -256,9 +256,13 @@ if (!doNotTrack) {
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>架設好 
-<a href="https://gohugo.io/" target="_blank">Hugo</a>
+    
+    <a href="https://gohugo.io/" target="_blank">Hugo</a>
+    
  部落格，接著要把它放到網路上公開 (
-<a href="https://pages.github.com/" target="_blank">GitHub Page</a>
+    
+    <a href="https://pages.github.com/" target="_blank">GitHub Page</a>
+    
 ) 讓人瀏覽。</p>
 
 <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
@@ -282,21 +286,28 @@ if (!doNotTrack) {
 <h1 id="introduction-說在前面">Introduction 說在前面</h1>
 
 <p>這次要介紹如何把 Hugo 整包丟到 
-<a href="https://pages.github.com/" target="_blank">GitHub Page</a>
+    
+    <a href="https://pages.github.com/" target="_blank">GitHub Page</a>
+    
  上；除了 GitHub Page 以外，我 (一開始) 還有使用過 
-<a href="https://gohugo.io/hosting-and-deployment/hosting-on-firebase/" target="_blank">Firebase</a>
+    
+    <a href="https://gohugo.io/hosting-and-deployment/hosting-on-firebase/" target="_blank">Firebase</a>
+    
  放部落格，後來選擇了 GitHub Page 是因為 Firebase 的 
-<a href="https://analytics.google.com/analytics/web/" target="_blank">Google Analytics</a>
+    
+    <a href="https://analytics.google.com/analytics/web/" target="_blank">Google Analytics</a>
+    
  我怎麼設置都讀不到，避免花太多時間研究就先擱著，先用我比較熟悉的 GitHub Page。</p>
 
 <div class="alert info ">
-  <p>之後可能會轉到 GitLab 也說不定，我就可以把腳本透過
-<a href="https://docs.gitlab.com/ee/ci/" target="_blank">GitLab-CI</a>
- 自動化，透過 <code>git push</code> 做更新 trigger，你說為什麼不用
-<a href="https://github.com/features/actions" target="_blank">Action</a>
-，因為一來 Action 我沒用過，而且聽說
-<a href="https://blog.wu-boy.com/2019/05/introduction-to-github-actions/" target="_blank">有待加強</a>
-，二來 GitLab-CI 我比較常用。</p>
+  <p><p>之後可能會轉到 GitLab 也說不定，我就可以把腳本透過</p>
+<pre><code>&lt;a href=&#34;https://docs.gitlab.com/ee/ci/&#34; target=&#34;_blank&#34;&gt;GitLab-CI&lt;/a&gt;</code></pre>
+<p>自動化，透過 <code>git push</code> 做更新 trigger，你說為什麼不用</p>
+<pre><code>&lt;a href=&#34;https://github.com/features/actions&#34; target=&#34;_blank&#34;&gt;Action&lt;/a&gt;</code></pre>
+<p>，因為一來 Action 我沒用過，而且聽說</p>
+<pre><code>&lt;a href=&#34;https://blog.wu-boy.com/2019/05/introduction-to-github-actions/&#34; target=&#34;_blank&#34;&gt;有待加強&lt;/a&gt;</code></pre>
+<p>，二來 GitLab-CI 我比較常用。</p>
+</p>
 </div>
 
 <h1 id="github-page-介紹">GitHub Page 介紹</h1>
@@ -307,10 +318,14 @@ if (!doNotTrack) {
 
 <ul>
 <li>首先，你得要有 GitHub 的帳號，可以點
-<a href="https://github.com/join" target="_blank">這邊</a>
+    
+    <a href="https://github.com/join" target="_blank">這邊</a>
+    
 去他們官網註冊。</li>
 <li>登入後，創建一個資源庫 
-<a href="https://github.com/new" target="_blank">new repository</a>
+    
+    <a href="https://github.com/new" target="_blank">new repository</a>
+    
 ，在 <code>Repository name</code> 的地方輸入 <code>{your-user-name}.github.io</code>，如下圖:</li>
 </ul>
 
@@ -363,7 +378,9 @@ if (!doNotTrack) {
 
 <ul>
 <li>把你的 repository url 貼到以下腳本: (修改自官方提供的
-<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script" target="_blank">script</a>
+    
+    <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script" target="_blank">script</a>
+    
 )</li>
 </ul>
 
@@ -498,21 +515,23 @@ if (!doNotTrack) {
 <h1 id="github-page-cname">GitHub Page CNAME</h1>
 
 <p>如果你想使用自己的網址，可以到 domain 提供商買一個，我是在 
-<a href="https://tw.godaddy.com/" target="_blank">GoDaddy</a>
+    
+    <a href="https://tw.godaddy.com/" target="_blank">GoDaddy</a>
+    
  買的，設置步驟如下:</p>
 
 <h2 id="public-底下新增文字檔案-cname">public 底下新增文字檔案 CNAME</h2>
 
 <p>內容如下</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">blog.genesu.me</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">blog.genesu.me</code></pre></div>
 <p>內容是放你自己買的網址，這邊我有包含子域名多跳一層，或許你不需要，可只用 <code>genesu.me</code> 即可。</p>
 
 <h2 id="設置-config-toml-baseurl">設置 config.toml baseURL</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># 使用 GitHub Page 預設網址</span>
-<span style="color:#ae81ff">baseURL = &#34;https://littlebookboy.github.io/&#34;</span>
+baseURL = <span style="color:#e6db74">&#34;https://littlebookboy.github.io/&#34;</span>
 
 <span style="color:#75715e"># or 有自訂購買的網址</span>
-<span style="color:#ae81ff">baseURL = &#34;https://blog.genesu.me/&#34;</span></code></pre></div>
+baseURL = <span style="color:#e6db74">&#34;https://blog.genesu.me/&#34;</span></code></pre></div>
 <h2 id="設置-github-repository-setting">設置 GitHub Repository Setting</h2>
 
 
@@ -650,16 +669,24 @@ CNAME blog littlebookboy.github.io</code></pre>
 
 <ul>
 <li>
-<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank">Hugo Host on GitHub</a>
+    
+    <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank">Hugo Host on GitHub</a>
+    
 </li>
 <li>
-<a href="https://gohugo.io/hosting-and-deployment/hosting-on-firebase/" target="_blank">Hugo Host on Firebase</a>
+    
+    <a href="https://gohugo.io/hosting-and-deployment/hosting-on-firebase/" target="_blank">Hugo Host on Firebase</a>
+    
 </li>
 <li>
-<a href="https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site" target="_blank">Managing a custom domain for your GitHub Pages site</a>
+    
+    <a href="https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site" target="_blank">Managing a custom domain for your GitHub Pages site</a>
+    
 </li>
 <li>
-<a href="https://xiwan.io/archive/github-pages-use-custom-domain-name.html" target="_blank">GITHUB PAGES使用自訂網域名稱</a>
+    
+    <a href="https://xiwan.io/archive/github-pages-use-custom-domain-name.html" target="_blank">GITHUB PAGES使用自訂網域名稱</a>
+    
 </li>
 </ul>
 
@@ -681,7 +708,9 @@ CNAME blog littlebookboy.github.io</code></pre>
 <br>
 永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2020/09/hugo-site-deploy/" target="_blank">https://blog.genesu.me/2020/09/hugo-site-deploy/</a><br>
 許可協議: 
-<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
+    
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
+    
 
 
 </multiple-line-output>
