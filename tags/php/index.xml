@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PHP on 高級伴讀書僮</title>
+    <link>https://blog.genesu.me/tags/php/</link>
+    <description>Recent content in PHP on 高級伴讀書僮</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Feb 2021 21:12:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.genesu.me/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PHP Unicode 編解碼筆記</title>
+      <link>https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/</link>
+      <pubDate>Thu, 25 Feb 2021 21:12:56 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/</guid>
+      <description>&lt;p&gt;本文記錄一下，當接收到第三方返回的「中文漢字」是已經經過 Unicode 編碼時，如何還原成「正常漢字」去顯示的解法。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

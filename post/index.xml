@@ -6,14 +6,18 @@
     <description>Recent content in Posts on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2020 18:15:57 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Feb 2021 21:12:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.genesu.me/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
-      <title>開點學習坑系列 2020-S4 總覽</title>
-      <link>https://blog.genesu.me/2020/10/learning-2020-s4/</link>
-      <pubDate>Tue, 06 Oct 2020 18:15:57 +0800</pubDate>
+      <title>PHP Unicode 編解碼筆記</title>
+      <link>https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/</link>
+      <pubDate>Thu, 25 Feb 2021 21:12:56 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/10/learning-2020-s4/</guid>
-      <description>&lt;p&gt;列出 2020 第四季學習坑。&lt;/p&gt;</description>
+      <guid>https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/</guid>
+      <description>&lt;p&gt;本文記錄一下，當接收到第三方返回的「中文漢字」是已經經過 Unicode 編碼時，如何還原成「正常漢字」去顯示的解法。&lt;/p&gt;</description>
     </item>
     
     <item>

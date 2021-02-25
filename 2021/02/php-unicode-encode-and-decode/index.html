@@ -5,34 +5,34 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.75.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
-<meta name="keywords" content="learning, develop, backend">
-<meta name="description" content="開點學習坑系列 2020-S4 總覽">
+<meta name="keywords" content="PHP, encode, decode, develop, backend">
+<meta name="description" content="PHP Unicode 編解碼筆記">
 
 
-<meta property="og:description" content="開點學習坑系列 2020-S4 總覽">
+<meta property="og:description" content="PHP Unicode 編解碼筆記">
 <meta property="og:type" content="article">
-<meta property="og:title" content="開點學習坑系列 2020-S4 總覽">
-<meta name="twitter:title" content="開點學習坑系列 2020-S4 總覽">
-<meta property="og:url" content="https://blog.genesu.me/2020/10/learning-2020-s4/">
-<meta property="twitter:url" content="https://blog.genesu.me/2020/10/learning-2020-s4/">
+<meta property="og:title" content="PHP Unicode 編解碼筆記">
+<meta name="twitter:title" content="PHP Unicode 編解碼筆記">
+<meta property="og:url" content="https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/">
+<meta property="twitter:url" content="https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/">
 <meta property="og:site_name" content="高級伴讀書僮">
-<meta property="og:description" content="開點學習坑系列 2020-S4 總覽">
-<meta name="twitter:description" content="開點學習坑系列 2020-S4 總覽">
+<meta property="og:description" content="PHP Unicode 編解碼筆記">
+<meta name="twitter:description" content="PHP Unicode 編解碼筆記">
 <meta property="og:locale" content="zh-tw">
 
   
-    <meta property="article:published_time" content="2020-10-06T18:15:57">
+    <meta property="article:published_time" content="2021-02-25T21:12:56">
   
   
-    <meta property="article:modified_time" content="2020-10-06T18:15:57">
+    <meta property="article:modified_time" content="2021-02-25T21:12:56">
   
   
   
   
     
-      <meta property="article:tag" content="Learning">
+      <meta property="article:tag" content="PHP">
     
   
 
@@ -46,8 +46,8 @@
 
 
 
-  <meta property="og:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/person-690157_1280.jpg">
-  <meta property="twitter:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/person-690157_1280.jpg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/luca-bravo-XJXWbfSo2f0-unsplash.jpg">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/luca-bravo-XJXWbfSo2f0-unsplash.jpg">
 
 
 
@@ -56,14 +56,14 @@
   <meta property="twitter:image" content="https://blog.genesu.me/images/avataaars.png">
 
 
-    <title>開點學習坑系列 2020-S4 總覽</title>
+    <title>PHP Unicode 編解碼筆記</title>
 
     <link rel="icon" href="images/favicon.png?v=1">
     
 
     
 
-    <link rel="canonical" href="https://blog.genesu.me/2020/10/learning-2020-s4/">
+    <link rel="canonical" href="https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -214,7 +214,7 @@ if (!doNotTrack) {
   <div class="post-header-cover
               text-center
               post-header-cover--partial"
-       style="background-image:url('https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/person-690157_1280.jpg')"
+       style="background-image:url('https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/luca-bravo-XJXWbfSo2f0-unsplash.jpg')"
        data-behavior="5">
     
   </div>
@@ -230,42 +230,139 @@ if (!doNotTrack) {
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      開點學習坑系列 2020-S4 總覽
+      PHP Unicode 編解碼筆記
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-10-06T18:15:57&#43;08:00">
+      <time itemprop="datePublished" datetime="2021-02-25T21:12:56&#43;08:00">
         
   
   
   
   
-    2020-10-06 18:15:57 UTC&#43;8
+    2021-02-25 21:12:56 UTC&#43;8
   
 
       </time>
     
     
-    約 1 分鐘
+    約 6 分鐘
   </div>
 
 </div>
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>列出 2020 第四季學習坑。</p>
+              <p>本文記錄一下，當接收到第三方返回的「中文漢字」是已經經過 Unicode 編碼時，如何還原成「正常漢字」去顯示的解法。</p>
 
-<h1 id="鐵人賽文章">鐵人賽文章</h1>
+<h2 id="介紹-json-encode">介紹 json_encode</h2>
+
+<p>首先可以先看一下<a href="http://outsidenote.blogspot.com/2013/03/jsonencodeunicode.html">這篇提到的方式</a>，僅限於「可掌握變數還是中文漢字時」使用：</p>
+<pre><code class="language-php=" data-lang="php=">$data = array(
+    &#39;title&#39; =&gt; &#39;高級伴讀書僮&#39;,
+    &#39;year&#39;  =&gt; 2021,
+    &#39;do&#39; =&gt; &#39;json_encode 編碼測試&#39;
+);
+$json = json_encode($data);
+echo &#34;$json&#34;;</code></pre>
+<blockquote>
+<p>output</p>
+
+<p>{&ldquo;title&rdquo;:&rdquo;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&rdquo;,&ldquo;year&rdquo;:2021,&ldquo;do&rdquo;:&ldquo;json_encode \u7de8\u78bc\u6e2c\u8a66&rdquo;}</p>
+</blockquote>
+<pre><code class="language-php=" data-lang="php=">// Use urlencode to workaround for json_encode without JSON_UNESCAPED_UNICODE
+array_walk_recursive($data, function(&amp;$value, $key) {
+    if(is_string($value)) {
+        $value = urlencode($value);
+    }
+});
+$json = urldecode(json_encode($data));
+echo &#34;$json&#34;;</code></pre>
+<blockquote>
+<p>output</p>
+
+<p>{&ldquo;title&rdquo;:&ldquo;高級伴讀書僮&rdquo;,&ldquo;year&rdquo;:2021,&ldquo;do&rdquo;:&ldquo;json_encode 編碼測試&rdquo;}</p>
+</blockquote>
+
+<p>概念上就是先把所有「中文字」做 <code>urlencode</code>，在經過 <code>json_encode</code> 之後，再把 encode 結果執行 <code>urldecode(整串 encode 結果)</code> 還原裡面被 <code>urlencode</code> 編碼過的中文。</p>
+
+<h1 id="unicode-編碼字符">Unicode 編碼字符</h1>
+
+<p>假設發出請求後，第三方返回的文字已被編碼成 Unicode，如</p>
+<pre><code>\uxxxx\uxxxx\uxxxx...</code></pre>
+<p>我們該如何還原成可辨識的文字？在這邊先簡單帶過認識一下什麼是 Unicode 編碼：</p>
+
+<blockquote>
+<p>Unicode</p>
+
+<p>在表示一個 Unicode 的字元時，通常會用「U+」然後緊接著一組十六進位的數字來表示這一個字元。在基本多文種平面（英語：Basic Multilingual Plane，簡寫 BMP。又稱為「零號平面」、plane 0）裏的所有字元，要用四個數字（即 2 位元組，共 16 位元，例如 U+4AE0，共支援六萬多個字元）；在零號平面以外的字元則需要使用五或六個數字。舊版的Unicode標準使用相近的標記方法，但卻有些微小差異：在Unicode 3.0 裏使用「U-」然後緊接著八個數字，而「U+」則必須隨後緊接著四個數字。 &mdash; 出處：<a href="https://zh.wikipedia.org/wiki/Unicode">Unicode - 維基百科</a></p>
+</blockquote>
+
+<p>上網找了些資料查看到底怎麼還還原 Unicode 文字 (一開始接到只有 \uxxxx 根本沒頭緒阿&hellip;)，不外乎提到上述<a href="http://outsidenote.blogspot.com/2013/03/jsonencodeunicode.html">第一部份</a>講的情境，或是使用 <code>mb_convert_encoding</code>、<code>icov</code> 等方式，去做到格式轉換；官方範例則是有提到：<code>json_encode</code> 要帶入參數 <code>JSON_UNESCAPED_UNICODE</code> 去跳脫編碼。</p>
+
+<p>BUT!!! 想要還原已經變成 <code>Unicode</code> 的編碼文字，其實可簡單使用 <code>json_decode</code> 達成，透過 <code>json_encode</code> 我們知道中文會被編碼成：</p>
+<pre><code class="language-php=" data-lang="php=">$string = &#39;高級伴讀書僮&#39;;
+echo json_encode($string);</code></pre>
+<blockquote>
+<p>output</p>
+
+<p>&ldquo;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&rdquo;</p>
+</blockquote>
+
+<p>注意到編碼結果帶有「雙引號」了嗎？因此我們可以透過此原理去解碼：</p>
+<pre><code class="language-php=" data-lang="php=">// 收到返回的內容已經被轉為 Unicode 了，想要轉成中文顯示
+$responseText = &#34;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&#34;;
+// 在編碼文字前後包上「雙引號」，並執行 `json_decode` 即可
+$zhHant = json_decode(&#39;&#34;&#39;.$responseText.&#39;&#34;&#39;);
+print_r($zhHant);</code></pre>
+<blockquote>
+<p>output</p>
+
+<p>高級伴讀書僮</p>
+</blockquote>
+
+<p>其中，補上雙引號在解碼這件事是不可省略的，否則解碼可能會失敗。</p>
+
+<h1 id="mb-convert-encoding">mb_convert_encoding</h1>
+
+<p>測試使用 <code>mb_convert_encoding</code> 做格式轉換 (<a href="https://www.php.net/manual/en/function.mb-convert-encoding.php">官方範例</a>)</p>
+<pre><code class="language-php=" data-lang="php=">$array = [&#34;高級伴讀書僮&#34;, &#34;編碼測試&#34;, &#39;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&#39;];
+
+// mb_convert_encoding ( array|string $string , string $to_encoding , array|string|null $from_encoding = null )
+// mb_convert_encoding(文字, 編碼後的格式，來源文字格式/不確定可不給參數，或是給個 auto)
+print_r(mb_convert_encoding($array, &#34;utf8&#34;));</code></pre>
+<p>根據上面程式碼，我就隨便假設有個使用場景為「讀入某個特殊編碼的檔案」，而你想把輸出全部轉為 utf8 時，可使用這個方法。</p>
+
+<h1 id="json-encode">json_encode</h1>
+
+<p>測試使用 <code>json_encode</code> 觀察編碼的效果 (<a href="https://www.php.net/manual/en/function.json-encode.php">官方範例</a>)</p>
+<pre><code class="language-php=" data-lang="php=">$stringArray = array(&#39;高級伴讀書僮&#39;);
+
+echo &#34;Normal: &#34;,  json_encode($stringArray), &#34;\n&#34;;
+echo &#34;Tags: &#34;,    json_encode($stringArray, JSON_HEX_TAG), &#34;\n&#34;;
+echo &#34;Apos: &#34;,    json_encode($stringArray, JSON_HEX_APOS), &#34;\n&#34;;
+echo &#34;Quot: &#34;,    json_encode($stringArray, JSON_HEX_QUOT), &#34;\n&#34;;
+echo &#34;Amp: &#34;,     json_encode($stringArray, JSON_HEX_AMP), &#34;\n&#34;;
+echo &#34;Unicode: &#34;, json_encode($stringArray, JSON_UNESCAPED_UNICODE), &#34;\n&#34;;
+echo &#34;All: &#34;,     json_encode($stringArray, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE), &#34;\n\n&#34;;</code></pre>
+<blockquote>
+<p>output</p>
+<pre><code class="language-php=" data-lang="php=">Normal: [&#34;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&#34;]
+Tags: [&#34;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&#34;]
+Apos: [&#34;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&#34;]
+Quot: [&#34;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&#34;]
+Amp: [&#34;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&#34;]
+Unicode: [&#34;高級伴讀書僮&#34;] // &lt;-- JSON_UNESCAPED_UNICODE 宣告跳脫 Unicode 編碼
+All: [&#34;高級伴讀書僮&#34;]</code></pre></blockquote>
+
+<h1 id="參考連結">參考連結</h1>
 
 <ul>
-<li><a href="https://ithelp.ithome.com.tw/articles/10101867">TDD 鐵人賽閱讀</a></li>
-<li><a href="https://ithelp.ithome.com.tw/articles/10245066">DDD 的部分</a></li>
-<li><a href="https://ithelp.ithome.com.tw/articles/10216645">Think in Domain-Driven Design</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E9%80%9A%E7%94%A8%E5%AD%97%E7%AC%A6%E9%9B%86">通用字元集 - 維基百科</a></li>
+<li><a href="http://zht.glyphwiki.org/wiki/GlyphWiki:%e9%a6%96%e9%a0%81">字形維基(GlyphWiki)</a></li>
 </ul>
-
-<p>從每天的文章，歸納出一個自己的結論、感想，至少要「寫出學習過程或感想」當作「學習完成」。</p>
 
 <hr />
 
@@ -275,7 +372,7 @@ if (!doNotTrack) {
 文章作者: 
 <a href="https://blog.genesu.me/archives">littlebookboy</a>
 <br>
-永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2020/10/learning-2020-s4/" target="_blank">https://blog.genesu.me/2020/10/learning-2020-s4/</a><br>
+永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2021/02/php-unicode-encode-and-decode/" target="_blank">https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/</a><br>
 許可協議: 
     
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
@@ -294,7 +391,7 @@ if (!doNotTrack) {
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">標籤</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://blog.genesu.me/tags/learning/">Learning</a>
+  <a class="tag tag--primary tag--small" href="https://blog.genesu.me/tags/php/">PHP</a>
 
                   </div>
                 
@@ -333,13 +430,13 @@ if (!doNotTrack) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2020/10/learning-2020-s4/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2020/10/learning-2020-s4/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -374,7 +471,7 @@ if (!doNotTrack) {
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2020 Gene (Littlebookboy). All Rights Reserved
+    &copy; 2021 Gene (Littlebookboy). All Rights Reserved
   </span>
 </footer>
 
@@ -413,13 +510,13 @@ if (!doNotTrack) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2020/10/learning-2020-s4/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2020/10/learning-2020-s4/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -449,13 +546,13 @@ if (!doNotTrack) {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2020%2F10%2Flearning-2020-s4%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2021%2F02%2Fphp-unicode-encode-and-decode%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2020%2F10%2Flearning-2020-s4%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2021%2F02%2Fphp-unicode-encode-and-decode%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
@@ -547,9 +644,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/blog.genesu.me\/2020\/10\/learning-2020-s4\/';
+          this.page.url = 'https:\/\/blog.genesu.me\/2021\/02\/php-unicode-encode-and-decode\/';
           
-            this.page.identifier = '\/2020\/10\/learning-2020-s4\/'
+            this.page.identifier = '\/2021\/02\/php-unicode-encode-and-decode\/'
           
         };
         (function() {
