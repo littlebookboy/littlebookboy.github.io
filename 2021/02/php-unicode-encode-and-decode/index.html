@@ -248,7 +248,7 @@ if (!doNotTrack) {
       </time>
     
     
-    約 6 分鐘
+    約 7 分鐘
   </div>
 
 </div>
@@ -356,6 +356,14 @@ Quot: [&#34;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&#34;]
 Amp: [&#34;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&#34;]
 Unicode: [&#34;高級伴讀書僮&#34;] // &lt;-- JSON_UNESCAPED_UNICODE 宣告跳脫 Unicode 編碼
 All: [&#34;高級伴讀書僮&#34;]</code></pre></blockquote>
+
+<h1 id="小結">小結</h1>
+
+<p>一開始收到 <code>\uxxxx</code> 這類文字編碼時，因為從來沒有遇到過，根本無從找起 (只能一段一段 \uxxxx 去 google 找)，一開始還猜是不是簡體文字的編碼，還是什麼神秘的加密文字，怎麼 google 都沒辦法精準找到相關說明 (孤陋寡聞吶&hellip;)，但我確信可以解碼，因為<a href="https://r12a.github.io/app-conversion/">這個網站</a>解的出來QQ；</p>
+
+<p>最後試著用 <code>json_encode</code> try 出可以得到一樣的編碼文字，也就是 Unicode 格式，再透過 <code>json_decode</code> 嘗試解碼，搞定。</p>
+
+<p>把 google 過程找到的相關作法都稍微摸過，多看幾個與編碼相關，且經常使用的語法，如果以後在實務上遇到，也能比較清楚選用哪個方案著手處理編碼問題。</p>
 
 <h1 id="參考連結">參考連結</h1>
 
