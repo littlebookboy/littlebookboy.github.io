@@ -259,7 +259,11 @@ if (!doNotTrack) {
 
 <h2 id="介紹-json-encode">介紹 json_encode</h2>
 
-<p>首先可以先看一下<a href="http://outsidenote.blogspot.com/2013/03/jsonencodeunicode.html">這篇提到的方式</a>，僅限於「可掌握變數還是中文漢字時」使用：</p>
+<p>首先可以先看一下
+    
+    <a href="http://outsidenote.blogspot.com/2013/03/jsonencodeunicode.html" target="_blank">這篇提到的方式</a>
+    
+，僅限於「可掌握變數還是中文漢字時」使用：</p>
 <pre><code class="language-php=" data-lang="php=">$data = array(
     &#39;title&#39; =&gt; &#39;高級伴讀書僮&#39;,
     &#39;year&#39;  =&gt; 2021,
@@ -297,10 +301,18 @@ echo &#34;$json&#34;;</code></pre>
 <blockquote>
 <p>Unicode</p>
 
-<p>在表示一個 Unicode 的字元時，通常會用「U+」然後緊接著一組十六進位的數字來表示這一個字元。在基本多文種平面（英語：Basic Multilingual Plane，簡寫 BMP。又稱為「零號平面」、plane 0）裏的所有字元，要用四個數字（即 2 位元組，共 16 位元，例如 U+4AE0，共支援六萬多個字元）；在零號平面以外的字元則需要使用五或六個數字。舊版的Unicode標準使用相近的標記方法，但卻有些微小差異：在Unicode 3.0 裏使用「U-」然後緊接著八個數字，而「U+」則必須隨後緊接著四個數字。 &mdash; 出處：<a href="https://zh.wikipedia.org/wiki/Unicode">Unicode - 維基百科</a></p>
+<p>在表示一個 Unicode 的字元時，通常會用「U+」然後緊接著一組十六進位的數字來表示這一個字元。在基本多文種平面（英語：Basic Multilingual Plane，簡寫 BMP。又稱為「零號平面」、plane 0）裏的所有字元，要用四個數字（即 2 位元組，共 16 位元，例如 U+4AE0，共支援六萬多個字元）；在零號平面以外的字元則需要使用五或六個數字。舊版的Unicode標準使用相近的標記方法，但卻有些微小差異：在Unicode 3.0 裏使用「U-」然後緊接著八個數字，而「U+」則必須隨後緊接著四個數字。 &mdash; 出處：
+    
+    <a href="https://zh.wikipedia.org/wiki/Unicode" target="_blank">Unicode - 維基百科</a>
+    
+</p>
 </blockquote>
 
-<p>上網找了些資料查看到底怎麼還還原 Unicode 文字 (一開始接到只有 \uxxxx 根本沒頭緒阿&hellip;)，不外乎提到上述<a href="http://outsidenote.blogspot.com/2013/03/jsonencodeunicode.html">第一部份</a>講的情境，或是使用 <code>mb_convert_encoding</code>、<code>icov</code> 等方式，去做到格式轉換；官方範例則是有提到：<code>json_encode</code> 要帶入參數 <code>JSON_UNESCAPED_UNICODE</code> 去跳脫編碼。</p>
+<p>上網找了些資料查看到底怎麼還還原 Unicode 文字 (一開始接到只有 \uxxxx 根本沒頭緒阿&hellip;)，不外乎提到上述
+    
+    <a href="http://outsidenote.blogspot.com/2013/03/jsonencodeunicode.html" target="_blank">第一部份</a>
+    
+講的情境，或是使用 <code>mb_convert_encoding</code>、<code>icov</code> 等方式，去做到格式轉換；官方範例則是有提到：<code>json_encode</code> 要帶入參數 <code>JSON_UNESCAPED_UNICODE</code> 去跳脫編碼。</p>
 
 <p>BUT!!! 想要還原已經變成 <code>Unicode</code> 的編碼文字，其實可簡單使用 <code>json_decode</code> 達成，透過 <code>json_encode</code> 我們知道中文會被編碼成：</p>
 <pre><code class="language-php=" data-lang="php=">$string = &#39;高級伴讀書僮&#39;;
@@ -327,7 +339,11 @@ print_r($zhHant);</code></pre>
 
 <h1 id="mb-convert-encoding">mb_convert_encoding</h1>
 
-<p>測試使用 <code>mb_convert_encoding</code> 做格式轉換 (<a href="https://www.php.net/manual/en/function.mb-convert-encoding.php">官方範例</a>)</p>
+<p>測試使用 <code>mb_convert_encoding</code> 做格式轉換 (
+    
+    <a href="https://www.php.net/manual/en/function.mb-convert-encoding.php" target="_blank">官方範例</a>
+    
+)</p>
 <pre><code class="language-php=" data-lang="php=">$array = [&#34;高級伴讀書僮&#34;, &#34;編碼測試&#34;, &#39;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&#39;];
 
 // mb_convert_encoding ( array|string $string , string $to_encoding , array|string|null $from_encoding = null )
@@ -337,7 +353,11 @@ print_r(mb_convert_encoding($array, &#34;utf8&#34;));</code></pre>
 
 <h1 id="json-encode">json_encode</h1>
 
-<p>測試使用 <code>json_encode</code> 觀察編碼的效果 (<a href="https://www.php.net/manual/en/function.json-encode.php">官方範例</a>)</p>
+<p>測試使用 <code>json_encode</code> 觀察編碼的效果 (
+    
+    <a href="https://www.php.net/manual/en/function.json-encode.php" target="_blank">官方範例</a>
+    
+)</p>
 <pre><code class="language-php=" data-lang="php=">$stringArray = array(&#39;高級伴讀書僮&#39;);
 
 echo &#34;Normal: &#34;,  json_encode($stringArray), &#34;\n&#34;;
@@ -359,7 +379,11 @@ All: [&#34;高級伴讀書僮&#34;]</code></pre></blockquote>
 
 <h1 id="補充">補充</h1>
 
-<p>後來搜尋關鍵字找到<a href="https://dotblogs.com.tw/twpg_slps970093/2019/07/10/081337">這篇</a>，借用作者的方法測試轉換的結果，理解到原來還有補滿 4 個字元(補零)，會比較通用：</p>
+<p>後來搜尋關鍵字找到
+    
+    <a href="https://dotblogs.com.tw/twpg_slps970093/2019/07/10/081337" target="_blank">這篇</a>
+    
+，借用作者的方法測試轉換的結果，理解到原來還有補滿 4 個字元(補零)，會比較通用：</p>
 <pre><code>function unicode_to_utf8($unicode_str) {
     $strArr = explode(&#34;\u&#34;,$unicode_str);
     $unicode_str = &#34;&#34;;
@@ -386,7 +410,11 @@ print_r(unicode_to_utf8(&#34;\u41\u61&#34;)); // 未滿四個字元的解碼測�
 
 <h1 id="小結">小結</h1>
 
-<p>一開始收到 <code>\uxxxx</code> 這類文字編碼時，因為從來沒有遇到過，根本無從找起 (只能一段一段 \uxxxx 去 google 找)，一開始還猜是不是簡體文字的編碼，還是什麼神秘的加密文字，怎麼 google 都沒辦法精準找到相關說明 (孤陋寡聞吶&hellip;)，但我確信可以解碼，因為<a href="https://r12a.github.io/app-conversion/">這個網站</a>解的出來QQ；</p>
+<p>一開始收到 <code>\uxxxx</code> 這類文字編碼時，因為從來沒有遇到過，根本無從找起 (只能一段一段 \uxxxx 去 google 找)，一開始還猜是不是簡體文字的編碼，還是什麼神秘的加密文字，怎麼 google 都沒辦法精準找到相關說明 (孤陋寡聞吶&hellip;)，但我確信可以解碼，因為
+    
+    <a href="https://r12a.github.io/app-conversion/" target="_blank">這個網站</a>
+    
+解的出來QQ；</p>
 
 <p>最後試著用 <code>json_encode</code> try 出可以得到一樣的編碼文字，也就是 Unicode 格式，再透過 <code>json_decode</code> 嘗試解碼，搞定。</p>
 
@@ -395,10 +423,26 @@ print_r(unicode_to_utf8(&#34;\u41\u61&#34;)); // 未滿四個字元的解碼測�
 <h1 id="參考連結">參考連結</h1>
 
 <ul>
-<li><a href="https://zh.wikipedia.org/wiki/%E9%80%9A%E7%94%A8%E5%AD%97%E7%AC%A6%E9%9B%86">通用字元集 - 維基百科</a></li>
-<li><a href="http://zht.glyphwiki.org/wiki/GlyphWiki:%e9%a6%96%e9%a0%81">字形維基(GlyphWiki)</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html">字符编码笔记：ASCII，Unicode 和 UTF-8 - 阮一峰的网络日志</a></li>
-<li><a href="http://www.chi2ko.com/tool/CJK.htm">字体编辑用中日韩汉字Unicode编码表</a></li>
+<li>
+    
+    <a href="https://zh.wikipedia.org/wiki/%E9%80%9A%E7%94%A8%E5%AD%97%E7%AC%A6%E9%9B%86" target="_blank">通用字元集 - 維基百科</a>
+    
+</li>
+<li>
+    
+    <a href="http://zht.glyphwiki.org/wiki/GlyphWiki:%e9%a6%96%e9%a0%81" target="_blank">字形維基(GlyphWiki)</a>
+    
+</li>
+<li>
+    
+    <a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank">字符编码笔记：ASCII，Unicode 和 UTF-8 - 阮一峰的网络日志</a>
+    
+</li>
+<li>
+    
+    <a href="http://www.chi2ko.com/tool/CJK.htm" target="_blank">字体编辑用中日韩汉字Unicode编码表</a>
+    
+</li>
 </ul>
 
 <hr />
