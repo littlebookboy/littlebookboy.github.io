@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
-<meta name="keywords" content="PHP, encode, decode, develop, backend">
+<meta name="keywords" content="PHP, unicode, utf8, encode, decode, develop, backend">
 <meta name="description" content="PHP Unicode 編解碼筆記">
 
 
@@ -248,7 +248,7 @@ if (!doNotTrack) {
       </time>
     
     
-    約 7 分鐘
+    約 8 分鐘
   </div>
 
 </div>
@@ -357,6 +357,33 @@ Amp: [&#34;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&#34;]
 Unicode: [&#34;高級伴讀書僮&#34;] // &lt;-- JSON_UNESCAPED_UNICODE 宣告跳脫 Unicode 編碼
 All: [&#34;高級伴讀書僮&#34;]</code></pre></blockquote>
 
+<h1 id="補充">補充</h1>
+
+<p>後來搜尋關鍵字找到<a href="https://dotblogs.com.tw/twpg_slps970093/2019/07/10/081337">這篇</a>，借用作者的方法測試轉換的結果，理解到原來還有補滿 4 個字元(補零)，會比較通用：</p>
+<pre><code>function unicode_to_utf8($unicode_str) {
+    $strArr = explode(&#34;\u&#34;,$unicode_str);
+    $unicode_str = &#34;&#34;;
+    // 後面要補 0 防止 PHP 無法正常解碼
+    foreach ( $strArr as $row ) {
+        if ( empty($row) ) {
+            continue;
+        }
+        $unicode_str .= &#34;\u&#34; . str_pad($row,4,&#39;0&#39;,STR_PAD_LEFT) .&#34;&#34;;
+    }
+
+    $json = &#39;{&#34;str&#34;:&#34;&#39;.$unicode_str.&#39;&#34;}&#39;;
+    $arr = json_decode($json,true);
+    if(empty($arr)) return &#39;&#39;;
+    return $arr[&#39;str&#39;];
+}
+print_r(unicode_to_utf8(&#34;\u9ad8\u7d1a\u4f34\u8b80\u66f8\u50ee&#34;));
+print_r(unicode_to_utf8(&#34;\u41\u61&#34;)); // 未滿四個字元的解碼測試</code></pre>
+<blockquote>
+<p>output</p>
+
+<p>高級伴讀書僮 Aa</p>
+</blockquote>
+
 <h1 id="小結">小結</h1>
 
 <p>一開始收到 <code>\uxxxx</code> 這類文字編碼時，因為從來沒有遇到過，根本無從找起 (只能一段一段 \uxxxx 去 google 找)，一開始還猜是不是簡體文字的編碼，還是什麼神秘的加密文字，怎麼 google 都沒辦法精準找到相關說明 (孤陋寡聞吶&hellip;)，但我確信可以解碼，因為<a href="https://r12a.github.io/app-conversion/">這個網站</a>解的出來QQ；</p>
@@ -370,6 +397,8 @@ All: [&#34;高級伴讀書僮&#34;]</code></pre></blockquote>
 <ul>
 <li><a href="https://zh.wikipedia.org/wiki/%E9%80%9A%E7%94%A8%E5%AD%97%E7%AC%A6%E9%9B%86">通用字元集 - 維基百科</a></li>
 <li><a href="http://zht.glyphwiki.org/wiki/GlyphWiki:%e9%a6%96%e9%a0%81">字形維基(GlyphWiki)</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html">字符编码笔记：ASCII，Unicode 和 UTF-8 - 阮一峰的网络日志</a></li>
+<li><a href="http://www.chi2ko.com/tool/CJK.htm">字体编辑用中日韩汉字Unicode编码表</a></li>
 </ul>
 
 <hr />
