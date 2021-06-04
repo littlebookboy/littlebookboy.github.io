@@ -6,7 +6,25 @@
     <description>Recent content in Tags on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Feb 2021 21:12:56 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Jun 2021 16:07:22 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laravel</title>
+      <link>https://blog.genesu.me/tags/laravel/</link>
+      <pubDate>Fri, 04 Jun 2021 16:07:22 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/tags/laravel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Valet</title>
+      <link>https://blog.genesu.me/tags/valet/</link>
+      <pubDate>Fri, 04 Jun 2021 16:07:22 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/tags/valet/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>PHP</title>
       <link>https://blog.genesu.me/tags/php/</link>
