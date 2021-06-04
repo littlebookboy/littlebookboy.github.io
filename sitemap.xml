@@ -1,97 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://blog.genesu.me/tags/php/</loc>
     <lastmod>2021-02-25T21:12:56+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/</loc>
     <lastmod>2021-02-25T21:12:56+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/post/</loc>
     <lastmod>2021-02-25T21:12:56+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/tags/</loc>
     <lastmod>2021-02-25T21:12:56+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/</loc>
     <lastmod>2021-02-25T21:12:56+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/tags/hugo/</loc>
     <lastmod>2020-09-28T13:15:56+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/2020/09/12th-ithelp/</loc>
     <lastmod>2020-09-28T13:15:56+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/2020/09/hugo-site-deploy/</loc>
     <lastmod>2020-09-02T21:02:03+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/2020/09/hugo-front-matter/</loc>
     <lastmod>2020-09-02T20:28:23+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/2020/08/hugo-installation/</loc>
     <lastmod>2020-08-29T11:02:39+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing-result/</loc>
     <lastmod>2020-08-22T23:12:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/tags/seo/</loc>
     <lastmod>2020-08-22T23:12:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/tags/shortcode/</loc>
     <lastmod>2020-08-22T23:12:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing/</loc>
     <lastmod>2020-08-22T22:34:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/tags/talking/</loc>
     <lastmod>2020-08-21T22:19:22+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/2020/08/why-do-i-write-articles/</loc>
     <lastmod>2020-08-21T22:19:22+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/archives/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/page/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.genesu.me/about-me/</loc>
   </url>
-  
 </urlset>
