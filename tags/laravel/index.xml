@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Laravel on 高級伴讀書僮</title>
+    <title>laravel on 高級伴讀書僮</title>
     <link>https://blog.genesu.me/tags/laravel/</link>
-    <description>Recent content in Laravel on 高級伴讀書僮</description>
+    <description>Recent content in laravel on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 04 Jun 2021 16:07:22 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/laravel/index.xml" rel="self" type="application/rss+xml" />

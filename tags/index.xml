@@ -6,9 +6,18 @@
     <description>Recent content in Tags on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Jun 2021 16:07:22 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Jun 2021 14:39:39 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Laravel</title>
+      <title>reading</title>
+      <link>https://blog.genesu.me/tags/reading/</link>
+      <pubDate>Sun, 06 Jun 2021 14:39:39 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/tags/reading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>laravel</title>
       <link>https://blog.genesu.me/tags/laravel/</link>
       <pubDate>Fri, 04 Jun 2021 16:07:22 +0800</pubDate>
       
@@ -17,16 +26,16 @@
     </item>
     
     <item>
-      <title>Valet</title>
-      <link>https://blog.genesu.me/tags/valet/</link>
+      <title>usage</title>
+      <link>https://blog.genesu.me/tags/usage/</link>
       <pubDate>Fri, 04 Jun 2021 16:07:22 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/tags/valet/</guid>
+      <guid>https://blog.genesu.me/tags/usage/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>PHP</title>
+      <title>php</title>
       <link>https://blog.genesu.me/tags/php/</link>
       <pubDate>Thu, 25 Feb 2021 21:12:56 +0800</pubDate>
       
@@ -35,7 +44,7 @@
     </item>
     
     <item>
-      <title>Hugo</title>
+      <title>hugo</title>
       <link>https://blog.genesu.me/tags/hugo/</link>
       <pubDate>Mon, 28 Sep 2020 13:15:56 +0800</pubDate>
       
@@ -44,25 +53,7 @@
     </item>
     
     <item>
-      <title>SEO</title>
-      <link>https://blog.genesu.me/tags/seo/</link>
-      <pubDate>Sat, 22 Aug 2020 23:12:30 +0800</pubDate>
-      
-      <guid>https://blog.genesu.me/tags/seo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shortcode</title>
-      <link>https://blog.genesu.me/tags/shortcode/</link>
-      <pubDate>Sat, 22 Aug 2020 23:12:30 +0800</pubDate>
-      
-      <guid>https://blog.genesu.me/tags/shortcode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Talking</title>
+      <title>talking</title>
       <link>https://blog.genesu.me/tags/talking/</link>
       <pubDate>Fri, 21 Aug 2020 22:19:22 +0800</pubDate>
       
