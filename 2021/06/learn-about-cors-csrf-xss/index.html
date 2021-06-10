@@ -7,32 +7,32 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
-<meta name="keywords" content="user story, user story mapping, 使用者故事對照, develop, backend">
-<meta name="description" content="使用者故事對照讀書筆記">
+<meta name="keywords" content="cors, csrf, xss, develop, backend">
+<meta name="description" content="認真研究一下 CORS CSRF XSS 做個筆記">
 
 
-<meta property="og:description" content="使用者故事對照讀書筆記">
+<meta property="og:description" content="認真研究一下 CORS CSRF XSS 做個筆記">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用者故事對照讀書筆記">
-<meta name="twitter:title" content="使用者故事對照讀書筆記">
-<meta property="og:url" content="https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/">
-<meta property="twitter:url" content="https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/">
+<meta property="og:title" content="認真研究一下 CORS CSRF XSS 做個筆記">
+<meta name="twitter:title" content="認真研究一下 CORS CSRF XSS 做個筆記">
+<meta property="og:url" content="https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
+<meta property="twitter:url" content="https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
 <meta property="og:site_name" content="高級伴讀書僮">
-<meta property="og:description" content="使用者故事對照讀書筆記">
-<meta name="twitter:description" content="使用者故事對照讀書筆記">
+<meta property="og:description" content="認真研究一下 CORS CSRF XSS 做個筆記">
+<meta name="twitter:description" content="認真研究一下 CORS CSRF XSS 做個筆記">
 <meta property="og:locale" content="zh-tw">
 
   
-    <meta property="article:published_time" content="2021-06-06T14:39:39">
+    <meta property="article:published_time" content="2021-06-10T22:52:05">
   
   
-    <meta property="article:modified_time" content="2021-06-06T14:39:39">
+    <meta property="article:modified_time" content="2021-06-10T22:52:05">
   
   
   
   
     
-      <meta property="article:tag" content="reading">
+      <meta property="article:tag" content="learning">
     
   
 
@@ -46,8 +46,8 @@
 
 
 
-  <meta property="og:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/sincerely-media-nGrfKmtwv24-unsplash.jpg">
-  <meta property="twitter:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/sincerely-media-nGrfKmtwv24-unsplash.jpg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/lumber-84678_1920.jpg">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/lumber-84678_1920.jpg">
 
 
 
@@ -56,14 +56,14 @@
   <meta property="twitter:image" content="https://blog.genesu.me/images/avataaars.png">
 
 
-    <title>使用者故事對照讀書筆記</title>
+    <title>認真研究一下 CORS CSRF XSS 做個筆記</title>
 
     <link rel="icon" href="images/favicon.png?v=1">
     
 
     
 
-    <link rel="canonical" href="https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/">
+    <link rel="canonical" href="https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -213,7 +213,7 @@ if (!doNotTrack) {
   <div class="post-header-cover
               text-center
               post-header-cover--partial"
-       style="background-image:url('https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/sincerely-media-nGrfKmtwv24-unsplash.jpg')"
+       style="background-image:url('https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/lumber-84678_1920.jpg')"
        data-behavior="5">
     
   </div>
@@ -229,345 +229,134 @@ if (!doNotTrack) {
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      使用者故事對照讀書筆記
+      認真研究一下 CORS CSRF XSS 做個筆記
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-06-06T14:39:39&#43;08:00">
+      <time itemprop="datePublished" datetime="2021-06-10T22:52:05&#43;08:00">
         
   
   
   
   
-    2021-06-06 14:39:39 UTC&#43;8
+    2021-06-10 22:52:05 UTC&#43;8
   
 
       </time>
     
     
-    約 5 分鐘
+    約 6 分鐘
   </div>
 
 </div>
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
+              <p>觀念練習，反正先筆記寫一篇，如果會寫得太冗長在考慮拆開。</p>
+
+<h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
 <ul>
-<li><a href="#基本資料">基本資料</a></li>
-<li><a href="#先看一張圖">先看一張圖</a></li>
-<li><a href="#快速筆記">快速筆記</a>
+<li><a href="#cors">CORS</a>
 <ul>
-<li><a href="#整體概觀-big-picture">整體概觀 (Big Picture)</a></li>
-<li><a href="#計畫準時完成">計畫準時完成</a></li>
-<li><a href="#練習建立">練習建立</a></li>
-<li><a href="#其他筆記留存">其他筆記留存</a></li>
+<li><a href="#origin">Origin</a></li>
+<li><a href="#請求種類">請求種類</a></li>
 </ul></li>
-<li><a href="#小結">小結</a></li>
-<li><a href="#延伸參考文章">延伸參考文章</a></li>
-<li><a href="#相關工具">相關工具</a></li>
+<li><a href="#csrf">CSRF</a></li>
+<li><a href="#xss">XSS</a></li>
+<li><a href="#參考連結">參考連結</a></li>
 </ul>
 </nav>
 
-<h1 id="基本資料">基本資料</h1>
+<h1 id="cors">CORS</h1>
+
+<blockquote>
+<p>CORS 為 Cross-Origin Resource Sharing 縮寫，意指「跨來源資源共用」。</p>
+</blockquote>
+
+<p>從前從前，有個人叫做小明，他正尋思寫一個自己的網站，網址為 <code>http://smallming.me</code>，有一天，他得知他的好友小華也寫了個網站，網址為 <code>http://smallhua.me</code>；這小明看到小華的網站中，有很多很炫炮的圖片，以及生動的 js 特效，貪圖方便的小明，就想著把這些資源偷放到自己網站上，加快自己寫網站的速度，這些資源舉例如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">http://smallhua.me/無所不能.js
+http://smallhua.me/氣勢滂礡背景圖.jpg
+http://smallhua.me/api/news</code></pre></div>
+<p>當小明把小華原始碼中的網址「搬進」自己網站原始碼之後，小明一瀏覽自己頁面，發現 devtools console 噴了一大堆紅字寫著：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Failed to load http://smallhua.me/無所不能.js: No &#39;Access-Control-Allow-Origin&#39; header is present on the requested resource...
+Failed to load http://smallhua.me/氣勢滂礡背景圖.jpg: No &#39;Access-Control-Allow-Origin&#39; header is present on the requested resource...
+Access to XMLHttpRequest at &#39;http://smallhua.me/api/news&#39; from origin &#39;http://smallming.me&#39; has been blocked by CORS policy...
+
+# 特別說明，上述訊息為示意文字，非真正撰寫實際案例獲得的正確例外訊息。</code></pre></div>
+<p>為什麼會這樣呢？先看一段 CORS 的說明：</p>
+
+<div class="alert info ">
+  <p><p>CORS 是一種使用額外 HTTP 標頭令目前瀏覽網站的使用者代理 (en-US) 取得存取其他來源（網域）伺服器特定資源權限的機制。當使用者代理請求一個不是目前文件來源——例如來自於不同網域（domain）、通訊協定（protocol）或通訊埠（port）的資源時，會建立一個跨來源 HTTP 請求（cross-origin HTTP request）。</p>
+
+<p>基於安全性考量，程式碼所發出的跨來源 HTTP 請求會受到限制。例如，XMLHttpRequest 及 Fetch 都遵守同源政策（same-origin policy）。這代表網路應用程式所使用的 API 除非使用 CORS 標頭，否則只能請求與應用程式相同網域的 HTTP 資源。</p>
+</p>
+</div>
+
+<p>很難一下子就看懂在講什麼，但其實意思就是：</p>
 
 <multiple-line-output>
-    
-ISBN：9789863479468<br>
-作者： Jeff Patton<br>
-譯者： 楊仁和<br>
-出版社：歐萊禮<br>
+     
+<br>
+<image src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202021-06-10%20%E4%B8%8B%E5%8D%8811.24.35.png">
+「你個小混蛋，你給我聽好了，你不能直接拿(請求)不是你的網站(址)底下的東西(資源/戳 API)」
 
 </multiple-line-output>
 
-<h1 id="先看一張圖">先看一張圖</h1>
+<p>看到說明中最後提到「你使用的 API 除非使用 CORS 標頭，否則只能請求與應用程式相同網域的 HTTP 資源」，其實還必須要加上「對方的伺服器也認可你是<code>可以</code>來我這請求的」才算完整。</p>
 
+<p>換句話說：小明今天想要「直接用小華的圖，或請求別人的 API 獲取正常的 response」，必須在請求的 Header 中帶著訊息，告訴小華說：「是我是我」，而小華網站後端的伺服器也必須實作說：「小明是我的麻吉，我允許小明來請求任何資源」，這樣才讓整個 CORS 完成，這也表示說，不是隨便來個人加入表頭，都可以通過 CORS。</p>
 
- 
-  
-  
-  
-  
-    
-      
-    
-  
-    
-  
+<h2 id="origin">Origin</h2>
 
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/usmp_0004.png.jpg" title="圖片來源：https://www.oreilly.com/library/view/user-story-mapping/9781491904893/images/usmp_0004.png.jpg" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/usmp_0004.png.jpg"  alt="圖片來源：https://www.oreilly.com/library/view/user-story-mapping/9781491904893/images/usmp_0004.png.jpg">
-  
-    </a>
-  
-   
-    <span class="caption">圖片來源：https://www.oreilly.com/library/view/user-story-mapping/9781491904893/images/usmp_0004.png.jpg</span>
-  
-</div>
-
-  <div style="clear:both;"></div>
-
-
-<p>上半部想表達的是，當我們對「某個需求、想法」有了基本認知，且我們都覺得對方想的跟自己一樣，一旦實際把這種「一樣」透過圖像、文字，展現出來時，一經討論對話才發現，彼此想法可能會有所不同。</p>
-
-<p>下半部則基於彼此認知的基礎，經由圖像化展現出來的東西，經由討論，去理解「做什麼」、「為什麼」，直到達成「真正的共識」。</p>
-
-<h1 id="快速筆記">快速筆記</h1>
-
-<h2 id="整體概觀-big-picture">整體概觀 (Big Picture)</h2>
-
-<ol>
-<li>我們常常「對話」，但沒寫下來，看不見 Big Picture</li>
-<li>將想法，透過圖像、文字呈現出來並討論(雙向)，藉此建立共識 (Shared Understanding)</li>
-<li>分享文件不等於分享共識</li>
-<li>共識，可視為未來驗收標準的原則 (Define of Done)</li>
-<li>交談並記錄
+<p>發出請求的一方，瀏覽器會在請求的 Header 加上 <code>Origin</code> 一併送到對方伺服器，此值包含了</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{http or https 通訊協定} + 域名 + port (80 通常省略)，例如 http://smallming.me</code></pre></div>
+<h2 id="請求種類">請求種類</h2>
 
 <ul>
-<li>思考&ndash;撰寫&ndash;解釋&ndash;放置，逐步建立使用故事地圖</li>
-</ul></li>
-<li>故事對照幫你發現思考漏洞</li>
-<li>一口氣列出的待辦/功能清單 (想做的事)，往往超過你所擁有的人力、時間或金錢 (資源)。</li>
-<li>聚焦一公里 (廣度)，探討一公分 (深度)
-
-<ul>
-<li>先從廣度從頭到尾討論，使用者 &gt; 不同的活動 &gt; (然後)每個步驟 &hellip; &gt; 不同的活動 &gt; &hellip;</li>
-<li>再從深度討論 &gt; 每個步驟 &gt; (或許可能)細節 &hellip;</li>
-</ul></li>
-</ol>
-
-
- 
-  
-  
-  
-  
+<li>簡單請求：在符合
     
-      
+    <a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS#%E7%B0%A1%E5%96%AE%E8%AB%8B%E6%B1%82" target="_blank">定義</a>
     
-  
-    
-  
+之下，發出的請求為簡單請求。</li>
+<li>預檢請求：非簡單請求時，都為預檢請求(笑)。預檢請求會先發送一個 OPTION 請求，問對方 CORS 的檢驗是不是允許我去戳，如果不允許，就不會有後續的請求，若允許，先返回允許的方法種類與相關資訊，若我的請求符合 OPTION 去要回來的規定，才發送真正的請求去對方那。</li>
+</ul>
 
- 
-  
-  
-  
-  
-    
-  
+<h1 id="csrf">CSRF</h1>
 
-<div class="figure " >
-  
-    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202021-06-06%20%E4%B8%8B%E5%8D%883.55.16.png" title="手寫筆記 p1" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202021-06-06%20%E4%B8%8B%E5%8D%883.55.16.png"  alt="手寫筆記 p1">
-  
-    </a>
-  
-   
-    <span class="caption">手寫筆記 p1</span>
-  
-</div>
+<blockquote>
+<p>CSRF 為 Cross-Site Request Forgery 縮寫，意指「跨站點偽造請求」。</p>
+</blockquote>
 
-  <div style="clear:both;"></div>
+<p>待捕</p>
 
+<h1 id="xss">XSS</h1>
 
+<blockquote>
+<p>XSS 指的是 Cross Site Scrit，為與 Cascading Style Sheets, CSS, 做出區別，在講到網站安全領域的「跨站腳本攻擊」時，都改稱為 XSS。</p>
+</blockquote>
 
- 
-  
-  
-  
-  
-    
-      
-    
-  
-    
-  
+<p>待捕</p>
 
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202021-06-06%20%E4%B8%8B%E5%8D%883.55.25.png" title="手寫筆記 p2" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202021-06-06%20%E4%B8%8B%E5%8D%883.55.25.png"  alt="手寫筆記 p2">
-  
-    </a>
-  
-   
-    <span class="caption">手寫筆記 p2</span>
-  
-</div>
-
-  <div style="clear:both;"></div>
-
-
-<h2 id="計畫準時完成">計畫準時完成</h2>
-
-<ol>
-<li>開局
-
-<ul>
-<li>聚焦在整個產品必要的功能或使用者步驟</li>
-<li>聚焦在技術上具有挑戰性或風險性的事情</li>
-<li>略過對使用者來說可有可無的功能</li>
-<li>僅建造足以看清產品從頭到尾運作的基本功能</li>
-</ul></li>
-<li>中局
-
-<ul>
-<li>填補並完成功能細節</li>
-<li>實作那些麻煩的商業規則</li>
-<li>從頭到尾測試產品的效能、可用性</li>
-</ul></li>
-<li>終局
-
-<ul>
-<li>精煉你的釋出版本，讓它用起來更有效率</li>
-<li>從使用者那些獲得實用的回饋意見，改善產品</li>
-<li>以真實的資料進一步測量的你的產品效率</li>
-</ul></li>
-</ol>
-
-<h2 id="練習建立">練習建立</h2>
-
-<ol>
-<li>一次一個步驟，寫出你的使用者故事
-
-<ul>
-<li>動詞短語，例如「起床」、「騎車」</li>
-</ul></li>
-<li>目標層級
-
-<ul>
-<li>摘要層任務：梳洗整理、吃早餐</li>
-<li>功能層任務：洗澡、刷牙、刮鬍子、換衣服</li>
-<li>子功能：開水、沖水、關水、拿麵包、烤麵包、擠牙膏、漱口、拿上衣、拿褲子、穿褲子</li>
-</ul></li>
-</ol>
-
-<h2 id="其他筆記留存">其他筆記留存</h2>
-
-
- 
-  
-  
-  
-  
-    
-      
-    
-  
-    
-  
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202021-06-06%20%E4%B8%8B%E5%8D%883.55.32.png" title="手寫筆記 p3 目標層級" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202021-06-06%20%E4%B8%8B%E5%8D%883.55.32.png"  alt="手寫筆記 p3 目標層級">
-  
-    </a>
-  
-   
-    <span class="caption">手寫筆記 p3 目標層級</span>
-  
-</div>
-
-  <div style="clear:both;"></div>
-
-
-
- 
-  
-  
-  
-  
-    
-      
-    
-  
-    
-  
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202021-06-06%20%E4%B8%8B%E5%8D%883.55.39.png" title="手寫筆記 p4" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202021-06-06%20%E4%B8%8B%E5%8D%883.55.39.png"  alt="手寫筆記 p4">
-  
-    </a>
-  
-   
-    <span class="caption">手寫筆記 p4</span>
-  
-</div>
-
-  <div style="clear:both;"></div>
-
-
-<h1 id="小結">小結</h1>
-
-<p>衝了整整兩天看完整本書 (內容文字意料之外的多)，目前消化不良中，先把幾個有貼標籤的重點打上來，日後有時間回頭看比較容易回憶。</p>
-
-<h1 id="延伸參考文章">延伸參考文章</h1>
-
-
-    
-    <a href="https://medium.com/%E6%96%87%E6%80%9D%E4%B8%8D%E8%97%8F%E7%A7%81/%E6%96%87%E6%80%9D%E4%B8%8D%E8%97%8F%E7%A7%81-%E4%BD%BF%E7%94%A8%E8%80%85%E6%95%85%E4%BA%8B%E5%B0%8D%E7%85%A7-part-1-89f8b9abc543" target="_blank">【文思不藏私】使用者故事對照 Part 1 ~ 4</a>
-    
-
-
-<h1 id="相關工具">相關工具</h1>
+<h1 id="參考連結">參考連結</h1>
 
 <ul>
 <li>
     
-    <a href="https://trello.com/" target="_blank">Trello</a>
+    <a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS" target="_blank">跨來源資源共用（CORS)</a>
     
 </li>
 <li>
     
-    <a href="https://cardboardit.com/" target="_blank">Cardboardit</a>
+    <a href="https://pandalab.org/articles/110" target="_blank">15分鐘搞懂LARAVEL的CSRF防護機制</a>
     
- 可免費 30 天試用</li>
+</li>
+<li>
+    
+    <a href="https://www.jianshu.com/p/9801aefde8ad" target="_blank">laravel 的 CSRF 防護機制和延伸</a>
+    
+</li>
 </ul>
 
 <hr />
@@ -578,7 +367,7 @@ ISBN：9789863479468<br>
 文章作者: 
 <a href="https://blog.genesu.me/archives">littlebookboy</a>
 <br>
-永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2021/06/reading-note-of-user-story-mapping/" target="_blank">https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/</a><br>
+永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2021/06/learn-about-cors-csrf-xss/" target="_blank">https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/</a><br>
 許可協議: 
     
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
@@ -597,7 +386,7 @@ ISBN：9789863479468<br>
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">標籤</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://blog.genesu.me/tags/reading/">reading</a>
+  <a class="tag tag--primary tag--small" href="https://blog.genesu.me/tags/learning/">learning</a>
 
                   </div>
                 
@@ -610,7 +399,7 @@ ISBN：9789863479468<br>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/" data-tooltip="認真研究一下 CORS CSRF XSS 做個筆記">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -618,7 +407,7 @@ ISBN：9789863479468<br>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/laravel-valet-share-note-20210604/" data-tooltip="Laravel Valet Share 使用筆記">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/" data-tooltip="使用者故事對照讀書筆記">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -636,13 +425,13 @@ ISBN：9789863479468<br>
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -690,7 +479,7 @@ ISBN：9789863479468<br>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/" data-tooltip="認真研究一下 CORS CSRF XSS 做個筆記">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -698,7 +487,7 @@ ISBN：9789863479468<br>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/laravel-valet-share-note-20210604/" data-tooltip="Laravel Valet Share 使用筆記">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/" data-tooltip="使用者故事對照讀書筆記">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -716,13 +505,13 @@ ISBN：9789863479468<br>
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -752,13 +541,13 @@ ISBN：9789863479468<br>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Freading-note-of-user-story-mapping%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Flearn-about-cors-csrf-xss%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Freading-note-of-user-story-mapping%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Flearn-about-cors-csrf-xss%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
@@ -850,9 +639,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/blog.genesu.me\/2021\/06\/reading-note-of-user-story-mapping\/';
+          this.page.url = 'https:\/\/blog.genesu.me\/2021\/06\/learn-about-cors-csrf-xss\/';
           
-            this.page.identifier = '\/2021\/06\/reading-note-of-user-story-mapping\/'
+            this.page.identifier = '\/2021\/06\/learn-about-cors-csrf-xss\/'
           
         };
         (function() {

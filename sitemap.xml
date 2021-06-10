@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.genesu.me/tags/learning/</loc>
+    <lastmod>2021-06-10T22:52:05+08:00</lastmod>
+  </url><url>
     <loc>https://blog.genesu.me/post/</loc>
-    <lastmod>2021-06-06T14:39:39+08:00</lastmod>
+    <lastmod>2021-06-10T22:52:05+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/tags/</loc>
+    <lastmod>2021-06-10T22:52:05+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/</loc>
+    <lastmod>2021-06-10T22:52:05+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/</loc>
+    <lastmod>2021-06-10T22:52:05+08:00</lastmod>
   </url><url>
     <loc>https://blog.genesu.me/tags/reading/</loc>
     <lastmod>2021-06-06T14:39:39+08:00</lastmod>
   </url><url>
-    <loc>https://blog.genesu.me/tags/</loc>
-    <lastmod>2021-06-06T14:39:39+08:00</lastmod>
-  </url><url>
     <loc>https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/</loc>
-    <lastmod>2021-06-06T14:39:39+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.genesu.me/</loc>
     <lastmod>2021-06-06T14:39:39+08:00</lastmod>
   </url><url>
     <loc>https://blog.genesu.me/tags/laravel/</loc>
