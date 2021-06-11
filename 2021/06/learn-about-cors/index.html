@@ -340,8 +340,10 @@ http://smallming.me vs http://smallming.me:81 port 不同</code></pre></div>
 
 <p>「哈囉，我可不可以要你的 Cookies 用一下？我要的 Cookies 名字是 bala。」
 若對方想要允許 (回 可以啊可以啊)，則可以在回應表頭加上：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Access-Control-Allow-Origin: http://smallming.me (在要對方 Cookies 時，Origin 不能是 *)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Access-Control-Allow-Origin: http://smallming.me
 Access-Control-Allow-Credentials: true</code></pre></div>
+<p>另外需注意，請求對方允許使用對方的 Cookies 時，對方允許的 Origin 不能是 <code>*</code>，必須指定一個完整網址。</p>
+
 <h1 id="結語">結語</h1>
 
 <p>因為想用白話一點的描述，嘗試讓自己看懂什麼是跨域共用，官方文件或網路文章提到的很多 CORS 家的那些 Header 就盡量不寫了。</p>
