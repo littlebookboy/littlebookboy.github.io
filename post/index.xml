@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 10 Jun 2021 22:52:05 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>認真研究一下 CORS CSRF XSS 做個筆記</title>
-      <link>https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/</link>
+      <title>CORS 觀念筆記</title>
+      <link>https://blog.genesu.me/2021/06/learn-about-cors/</link>
       <pubDate>Thu, 10 Jun 2021 22:52:05 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/</guid>
-      <description>&lt;p&gt;觀念練習，反正先筆記寫一篇，如果會寫得太冗長在考慮拆開。&lt;/p&gt;</description>
+      <guid>https://blog.genesu.me/2021/06/learn-about-cors/</guid>
+      <description></description>
     </item>
     
     <item>

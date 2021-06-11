@@ -7,19 +7,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
-<meta name="keywords" content="cors, csrf, xss, develop, backend">
-<meta name="description" content="認真研究一下 CORS CSRF XSS 做個筆記">
+<meta name="keywords" content="cors, develop, backend">
+<meta name="description" content="CORS 觀念筆記">
 
 
-<meta property="og:description" content="認真研究一下 CORS CSRF XSS 做個筆記">
+<meta property="og:description" content="CORS 觀念筆記">
 <meta property="og:type" content="article">
-<meta property="og:title" content="認真研究一下 CORS CSRF XSS 做個筆記">
-<meta name="twitter:title" content="認真研究一下 CORS CSRF XSS 做個筆記">
-<meta property="og:url" content="https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
-<meta property="twitter:url" content="https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
+<meta property="og:title" content="CORS 觀念筆記">
+<meta name="twitter:title" content="CORS 觀念筆記">
+<meta property="og:url" content="https://blog.genesu.me/2021/06/learn-about-cors/">
+<meta property="twitter:url" content="https://blog.genesu.me/2021/06/learn-about-cors/">
 <meta property="og:site_name" content="高級伴讀書僮">
-<meta property="og:description" content="認真研究一下 CORS CSRF XSS 做個筆記">
-<meta name="twitter:description" content="認真研究一下 CORS CSRF XSS 做個筆記">
+<meta property="og:description" content="CORS 觀念筆記">
+<meta name="twitter:description" content="CORS 觀念筆記">
 <meta property="og:locale" content="zh-tw">
 
   
@@ -56,14 +56,14 @@
   <meta property="twitter:image" content="https://blog.genesu.me/images/avataaars.png">
 
 
-    <title>認真研究一下 CORS CSRF XSS 做個筆記</title>
+    <title>CORS 觀念筆記</title>
 
     <link rel="icon" href="images/favicon.png?v=1">
     
 
     
 
-    <link rel="canonical" href="https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
+    <link rel="canonical" href="https://blog.genesu.me/2021/06/learn-about-cors/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -229,7 +229,7 @@ if (!doNotTrack) {
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      認真研究一下 CORS CSRF XSS 做個筆記
+      CORS 觀念筆記
     </h1>
   
   
@@ -247,35 +247,33 @@ if (!doNotTrack) {
       </time>
     
     
-    約 6 分鐘
+    約 8 分鐘
   </div>
 
 </div>
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>觀念練習，反正先筆記寫一篇，如果會寫得太冗長在考慮拆開。</p>
-
-<h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
+              <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
 <ul>
-<li><a href="#cors">CORS</a>
-<ul>
-<li><a href="#origin">Origin</a></li>
-<li><a href="#請求種類">請求種類</a></li>
-</ul></li>
-<li><a href="#csrf">CSRF</a></li>
-<li><a href="#xss">XSS</a></li>
+<li><a href="#once-upon-a-time">Once upon a time</a></li>
+<li><a href="#same-origin-policy-同源政策">Same-Origin Policy, 同源政策</a></li>
+<li><a href="#cors-請求類型">CORS 請求類型</a></li>
+<li><a href="#cors-怎麼運作的">CORS 怎麼運作的</a></li>
+<li><a href="#cors-cookies">CORS Cookies</a></li>
+<li><a href="#結語">結語</a></li>
 <li><a href="#參考連結">參考連結</a></li>
+<li><a href="#最後">最後</a></li>
 </ul>
 </nav>
 
-<h1 id="cors">CORS</h1>
+<h1 id="once-upon-a-time">Once upon a time</h1>
 
 <blockquote>
 <p>CORS 為 Cross-Origin Resource Sharing 縮寫，意指「跨來源資源共用」。</p>
 </blockquote>
 
-<p>從前從前，有個人叫做小明，他正尋思寫一個自己的網站，網址為 <code>http://smallming.me</code>，有一天，他得知他的好友小華也寫了個網站，網址為 <code>http://smallhua.me</code>；這小明看到小華的網站中，有很多很炫炮的圖片，以及生動的 js 特效，貪圖方便的小明，就想著把這些資源偷放到自己網站上，加快自己寫網站的速度，這些資源舉例如下：</p>
+<p>從前從前，有個人叫做小明，他正尋思寫一個自己的網站，網址為 <code>http://smallming.me</code>，有一天，他得知他的好友小華也寫了個網站，網址為 <code>http://smallhua.me</code>；這小明看到小華的網站中，有很多很炫炮的圖片，以及生動的 js 特效，貪圖方便的小明，就想著把這些資源放到自己網站上，加快自己寫網站的速度，這些資源舉例如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">http://smallhua.me/無所不能.js
 http://smallhua.me/氣勢滂礡背景圖.jpg
 http://smallhua.me/api/news</code></pre></div>
@@ -300,44 +298,53 @@ Access to XMLHttpRequest at &#39;http://smallhua.me/api/news&#39; from origin &#
      
 <br>
 <image src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202021-06-10%20%E4%B8%8B%E5%8D%8811.24.35.png">
-「你個小混蛋，你給我聽好了，你不能直接拿(請求)不是你的網站(址)底下的東西(資源/戳 API)」
+「你個小混蛋，給我聽好了，不是你們家的東西(資源/API)，你必須得獲得對方允許才能用。」
 
 </multiple-line-output>
 
-<p>看到說明中最後提到「你使用的 API 除非使用 CORS 標頭，否則只能請求與應用程式相同網域的 HTTP 資源」，其實還必須要加上「對方的伺服器也認可你是<code>可以</code>來我這請求的」才算完整。</p>
+<h1 id="same-origin-policy-同源政策">Same-Origin Policy, 同源政策</h1>
 
-<p>換句話說：小明今天想要「直接用小華的圖，或請求別人的 API 獲取正常的 response」，必須在請求的 Header 中帶著訊息 (瀏覽器會自動加上 Origin 表頭)，告訴小華說：「是我是我」，而小華網站後端的伺服器也必須實作說：「小明是我的麻吉，我允許小明來請求任何資源」，這樣才讓整個 CORS 完成，這也表示說，不是隨便來個人加入表頭，都可以通過 CORS。</p>
+<p>這時就要先講一下瀏覽器的「Same-Origin Policy, 同源政策」了；同源政策為「當你請求的伺服器網址跟你的網址不是同一個」，即為不同源，例如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">http://smallming.me vs http://smallhua.me 網址不同
+http://www.smallming.me vs http://smallhua.me 網址不同
+http://smallming.me vs https://smallming.me 協定不同
+http://smallming.me vs http://smallming.me:81 port 不同</code></pre></div>
+<p>不同源你是 call 不了第三方要資料的，所以為了安全，瀏覽器會強制讓所有請求遵守 <code>CORS</code>，簡單說就是「你請求，我允許/不允許」的規則。那怎麼樣才能跨域 call 別人要資料呢，答案就是「滿足 CORS 定義之下，發出請求，並且讓對方伺服器去定義<code>允許誰/不允許誰</code>，開放讓指定的不同源網址來要資料」。</p>
 
-<h2 id="origin">Origin</h2>
+<p>這裡有篇
+    
+    <a href="https://medium.com/%E7%A8%8B%E5%BC%8F%E7%8C%BF%E5%90%83%E9%A6%99%E8%95%89/same-origin-policy-%E5%90%8C%E6%BA%90%E6%94%BF%E7%AD%96-%E4%B8%80%E5%88%87%E5%AE%89%E5%85%A8%E7%9A%84%E5%9F%BA%E7%A4%8E-36432565a226" target="_blank">文章</a>
+    
+提到的同源政策，還區分為：DOM 同源政策，以及 Cookies 同源政策。</p>
 
-<p>發出請求的一方，瀏覽器會在請求的 Header 加上 <code>Origin</code> 一併送到對方伺服器，此值包含了</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{http or https 通訊協定} + 域名 + port (80 通常省略)，例如 http://smallming.me</code></pre></div>
-<h2 id="請求種類">請求種類</h2>
+<h1 id="cors-請求類型">CORS 請求類型</h1>
+
+<p>在 CORS 定義中，有兩種請求方式：</p>
 
 <ul>
-<li>簡單請求：在符合
-    
-    <a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS#%E7%B0%A1%E5%96%AE%E8%AB%8B%E6%B1%82" target="_blank">定義</a>
-    
-之下，發出的請求為簡單請求。</li>
-<li>預檢請求：非簡單請求時，都為預檢請求(笑)。預檢請求會先發送一個 OPTION 請求，問對方 CORS 的檢驗是不是允許我去戳，如果不允許，就不會有後續的請求，若允許，先返回允許的方法種類與相關資訊，若我的請求符合 OPTION 去要回來的規定，才發送真正的請求去對方那。</li>
+<li>簡單跨域請求</li>
+<li>非簡單跨域請求</li>
 </ul>
 
-<h1 id="csrf">CSRF</h1>
+<p>這邊就不講太多細節 (請
+    
+    <a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS#%E7%B0%A1%E5%96%AE%E8%AB%8B%E6%B1%82" target="_blank">參考</a>
+    
+這)，區別就是，簡單請求會直接把請求送到對方伺服器去要資料，<code>非</code>簡單請求，則會先發一個「叩叩叩，May I?」(preflight request, 預檢請求) 去問對方，要回「我允許的 HTTP 方法與表頭」給請求方，讓他知道需不需要發送真正的請求要資料，當對方給你的允許方法與表頭名單，為預檢請求之後，真正要發出請求的方法與表頭，就表示瀏覽器通過 CORS，也就是對方回應你的預檢請求說：「你可以來要資料了」。</p>
 
-<blockquote>
-<p>CSRF 為 Cross-Site Request Forgery 縮寫，意指「跨站點偽造請求」。</p>
-</blockquote>
+<h1 id="cors-怎麼運作的">CORS 怎麼運作的</h1>
 
-<p>待捕</p>
+<p>當發出請求的一方，向不同源伺服器要資料，瀏覽器會在這次請求的 Header 加上請求方的 <code>Origin</code> (小明請求小華時，小明的 request 中會包含 Origin 表頭：<code>http://smallming.me</code>) 一併送到對方伺服器，此值包含了</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{http or https 通訊協定} + 域名 + port (80 通常省略)，例如 http://smallming.me</code></pre></div>
+<h1 id="cors-cookies">CORS Cookies</h1>
 
-<h1 id="xss">XSS</h1>
+<p>「哈囉，我可不可以要你的 Cookies 用一下？我要的 Cookies 名字是 bala。」
+若對方想要允許 (回 可以啊可以啊)，則可以在回應表頭加上：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Access-Control-Allow-Origin: http://smallming.me (在要對方 Cookies 時，Origin 不能是 *)
+Access-Control-Allow-Credentials: true</code></pre></div>
+<h1 id="結語">結語</h1>
 
-<blockquote>
-<p>XSS 指的是 Cross Site Scrit，為與 Cascading Style Sheets, CSS, 做出區別，在講到網站安全領域的「跨站腳本攻擊」時，都改稱為 XSS。</p>
-</blockquote>
-
-<p>待捕</p>
+<p>因為想用白話一點的描述，嘗試讓自己看懂什麼是跨域共用，官方文件或網路文章提到的很多 CORS 家的那些 Header 就盡量不寫了。</p>
 
 <h1 id="參考連結">參考連結</h1>
 
@@ -349,15 +356,14 @@ Access to XMLHttpRequest at &#39;http://smallhua.me/api/news&#39; from origin &#
 </li>
 <li>
     
-    <a href="https://pandalab.org/articles/110" target="_blank">15分鐘搞懂LARAVEL的CSRF防護機制</a>
-    
-</li>
-<li>
-    
-    <a href="https://www.jianshu.com/p/9801aefde8ad" target="_blank">laravel 的 CSRF 防護機制和延伸</a>
+    <a href="https://shubo.io/what-is-cors/" target="_blank">[教學] CORS 是什麼? 如何設定 CORS?</a>
     
 </li>
 </ul>
+
+<h1 id="最後">最後</h1>
+
+<p>有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
 
 <hr />
 
@@ -367,7 +373,7 @@ Access to XMLHttpRequest at &#39;http://smallhua.me/api/news&#39; from origin &#
 文章作者: 
 <a href="https://blog.genesu.me/archives">littlebookboy</a>
 <br>
-永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2021/06/learn-about-cors-csrf-xss/" target="_blank">https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/</a><br>
+永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2021/06/learn-about-cors/" target="_blank">https://blog.genesu.me/2021/06/learn-about-cors/</a><br>
 許可協議: 
     
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
@@ -425,13 +431,13 @@ Access to XMLHttpRequest at &#39;http://smallhua.me/api/news&#39; from origin &#
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/learn-about-cors/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/learn-about-cors/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -505,13 +511,13 @@ Access to XMLHttpRequest at &#39;http://smallhua.me/api/news&#39; from origin &#
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/learn-about-cors/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/learn-about-cors-csrf-xss/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/learn-about-cors/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -541,13 +547,13 @@ Access to XMLHttpRequest at &#39;http://smallhua.me/api/news&#39; from origin &#
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Flearn-about-cors-csrf-xss%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Flearn-about-cors%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Flearn-about-cors-csrf-xss%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Flearn-about-cors%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
@@ -639,9 +645,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/blog.genesu.me\/2021\/06\/learn-about-cors-csrf-xss\/';
+          this.page.url = 'https:\/\/blog.genesu.me\/2021\/06\/learn-about-cors\/';
           
-            this.page.identifier = '\/2021\/06\/learn-about-cors-csrf-xss\/'
+            this.page.identifier = '\/2021\/06\/learn-about-cors\/'
           
         };
         (function() {
