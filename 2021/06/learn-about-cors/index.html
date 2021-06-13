@@ -247,7 +247,7 @@ if (!doNotTrack) {
       </time>
     
     
-    約 8 分鐘
+    約 9 分鐘
   </div>
 
 </div>
@@ -336,17 +336,24 @@ http://smallming.me vs http://smallming.me:81 port 不同</code></pre></div>
 
 <p>當發出請求的一方，向不同源伺服器要資料，瀏覽器會在這次請求的 Header 加上請求方的 <code>Origin</code> (小明請求小華時，小明的 request 中會包含 Origin 表頭：<code>http://smallming.me</code>) 一併送到對方伺服器，此值包含了</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{http or https 通訊協定} + 域名 + port (80 通常省略)，例如 http://smallming.me</code></pre></div>
+<p>小華接收到小明的請求後，根據小華自己的實作，去判斷這是不是他允許的請求方 (判斷 Origin 有沒有在自己的允許名單內)，若允許，就回給小明說：「OK, 給你資料吧」或是「OK, 來跟我要資料吧 (回給預檢請求)」。</p>
+
+<div class="alert info ">
+  <p>詳細的請求回應運作過程、過程中使用到的表頭，以及其他不在一般情況的請求/回應場景，需另外實作不同的邏輯來實現 CORS，來保證其跨域資源共用的溝通方式是安全的。</p>
+</div>
+
 <h1 id="cors-cookies">CORS Cookies</h1>
 
-<p>「哈囉，我可不可以要你的 Cookies 用一下？我要的 Cookies 名字是 bala。」
-若對方想要允許 (回 可以啊可以啊)，則可以在回應表頭加上：</p>
+<p>「哈囉，我可不可以要你的 Cookies 用一下？我要的 Cookies 名字是 bala。」</p>
+
+<p>若對方想要允許 (回 可以啊可以啊)，則可以在回應表頭加上：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Access-Control-Allow-Origin: http://smallming.me
 Access-Control-Allow-Credentials: true</code></pre></div>
-<p>另外需注意，請求對方允許使用對方的 Cookies 時，對方允許的 Origin 不能是 <code>*</code>，必須指定一個完整網址。</p>
+<p>另外需注意，要請求使用對方的 Cookies 時，對方實作加入允許名單的表頭中，<code>Access-Control-Allow-Origin</code> 不能是 <code>*</code>，必須指定一個完整網址。</p>
 
 <h1 id="結語">結語</h1>
 
-<p>因為想用白話一點的描述，嘗試讓自己看懂什麼是跨域共用，官方文件或網路文章提到的很多 CORS 家的那些 Header 就盡量不寫了。</p>
+<p>因為想用白話一點的描述，嘗試讓自己看懂什麼是 CORS，所以官方文件、網路文章內容中，提過的/實作細節就盡量不重複在寫了。</p>
 
 <h1 id="參考連結">參考連結</h1>
 
