@@ -299,9 +299,11 @@ if (!doNotTrack) {
 
 <h1 id="如何防範">如何防範</h1>
 
-<blockquote>
-<span class="highlight-text yellow">不要相信任何客端傳遞過來的參數</span>
-</blockquote>
+<div class="alert warning ">
+  <p>不要相信任何客端傳遞過來的參數</p>
+</div>
+
+<br>
 
 <ul>
 <li>把輸入的參數值，經過編碼跳脫，存入 DB</li>
@@ -311,7 +313,7 @@ if (!doNotTrack) {
 
 <h1 id="實務經驗">實務經驗</h1>
 
-<p>曾經在 Laravel 控制器把參數值丟給 blade，並在 js 經過邏輯處理，塞在 jQuery <code>.html()</code> 語法中，導致被 xss 的文字被成功執行。</p>
+<p>曾經在 Laravel 控制器把參數值丟給 blade，並在 js 經過邏輯處理，塞在 jQuery <code>.html()</code> 語法中，導致 <code>stored xss</code> 的文字被成功執行。</p>
 
 <h1 id="參考連結">參考連結</h1>
 
