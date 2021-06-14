@@ -6,7 +6,16 @@
     <description>Recent content on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Jun 2021 13:35:43 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Jun 2021 16:23:19 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XSS 觀念筆記</title>
+      <link>https://blog.genesu.me/2021/06/xss-%E8%A7%80%E5%BF%B5%E7%AD%86%E8%A8%98/</link>
+      <pubDate>Mon, 14 Jun 2021 16:23:19 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/2021/06/xss-%E8%A7%80%E5%BF%B5%E7%AD%86%E8%A8%98/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CSRF 觀念筆記</title>
       <link>https://blog.genesu.me/2021/06/learn-about-csrf/</link>
