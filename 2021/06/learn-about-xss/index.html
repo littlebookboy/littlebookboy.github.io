@@ -256,13 +256,7 @@ if (!doNotTrack) {
             <div class="main-content-wrap">
               <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
 <ul>
-<li><a href="#認識-xss">認識 XSS</a>
-<ul>
-<li><a href="#stored-xss">Stored XSS</a></li>
-<li><a href="#reflected-xss">Reflected XSS</a></li>
-<li><a href="#dom-based-xss">DOM Based XSS</a></li>
-<li><a href="#其他">其他</a></li>
-</ul></li>
+<li><a href="#認識-xss">認識 XSS</a></li>
 <li><a href="#如何防範">如何防範</a></li>
 <li><a href="#實務經驗">實務經驗</a></li>
 <li><a href="#參考連結">參考連結</a></li>
@@ -278,23 +272,30 @@ if (!doNotTrack) {
 
 <p>爬文提到，XSS 是指攻擊者透過「網站上任何可以 Input (輸入資料)」的地方，進行 XSS 攻擊，算是討論到網站安全時，最常見的攻擊手法之一。這類攻擊通常為利用各種輸入，或者說「傳遞參數」的手段，把帶有可被執行的 Javascript 程式碼，或 SQL query 傳給伺服器讓程式被觸發(往不好的方向走)，達成攻擊者想要的結果。</p>
 
-<p>這邊提到的 <code>Input</code> 並不單指表單輸入，還有很多其他的傳遞參數方式，可以傳給伺服器，以下舉幾個例子：</p>
+<p>這邊提到的 <code>Input</code> 並不單指表單輸入，還有很多其他的傳遞參數方式，可以傳給伺服器，以下列出幾種 XSS 輸入手段：</p>
 
-<h2 id="stored-xss">Stored XSS</h2>
+<ul>
+<li>Stored XSS
 
-<p>透過表單欄位 <code>&lt;input name=&quot;user&quot;&gt;</code> 輸入值後把表單 <code>sumbit</code></p>
+<ul>
+<li>透過表單欄位 <code>&lt;input name=&quot;user&quot;&gt;</code> 輸入值後把表單 <code>sumbit</code></li>
+</ul></li>
+<li>Reflected XSS
 
-<h2 id="reflected-xss">Reflected XSS</h2>
+<ul>
+<li>透過 URL GET 參數傳入，例如 <code>http://foo.bar/?user=&lt;script&gt;alert('Boom!!')&lt;/script&gt;</code></li>
+</ul></li>
+<li>DOM Based XSS
 
-<p>透過 URL GET 參數傳入，例如 <code>http://foo.bar/?user=&lt;script&gt;alert('Boom!!')&lt;/script&gt;</code></p>
+<ul>
+<li>透過 DOM 渲染時載入的語法 <code>&lt;img onerror=&quot;&lt;script&gt;alert('Boom!!')&lt;/script&gt;&quot;&gt;</code> 引入資源後觸發程式</li>
+</ul></li>
+<li>其他
 
-<h2 id="dom-based-xss">DOM Based XSS</h2>
-
-<p>透過 DOM 渲染時載入的語法 <code>&lt;img onerror=&quot;&lt;script&gt;alert('Boom!!')&lt;/script&gt;&quot;&gt;</code> 引入資源後觸發程式</p>
-
-<h2 id="其他">其他</h2>
-
-<p>另外還有像是透過工具：封包攔截器，把請求送到一半暫停，變更請求表頭塞入自己要的程式碼在送出，也可以算是傳遞參數的一種手段。</p>
+<ul>
+<li>另外還有像是透過工具：封包攔截器，把請求送到一半暫停，變更請求表頭塞入自己要的程式碼在送出，也可以算是傳遞參數的一種手段。</li>
+</ul></li>
+</ul>
 
 <h1 id="如何防範">如何防範</h1>
 
