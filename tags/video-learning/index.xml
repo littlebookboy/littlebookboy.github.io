@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>youtube on 高級伴讀書僮</title>
-    <link>https://blog.genesu.me/tags/youtube/</link>
-    <description>Recent content in youtube on 高級伴讀書僮</description>
+    <title>video-learning on 高級伴讀書僮</title>
+    <link>https://blog.genesu.me/tags/video-learning/</link>
+    <description>Recent content in video-learning on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Jun 2021 20:50:55 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Jun 2021 20:50:55 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/video-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JavaScript 學習筆記 - 5 個不為人知的特性</title>
       <link>https://blog.genesu.me/2021/06/learn-javascript-5-features-you-dont-know/</link>
