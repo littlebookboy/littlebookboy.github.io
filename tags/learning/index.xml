@@ -6,7 +6,21 @@
     <description>Recent content in learning on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Jun 2021 16:23:19 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Jun 2021 20:50:55 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript 學習筆記 - 5 個不為人知的特性</title>
+      <link>https://blog.genesu.me/2021/06/learn-javascript-5-features-you-dont-know/</link>
+      <pubDate>Tue, 15 Jun 2021 20:50:55 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/2021/06/learn-javascript-5-features-you-dont-know/</guid>
+      <description>&lt;p&gt;看完影片 
+    
+    &lt;a href=&#34;https://www.youtube.com/watch?v=v2tJ3nzXh8I&#34; target=&#34;_blank&#34;&gt;youtube - 5 Must Know JavaScript Features That Almost Nobody Knows
+&lt;/a&gt;
+    
+ 整理紀錄下內容所說的東西。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>XSS 觀念筆記</title>
       <link>https://blog.genesu.me/2021/06/learn-about-xss/</link>
