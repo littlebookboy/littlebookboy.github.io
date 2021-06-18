@@ -249,7 +249,7 @@ if (!doNotTrack) {
       </time>
     
     
-    約 5 分鐘
+    約 6 分鐘
   </div>
 
 </div>
@@ -261,10 +261,9 @@ if (!doNotTrack) {
 <li><a href="#認識-csrf-攻擊">認識 CSRF 攻擊</a></li>
 <li><a href="#事情是這樣的">事情是這樣的</a></li>
 <li><a href="#如何防止-csrf-攻擊">如何防止 CSRF 攻擊</a></li>
-<li><a href="#認識-laravel-的-csrf-防禦機制">認識 Laravel 的 CSRF 防禦機制</a></li>
-<li><a href="#結語">結語</a></li>
-<li><a href="#參考連結">參考連結</a></li>
+<li><a href="#laravel-提供的-csrf-作法">Laravel 提供的 CSRF 作法</a></li>
 <li><a href="#最後">最後</a></li>
+<li><a href="#參考連結">參考連結</a></li>
 </ul>
 </nav>
 
@@ -306,7 +305,7 @@ if (!doNotTrack) {
 
 <p>當然也可以單純把 token 寫在伺服器端 (用 session)，讓前端去塞入到每個請求中，這樣也可以驗證暗號是不是對的，也就是説「只要這暗號，是別人沒辦法建立的，只有我能用」的前提之下才有效。</p>
 
-<h1 id="認識-laravel-的-csrf-防禦機制">認識 Laravel 的 CSRF 防禦機制</h1>
+<h1 id="laravel-提供的-csrf-作法">Laravel 提供的 CSRF 作法</h1>
 
 <p>Laravel 提供你可輕鬆在原始碼中，加入 csrf token (暗號)，以防止 CSRF 攻擊發生，以下是幾種產生 token 的方式：</p>
 
@@ -317,14 +316,20 @@ if (!doNotTrack) {
 <li>客端產生隨機數，當成 token，由 cookies 同源機制去判斷是不是「我家的客端」(題外話，若 cookies 有辦法被第三者寫入，或透過 CORS 取用，則無法真正防止 CSRF 攻擊發生)</li>
 </ul>
 
-<h1 id="結語">結語</h1>
+<h1 id="最後">最後</h1>
 
-<p>這兩天看了很多篇關於 CORS、CSRF 的說明，大致上能理解其描述的案例、場景、以及大概是如何實作的。</p>
+<p>這兩天看了很多篇關於 CORS、CSRF 的說明，大致上能理解其描述的案例、場景、以及大概是如何實作的。有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
+
+<p>另外，筆者一併整理了討論到 CSRF 時，可一併吸收研讀的主題</p>
+
+<ul>
+<li><a href="https://blog.genesu.me/2021/06/learn-about-cors/">CORS 觀念筆記</a></li>
+<li><a href="https://blog.genesu.me/2021/06/learn-about-xss/">XSS 觀念筆記</a></li>
+</ul>
 
 <h1 id="參考連結">參考連結</h1>
 
 <ul>
-<li><a href="https://blog.genesu.me/2021/06/learn-about-cors/">CORS 觀念筆記</a></li>
 <li>
     
     <a href="https://zh.wikipedia.org/wiki/%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0" target="_blank">跨站請求偽造 - 維基百科</a>
@@ -341,10 +346,6 @@ if (!doNotTrack) {
     
 </li>
 </ul>
-
-<h1 id="最後">最後</h1>
-
-<p>有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
 
 <hr />
 

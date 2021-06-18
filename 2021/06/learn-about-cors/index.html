@@ -261,9 +261,8 @@ if (!doNotTrack) {
 <li><a href="#cors-請求類型">CORS 請求類型</a></li>
 <li><a href="#cors-怎麼運作的">CORS 怎麼運作的</a></li>
 <li><a href="#cors-cookies">CORS Cookies</a></li>
-<li><a href="#結語">結語</a></li>
-<li><a href="#參考連結">參考連結</a></li>
 <li><a href="#最後">最後</a></li>
+<li><a href="#參考連結">參考連結</a></li>
 </ul>
 </nav>
 
@@ -351,14 +350,20 @@ http://smallming.me vs http://smallming.me:81 port 不同</code></pre></div>
 Access-Control-Allow-Credentials: true</code></pre></div>
 <p>另外需注意，要請求使用對方的 Cookies 時，對方實作加入允許名單的表頭中，<code>Access-Control-Allow-Origin</code> 不能是 <code>*</code>，必須指定一個完整網址。</p>
 
-<h1 id="結語">結語</h1>
+<h1 id="最後">最後</h1>
 
-<p>因為想用白話一點的描述，嘗試讓自己看懂什麼是 CORS，所以官方文件、網路文章內容中，提過的/實作細節就盡量不重複在寫了。</p>
+<p>因為想用白話一點的描述，嘗試讓自己看懂什麼是 CORS，所以官方文件、網路文章內容中，提過的/實作細節就盡量不重複在寫了。有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
+
+<p>另外，筆者一併整理了討論到 CSRF 時，可一併吸收研讀的主題</p>
+
+<ul>
+<li><a href="https://blog.genesu.me/2021/06/learn-about-csrf/">CSRF 觀念筆記</a></li>
+<li><a href="https://blog.genesu.me/2021/06/learn-about-xss/">XSS 觀念筆記</a></li>
+</ul>
 
 <h1 id="參考連結">參考連結</h1>
 
 <ul>
-<li><a href="https://blog.genesu.me/2021/06/learn-about-csrf/">CORS 觀念筆記</a></li>
 <li>
     
     <a href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS" target="_blank">跨來源資源共用（CORS)</a>
@@ -370,10 +375,6 @@ Access-Control-Allow-Credentials: true</code></pre></div>
     
 </li>
 </ul>
-
-<h1 id="最後">最後</h1>
-
-<p>有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
 
 <hr />
 
