@@ -2,25 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.genesu.me/tags/learning/</loc>
+    <lastmod>2021-06-18T12:01:41+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/post/</loc>
+    <lastmod>2021-06-18T12:01:41+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/tags/</loc>
+    <lastmod>2021-06-18T12:01:41+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/tags/test/</loc>
+    <lastmod>2021-06-18T12:01:41+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/2021/06/learn-about-stress-testing/</loc>
+    <lastmod>2021-06-18T12:01:41+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/</loc>
+    <lastmod>2021-06-18T12:01:41+08:00</lastmod>
+  </url><url>
     <loc>https://blog.genesu.me/tags/javascript/</loc>
     <lastmod>2021-06-15T20:50:55+08:00</lastmod>
   </url><url>
     <loc>https://blog.genesu.me/2021/06/learn-javascript-5-features-you-dont-know/</loc>
     <lastmod>2021-06-15T20:50:55+08:00</lastmod>
   </url><url>
-    <loc>https://blog.genesu.me/tags/learning/</loc>
-    <lastmod>2021-06-15T20:50:55+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.genesu.me/post/</loc>
-    <lastmod>2021-06-15T20:50:55+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.genesu.me/tags/</loc>
-    <lastmod>2021-06-15T20:50:55+08:00</lastmod>
-  </url><url>
     <loc>https://blog.genesu.me/tags/video-learning/</loc>
-    <lastmod>2021-06-15T20:50:55+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.genesu.me/</loc>
     <lastmod>2021-06-15T20:50:55+08:00</lastmod>
   </url><url>
     <loc>https://blog.genesu.me/2021/06/learn-about-xss/</loc>

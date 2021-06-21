@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Gene (Littlebookboy)">
+<meta name="keywords" content="ab, 壓力測試, testing, stress testing, develop, backend">
+<meta name="description" content="了解壓力測試">
+
+
+<meta property="og:description" content="了解壓力測試">
+<meta property="og:type" content="article">
+<meta property="og:title" content="了解壓力測試">
+<meta name="twitter:title" content="了解壓力測試">
+<meta property="og:url" content="https://blog.genesu.me/2021/06/learn-about-stress-testing/">
+<meta property="twitter:url" content="https://blog.genesu.me/2021/06/learn-about-stress-testing/">
+<meta property="og:site_name" content="高級伴讀書僮">
+<meta property="og:description" content="了解壓力測試">
+<meta name="twitter:description" content="了解壓力測試">
+<meta property="og:locale" content="zh-tw">
+
+  
+    <meta property="article:published_time" content="2021-06-18T12:01:41">
+  
+  
+    <meta property="article:modified_time" content="2021-06-18T12:01:41">
+  
+  
+  
+  
+    
+      <meta property="article:tag" content="learning">
+    
+      <meta property="article:tag" content="test">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/wave-3473335_1920.jpg">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/wave-3473335_1920.jpg">
+
+
+
+
+  <meta property="og:image" content="https://blog.genesu.me/images/avataaars.png">
+  <meta property="twitter:image" content="https://blog.genesu.me/images/avataaars.png">
+
+
+    <title>了解壓力測試</title>
+
+    <link rel="icon" href="images/favicon.png?v=1">
+    
+
+    
+
+    <link rel="canonical" href="https://blog.genesu.me/2021/06/learn-about-stress-testing/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://blog.genesu.me/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://blog.genesu.me/css/mystyle.css">
+      
+    
+
+    
+      
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-176081577-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://blog.genesu.me/">高級伴讀書僮</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://blog.genesu.me/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://blog.genesu.me/images/avataaars.png" alt="作者的圖片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://blog.genesu.me/#about">
+          <img class="sidebar-profile-picture" src="https://blog.genesu.me/images/avataaars.png" alt="作者的圖片" />
+        </a>
+        <h4 class="sidebar-profile-name">Gene (Littlebookboy)</h4>
+        
+          <h5 class="sidebar-profile-bio">Writing, Learning, and Keep Going</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.genesu.me/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首頁</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.genesu.me/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">標籤</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.genesu.me/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">所有文章</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.genesu.me/about-me">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">關於我</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/littlebookboy" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.genesu.me/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              post-header-cover--partial"
+       style="background-image:url('https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/wave-3473335_1920.jpg')"
+       data-behavior="5">
+    
+  </div>
+
+
+      <div id="main" data-behavior="5"
+        class="hasCover
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      了解壓力測試
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-06-18T12:01:41&#43;08:00">
+        
+  
+  
+  
+  
+    2021-06-18 12:01:41 UTC&#43;8
+  
+
+      </time>
+    
+    
+    約 10 分鐘
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
+<ul>
+<li><a href="#前言">前言</a></li>
+<li><a href="#何謂壓力測試">何謂壓力測試</a></li>
+<li><a href="#需要壓測的場景">需要壓測的場景</a></li>
+<li><a href="#壓力測試計畫">壓力測試計畫</a></li>
+<li><a href="#效能指標">效能指標</a></li>
+<li><a href="#相關工具">相關工具</a></li>
+<li><a href="#題外話-如何優化">題外話：如何優化</a></li>
+<li><a href="#最後">最後</a></li>
+<li><a href="#參考連結">參考連結</a></li>
+</ul>
+</nav>
+
+<h1 id="前言">前言</h1>
+
+<p>嗯&hellip;因為近期有被問到說，我會怎麼做壓力測試，覺得自己答的沒有很好，花了一個下午吃了幾篇文章，把目前看到的東西整理一下。</p>
+
+<h1 id="何謂壓力測試">何謂壓力測試</h1>
+
+<blockquote>
+<p>軟體測試中的壓力測試，是在超過正常運作條件以外的條件下運作系統，以確認軟體體質、可用性的一種測試驗證方式。一般來說，壓力測試會看軟體在高負載下的 Robustness、可用性及異常處理，以及哪些在一般使用環境下算是正常行為。例如一個網站頁面預期是 100 個人同時點擊訪問，壓力測試就要是採用 120 個 (略高) 同時點擊的條件測試。 &mdash; 
+    
+    <a href="https://en.wikipedia.org/wiki/Stress_testing_%28software%29" target="_blank">參考自維基百科 Stress testing (software)</a>
+    
+</p>
+</blockquote>
+
+<p>根據維基百科的說明，我們可以透過壓力測試，得知軟體 (網站 / API 等) 在一般情況、異常情況下，能夠被多少人訪問存取，系統能承受到多少，反應速度如何，系統是否會發生異常，系統承載量是不是符合預期等，藉由不同的假設，來確認我們設計的軟體，足以應對各種使用場景，讓使用者有良好的體驗。</p>
+
+<div class="alert info ">
+  <p>簡言之，透過壓測，了解系統正常最多可吃多少的訪問量 (不會慢)，異常時多少會掛掉。</p>
+</div>
+
+<h1 id="需要壓測的場景">需要壓測的場景</h1>
+
+<p>現實生活中，有很多實務場景，常常需要為系統做好「承受能力」的測試，例如：</p>
+
+<ul>
+<li>演唱會搶票</li>
+<li>遊戲上線公測</li>
+<li>網路預約施打疫苗</li>
+<li>預約申辦 499 吃到飽</li>
+<li>雙 11 整點下殺一折商品搶購</li>
+<li><del>Twitter 巴魯斯季</del></li>
+</ul>
+
+<p>若沒有妥善預估好服務應承受合理的人次/訪問次數，做好規劃，等到使用者同時擠進來，則可能會造成服務中斷，背後損失的成本難以預估。</p>
+
+<h1 id="壓力測試計畫">壓力測試計畫</h1>
+
+<p>先確認好「測試目標場景」，在制定壓測的方式，如何打到有效的數據；記得，我們要的是「壓測 &gt; 改善 &gt; 壓測」，也就是說，壓測的最終目的就是：藉由<span class="highlight-text yellow">壓測結果</span>，取得<span class="highlight-text yellow">系統可改善的標的</span>。</p>
+
+<p>舉例來說，系統即將於早上 10:00 開放線上預約施打疫苗，預估總預約人數為 10,000 人，假設使用者怕預約不到，全部都很準時想要搶在 10:00 馬上登入預約，則可預期：</p>
+
+<ul>
+<li>瞬間訪問請求數為 10,000 次 (每人 1 次) (正常情況下)</li>
+<li>瞬間訪問請求數為 20,000 次 (每人 2 次) (進不來 F5 重整)</li>
+<li>瞬間訪問請求數為 40,000 次 (極端條件/最差情況，可能為預估次數的數倍)</li>
+</ul>
+
+<p>在可預期的情況下，我們希望：</p>
+
+<ol>
+<li>正常情況下，系統應一路順暢，每個請求回應都是低延遲，快速反應</li>
+<li>比正常情況更頻繁的訪問下，雖然每個請求回應可能比正常情況下，延遲略高一點，但不會讓使用者等待過久</li>
+<li>極端情況下，系統不能直接噴/掛掉給使用者看</li>
+</ol>
+
+<p>依據「反應時間」制定測試計畫 (舉例)：</p>
+
+<ol>
+<li>在 2 秒內，模擬達到 10,000 人次訪問，其平均反應時間應在 0.05 秒，且請求成功率為 100%</li>
+<li>在 2 秒內，模擬達到 20,000 人次訪問，其平均反應時間應在 0.12 秒，且請求成功率為 100%</li>
+<li>在 2 秒內，模擬達到 40,000 人次訪問，其平均反應時間應在 0.55 秒，且請求成功率為 100%</li>
+<li>嘗試更高的極限條件，讓反應速度慢到會讓使用者感到不高興 (例如反應時間 5 秒)，並針對此情況設計如何優化</li>
+<li>嘗試更高的極限條件，把系統打到掛掉，紀錄極限值，並針對此情況設計如何恢復系統</li>
+</ol>
+
+<p>上述 1~4 又稱為<span class="highlight-text yellow">負載測試</span>，這類測試只是為了知道系統可承受的量，所制定的測試計畫；</p>
+
+<p>而 5 可稱為<span class="highlight-text yellow">壓力測試</span>，這類測試會制定極端條件，找出系統故障之後的行為，才能知道如果真的發生了，要如何恢復系統。</p>
+
+<h1 id="效能指標">效能指標</h1>
+
+<p>這邊列舉幾個指標供參考：</p>
+
+<ul>
+<li>1 分鐘內，每秒可載入多少頁面</li>
+<li>1 分鐘內，可接受完成幾次 API 請求</li>
+<li>平均頁面載入時間</li>
+<li>平均圖片載入時間</li>
+<li>請求失敗次數/失敗率</li>
+<li>模擬的客戶人數，與分散訪問時間，例如 10 秒內，每秒幾人訪問，共幾次請求，請參考下圖。</li>
+</ul>
+
+
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/file-kumake8dOr.png" title="出處 https://techmoon.xyz/loader-io/，此圖為模擬 20 秒內，達到每秒 100 個使用者訪問，共 20,000 次請求" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/file-kumake8dOr.png"  alt="出處 https://techmoon.xyz/loader-io/，此圖為模擬 20 秒內，達到每秒 100 個使用者訪問，共 20,000 次請求">
+  
+    </a>
+  
+   
+    <span class="caption">出處 https://techmoon.xyz/loader-io/，此圖為模擬 20 秒內，達到每秒 100 個使用者訪問，共 20,000 次請求</span>
+  
+</div>
+
+  <div style="clear:both;"></div>
+
+
+<h1 id="相關工具">相關工具</h1>
+
+<ul>
+<li>Apache Bench 適合用於負載測試，比起 JMeter 較為陽春，但速度較快 (日後認真用過再補充)</li>
+<li>Apache JMeter 支援終端機指令，同時提供 GUI 介面，測試功能較齊全，但要學習使用也比較花時間 (用過一次，但沒有很熟，日後再補充)</li>
+<li>nodejs 非同步請求，做負載測試，單純用來狂打，可以看硬體扛不扛得住這種瞬間併發 (CPU 會不會飆到 100%，記憶體會不會被吃滿)</li>
+<li>guzzle 非同步請求，同上</li>
+<li>
+    
+    <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google PageSpeed Insights</a>
+    
+ 這個不是壓測工具，但也可用於分析網頁載入效能</li>
+</ul>
+
+<h1 id="題外話-如何優化">題外話：如何優化</h1>
+
+<ul>
+<li>後端程式方面，可使用 
+    
+    <a href="https://github.com/laynefyc/php-monitor" target="_blank">php-monitor</a>
+    
+ 這類工具，觀察執行過程看哪邊在慢，重複進行壓測、改善、壓測的循環，藉此提升效能；如果與預期效能差距過大，或許要考慮換個更適合對應場景的語言、第三方服務等方式，提高整體服務效能</li>
+<li>承上，從觀測到慢的地方著手改善，例如替不用每次都返回最新的資料加上快取、靜態資源透過 cdn 快取、慢查詢透過優化 SQL Query 、設索引等方式優化調整</li>
+<li>後端機器方面，可藉由垂直擴展 (加大 CPU、Memory)，或是水平擴展 (新增服務作 LB 分流) 等課金手段優化效能</li>
+</ul>
+
+<h1 id="最後">最後</h1>
+
+<p>大力推薦可以去看一下 
+    
+    <a href="https://medium.com/@harrietty/load-testing-an-api-with-apache-benchmark-or-jmeter-24cfe39d3a23" target="_blank">這篇文章</a>
+    
+，令我收穫良多。</p>
+
+<p>此篇文章標題原本定調為「如何壓力測試」，主軸會是如何使用工具進行壓力測試，但網路上已經有很多篇文章介紹如何使用，因此推翻重寫，主題改為「了解壓力測試」，試著把他搞清楚，這樣之後才不會只是為了測試而測試，卻始終不知到底為何而測試，而是理解「明確知道何為測試的目標、目的」，才去進行壓力測試。</p>
+
+<p>目前覺得寫得還不是很理想，覺得還有很多沒有講到或是寫得太淺<del>我就廢</del>，日後會再使用過工具後，另寫一篇關於工具使用的文章，順便認真看一下 ab 跟 JMeter 有何差別；有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
+
+<h1 id="參考連結">參考連結</h1>
+
+<ul>
+<li>
+    
+    <a href="https://medium.com/@harrietty/load-testing-an-api-with-apache-benchmark-or-jmeter-24cfe39d3a23" target="_blank">Load testing an API with Apache Benchmark or JMeter</a>
+    
+</li>
+<li>
+    
+    <a href="https://stackoverflow.com/questions/10260526/which-gets-the-measurements-right-jmeter-or-apache-ab" target="_blank">Which gets the measurements right, JMeter or Apache ab?</a>
+    
+</li>
+<li>
+    
+    <a href="https://www.twblogs.net/a/5c39cd38bd9eee35b21da95d" target="_blank">Apache Bench 壓測以及和 Jmeter 對比</a>
+    
+</li>
+<li>
+    
+    <a href="https://www.guru99.com/stress-testing-tutorial.html" target="_blank">What is STRESS Testing in Software Testing? Tools, Types, Examples</a>
+    
+</li>
+<li>
+    
+    <a href="https://blog.hellosanta.com.tw/%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88/%E4%BC%BA%E6%9C%8D%E5%99%A8/%E7%B6%B2%E9%A0%81%E4%BC%BA%E6%9C%8D%E5%99%A8%E7%9B%A3%E6%B8%AC%E7%AB%99%EF%BC%81%EF%BC%81%E4%B8%8D%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84apachebench%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95" target="_blank">網頁伺服器監測站！！不能不知道的ApacheBench使用方法</a>
+    
+ (結論的部分可參考一下)</li>
+</ul>
+
+<hr />
+
+<multiple-line-output>
+    
+<br>
+文章作者: 
+<a href="https://blog.genesu.me/archives">littlebookboy</a>
+<br>
+永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2021/06/learn-about-stress-testing/" target="_blank">https://blog.genesu.me/2021/06/learn-about-stress-testing/</a><br>
+許可協議: 
+    
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
+    
+
+
+</multiple-line-output>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">標籤</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.genesu.me/tags/learning/">learning</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.genesu.me/tags/test/">test</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/learn-javascript-5-features-you-dont-know/" data-tooltip="JavaScript 學習筆記 - 5 個不為人知的特性">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/learn-about-stress-testing/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/learn-about-stress-testing/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 Gene (Littlebookboy). All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/learn-javascript-5-features-you-dont-know/" data-tooltip="JavaScript 學習筆記 - 5 個不為人知的特性">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/learn-about-stress-testing/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/learn-about-stress-testing/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Flearn-about-stress-testing%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Flearn-about-stress-testing%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://blog.genesu.me/images/avataaars.png" alt="作者的圖片" />
+    
+    <h4 id="about-card-name">Gene (Littlebookboy)</h4>
+    
+      <div id="about-card-bio">Writing, Learning, and Keep Going</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        <a href="https://blog.genesu.me/about-me/">Backend Engineer</a>
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Taichung, Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://blog.genesu.me/images/cover2.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://blog.genesu.me/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/blog.genesu.me\/2021\/06\/learn-about-stress-testing\/';
+          
+            this.page.identifier = '\/2021\/06\/learn-about-stress-testing\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'blog-genesu-me';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
