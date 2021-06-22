@@ -260,7 +260,7 @@ if (!doNotTrack) {
 <li><a href="#記憶體用去哪了">記憶體用去哪了</a></li>
 <li><a href="#解法-1-改-php-ini">解法 1 - 改 php.ini</a></li>
 <li><a href="#解法-2-透過-php-指令加大記憶體">解法 2 - 透過 php 指令加大記憶體</a></li>
-<li><a href="#解法-3-透過-composer-指令加大記憶體">解法 3 - 透過 composer 指令加大記憶體</a></li>
+<li><a href="#解法-3-透過-composer-指令加大記憶體-推">解法 3 - 透過 composer 指令加大記憶體 (推)</a></li>
 <li><a href="#再次別名-以-mac-為例">再次別名 (以 Mac 為例)</a></li>
 <li><a href="#最後">最後</a></li>
 <li><a href="#參考連結">參考連結</a></li>
@@ -292,11 +292,19 @@ if (!doNotTrack) {
 )：</p>
 <pre><code>; Use -1 for unlimited or define an explicit value like 2G
 memory_limit = -1</code></pre>
+<div class="alert warning ">
+  <p>不推薦此做法，這樣本地整個環境的 php 都會被影響。</p>
+</div>
+
 <h1 id="解法-2-透過-php-指令加大記憶體">解法 2 - 透過 php 指令加大記憶體</h1>
 
 <p>透過 <code>php</code> 宣告，臨時加大記憶體配置，例如：</p>
 <pre><code>php -d memory_limit=-1 composer.phar &lt;...&gt;</code></pre>
-<h1 id="解法-3-透過-composer-指令加大記憶體">解法 3 - 透過 composer 指令加大記憶體</h1>
+<div class="alert info ">
+  <p>個人不使用此做法，與平常直接使用 <code>composer</code> 習慣有差，還要多打 <code>php -d ...</code>。</p>
+</div>
+
+<h1 id="解法-3-透過-composer-指令加大記憶體-推">解法 3 - 透過 composer 指令加大記憶體 (推)</h1>
 
 <p>透過 <code>composer</code> 宣告，臨時加大記憶體配置，例如：</p>
 <pre><code>COMPOSER_MEMORY_LIMIT=-1 composer.phar &lt;...&gt;</code></pre>
