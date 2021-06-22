@@ -7,34 +7,32 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
-<meta name="keywords" content="prototype, balsamiq, develop, backend">
-<meta name="description" content="練習製作產品 Prototype">
+<meta name="keywords" content="composer, Fatal error, allowed memory, develop, backend">
+<meta name="description" content="Composer 跑到記憶體不足問題解法">
 
 
-<meta property="og:description" content="練習製作產品 Prototype">
+<meta property="og:description" content="Composer 跑到記憶體不足問題解法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="練習製作產品 Prototype">
-<meta name="twitter:title" content="練習製作產品 Prototype">
-<meta property="og:url" content="https://blog.genesu.me/2021/06/learn-about-drawing-web-prototype-using-balsamiq/">
-<meta property="twitter:url" content="https://blog.genesu.me/2021/06/learn-about-drawing-web-prototype-using-balsamiq/">
+<meta property="og:title" content="Composer 跑到記憶體不足問題解法">
+<meta name="twitter:title" content="Composer 跑到記憶體不足問題解法">
+<meta property="og:url" content="https://blog.genesu.me/2021/06/how-to-solve-memory-issue-when-using-composer/">
+<meta property="twitter:url" content="https://blog.genesu.me/2021/06/how-to-solve-memory-issue-when-using-composer/">
 <meta property="og:site_name" content="高級伴讀書僮">
-<meta property="og:description" content="練習製作產品 Prototype">
-<meta name="twitter:description" content="練習製作產品 Prototype">
+<meta property="og:description" content="Composer 跑到記憶體不足問題解法">
+<meta name="twitter:description" content="Composer 跑到記憶體不足問題解法">
 <meta property="og:locale" content="zh-tw">
 
   
-    <meta property="article:published_time" content="2021-06-21T18:51:53">
+    <meta property="article:published_time" content="2021-06-22T09:03:21">
   
   
-    <meta property="article:modified_time" content="2021-06-21T18:51:53">
+    <meta property="article:modified_time" content="2021-06-22T09:03:21">
   
   
   
   
     
-      <meta property="article:tag" content="learning">
-    
-      <meta property="article:tag" content="prototype">
+      <meta property="article:tag" content="composer">
     
   
 
@@ -48,8 +46,8 @@
 
 
 
-  <meta property="og:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/ux-788002_1920.jpg">
-  <meta property="twitter:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/ux-788002_1920.jpg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/pen-731199_1920.jpg">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/pen-731199_1920.jpg">
 
 
 
@@ -58,14 +56,14 @@
   <meta property="twitter:image" content="https://blog.genesu.me/images/avataaars.png">
 
 
-    <title>練習製作產品 Prototype</title>
+    <title>Composer 跑到記憶體不足問題解法</title>
 
     <link rel="icon" href="images/favicon.png?v=1">
     
 
     
 
-    <link rel="canonical" href="https://blog.genesu.me/2021/06/learn-about-drawing-web-prototype-using-balsamiq/">
+    <link rel="canonical" href="https://blog.genesu.me/2021/06/how-to-solve-memory-issue-when-using-composer/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -215,7 +213,7 @@ if (!doNotTrack) {
   <div class="post-header-cover
               text-center
               post-header-cover--partial"
-       style="background-image:url('https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/ux-788002_1920.jpg')"
+       style="background-image:url('https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/pen-731199_1920.jpg')"
        data-behavior="5">
     
   </div>
@@ -231,19 +229,19 @@ if (!doNotTrack) {
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      練習製作產品 Prototype
+      Composer 跑到記憶體不足問題解法
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-06-21T18:51:53&#43;08:00">
+      <time itemprop="datePublished" datetime="2021-06-22T09:03:21&#43;08:00">
         
   
   
   
   
-    2021-06-21 18:51:53 UTC&#43;8
+    2021-06-22 09:03:21 UTC&#43;8
   
 
       </time>
@@ -258,88 +256,62 @@ if (!doNotTrack) {
             <div class="main-content-wrap">
               <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
 <ul>
-<li><a href="#工具">工具</a></li>
-<li><a href="#直接上影片">直接上影片</a></li>
+<li><a href="#前言">前言</a></li>
+<li><a href="#記憶體用去哪了">記憶體用去哪了</a></li>
+<li><a href="#解法-1-改-php-ini">解法 1 - 改 php.ini</a></li>
+<li><a href="#解法-2-透過-php-指令加大記憶體">解法 2 - 透過 php 指令加大記憶體</a></li>
+<li><a href="#解法-3-透過-composer-指令加大記憶體">解法 3 - 透過 composer 指令加大記憶體</a></li>
+<li><a href="#再次別名-以-mac-為例">再次別名 (以 Mac 為例)</a></li>
 <li><a href="#最後">最後</a></li>
 <li><a href="#參考連結">參考連結</a></li>
 </ul>
 </nav>
 
-<h1 id="工具">工具</h1>
+<h1 id="前言">前言</h1>
 
+<p>近期發現在使用
+    
+    <a href="https://getcomposer.org/" target="_blank">Composer</a>
+    
+時，都會跑到</p>
+<pre><code>PHP Fatal error: Allowed memory size of XXXXXX bytes exhausted &lt;...&gt;</code></pre>
+<p>於是上網找了一些資料，這邊做個整理</p>
 
-    
-    <a href="https://balsamiq.com/" target="_blank">https://balsamiq.com/</a>
-    
+<h1 id="記憶體用去哪了">記憶體用去哪了</h1>
 
+<p>在下指令時，補上 <code>-vvv</code> 可以看到執行過程，例如：</p>
+<pre><code>composer install -vvv</code></pre>
+<p>(不過在 mac 好像不會 show memory 用了多少，在 centos 裏面記得是有 show)</p>
 
-<p>純粹興趣練習畫看看 Web Prototype，網路上找到的推薦工具很多，就挑了個相對順眼 + 操作簡單 + 免費試用 + 有桌面軟體 + 有官方指引的
-    
-    <a href="https://balsamiq.com/" target="_blank">這套</a>
-    
-來玩玩。
-<p>
+<h1 id="解法-1-改-php-ini">解法 1 - 改 php.ini</h1>
 
- 
-  
-  
-  
-  
+<p>追加以下設定到 <code>php.ini</code> 中 (
     
-      
+    <a href="https://getcomposer.org/doc/articles/troubleshooting.md#memory-limit-errors" target="_blank">出處</a>
     
-  
-    
-  
-    
-      
-    
-  
+)：</p>
+<pre><code>; Use -1 for unlimited or define an explicit value like 2G
+memory_limit = -1</code></pre>
+<h1 id="解法-2-透過-php-指令加大記憶體">解法 2 - 透過 php 指令加大記憶體</h1>
 
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
+<p>透過 <code>php</code> 宣告，臨時加大記憶體配置，例如：</p>
+<pre><code>php -d memory_limit=-1 composer.phar &lt;...&gt;</code></pre>
+<h1 id="解法-3-透過-composer-指令加大記憶體">解法 3 - 透過 composer 指令加大記憶體</h1>
 
-<div class="figure center" >
-  
-    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202021-06-21%20%E4%B8%8B%E5%8D%887.01.30.png" title="balsamiq 的 MAC 桌面版安裝好之後，圖示長這樣" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202021-06-21%20%E4%B8%8B%E5%8D%887.01.30.png"  alt="balsamiq 的 MAC 桌面版安裝好之後，圖示長這樣">
-  
-    </a>
-  
-   
-    <span class="caption">balsamiq 的 MAC 桌面版安裝好之後，圖示長這樣</span>
-  
-</div>
+<p>透過 <code>composer</code> 宣告，臨時加大記憶體配置，例如：</p>
+<pre><code>COMPOSER_MEMORY_LIMIT=-1 composer.phar &lt;...&gt;</code></pre>
+<h1 id="再次別名-以-mac-為例">再次別名 (以 Mac 為例)</h1>
 
-  <div style="clear:both;"></div>
-
-</p></p>
-
-<h1 id="直接上影片">直接上影片</h1>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9nFdWLhD2zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<p>可透過 <code>aliases</code> 再次別名，讓記憶體加大這件事不用每次打，例如：</p>
+<pre><code>echo &#34;alias composer=\&#34;COMPOSER_MEMORY_LIMIT=4G composer\&#34;&#34; &gt;&gt; ~/.aliases</code></pre>
+<p>重開終端機，即可正常使用：</p>
+<pre><code>composer install &lt;...&gt; # 這樣下記憶體已經加大過了</code></pre>
 <h1 id="最後">最後</h1>
 
-<p>這套使用上很好理解 (練習影片大概花不到兩小時做的)，而且很多別人做好的 layout，可以直接匯入使用修改，大大節省了重新刻輪子的時間；</p>
-
-<p>目前官方售價桌面軟體買斷是一人 89 鎂，不知道月租除了可以月付少少 - 9 鎂 (不用一次買斷) 優點，以及限制最多創建兩個專案 (嗯好像有點少) 之外，有無功能上的差異；</p>
-
-<p>另外還有個付費方案是能整合到 
-    
-    <a href="https://balsamiq.com/buy/#gd" target="_blank">Google 雲端、Atlassian Confluence，或是 Jira</a>
-    
-；</p>
+<ol>
+<li>前述解法中提到的 <code>composer.phar</code> 若有設置過軟連結，則改為 <code>composer</code></li>
+<li>臨時加大的記憶體，不要設置成 <code>-1</code> (開到最大)，我通常設定成 <code>4G</code> (夠用就好)，例如 <code>COMPOSER_MEMORY_LIMIT=4G composer &lt;...&gt;</code>，避免記憶體爆掉</li>
+</ol>
 
 <p>有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
 
@@ -348,7 +320,7 @@ if (!doNotTrack) {
 <ul>
 <li>
     
-    <a href="https://balsamiq.com/" target="_blank">Balsamiq 官方網站</a>
+    <a href="https://getcomposer.org/doc/articles/troubleshooting.md#memory-limit-errors" target="_blank">Memory limit errors - Composer 官網</a>
     
 </li>
 </ul>
@@ -361,7 +333,7 @@ if (!doNotTrack) {
 文章作者: 
 <a href="https://blog.genesu.me/archives">littlebookboy</a>
 <br>
-永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2021/06/learn-about-drawing-web-prototype-using-balsamiq/" target="_blank">https://blog.genesu.me/2021/06/learn-about-drawing-web-prototype-using-balsamiq/</a><br>
+永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2021/06/how-to-solve-memory-issue-when-using-composer/" target="_blank">https://blog.genesu.me/2021/06/how-to-solve-memory-issue-when-using-composer/</a><br>
 許可協議: 
     
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
@@ -380,9 +352,7 @@ if (!doNotTrack) {
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">標籤</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://blog.genesu.me/tags/learning/">learning</a>
-
-  <a class="tag tag--primary tag--small" href="https://blog.genesu.me/tags/prototype/">prototype</a>
+  <a class="tag tag--primary tag--small" href="https://blog.genesu.me/tags/composer/">composer</a>
 
                   </div>
                 
@@ -395,7 +365,7 @@ if (!doNotTrack) {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/how-to-solve-memory-issue-when-using-composer/" data-tooltip="Composer 跑到記憶體不足問題解法">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -403,7 +373,7 @@ if (!doNotTrack) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/learn-about-stress-testing/" data-tooltip="了解壓力測試">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/learn-about-drawing-web-prototype-using-balsamiq/" data-tooltip="練習製作產品 Prototype">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -421,13 +391,13 @@ if (!doNotTrack) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/learn-about-drawing-web-prototype-using-balsamiq/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/how-to-solve-memory-issue-when-using-composer/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/learn-about-drawing-web-prototype-using-balsamiq/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/how-to-solve-memory-issue-when-using-composer/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -475,7 +445,7 @@ if (!doNotTrack) {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/how-to-solve-memory-issue-when-using-composer/" data-tooltip="Composer 跑到記憶體不足問題解法">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -483,7 +453,7 @@ if (!doNotTrack) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/learn-about-stress-testing/" data-tooltip="了解壓力測試">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/06/learn-about-drawing-web-prototype-using-balsamiq/" data-tooltip="練習製作產品 Prototype">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -501,13 +471,13 @@ if (!doNotTrack) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/learn-about-drawing-web-prototype-using-balsamiq/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/06/how-to-solve-memory-issue-when-using-composer/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/learn-about-drawing-web-prototype-using-balsamiq/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/06/how-to-solve-memory-issue-when-using-composer/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -537,13 +507,13 @@ if (!doNotTrack) {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Flearn-about-drawing-web-prototype-using-balsamiq%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Fhow-to-solve-memory-issue-when-using-composer%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Flearn-about-drawing-web-prototype-using-balsamiq%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2021%2F06%2Fhow-to-solve-memory-issue-when-using-composer%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
@@ -635,9 +605,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/blog.genesu.me\/2021\/06\/learn-about-drawing-web-prototype-using-balsamiq\/';
+          this.page.url = 'https:\/\/blog.genesu.me\/2021\/06\/how-to-solve-memory-issue-when-using-composer\/';
           
-            this.page.identifier = '\/2021\/06\/learn-about-drawing-web-prototype-using-balsamiq\/'
+            this.page.identifier = '\/2021\/06\/how-to-solve-memory-issue-when-using-composer\/'
           
         };
         (function() {
