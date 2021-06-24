@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xss on 高級伴讀書僮</title>
+    <link>https://blog.genesu.me/tags/xss/</link>
+    <description>Recent content in xss on 高級伴讀書僮</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Jun 2021 16:23:19 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/xss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XSS 觀念筆記</title>
+      <link>https://blog.genesu.me/2021/06/learn-about-xss/</link>
+      <pubDate>Mon, 14 Jun 2021 16:23:19 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/2021/06/learn-about-xss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSRF 觀念筆記</title>
+      <link>https://blog.genesu.me/2021/06/learn-about-csrf/</link>
+      <pubDate>Sat, 12 Jun 2021 13:35:43 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/2021/06/learn-about-csrf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CORS 觀念筆記</title>
+      <link>https://blog.genesu.me/2021/06/learn-about-cors/</link>
+      <pubDate>Thu, 10 Jun 2021 22:52:05 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/2021/06/learn-about-cors/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

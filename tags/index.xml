@@ -17,6 +17,24 @@
     </item>
     
     <item>
+      <title>memory</title>
+      <link>https://blog.genesu.me/tags/memory/</link>
+      <pubDate>Tue, 22 Jun 2021 09:03:21 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/tags/memory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>balsamiq</title>
+      <link>https://blog.genesu.me/tags/balsamiq/</link>
+      <pubDate>Mon, 21 Jun 2021 18:51:53 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/tags/balsamiq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>learning</title>
       <link>https://blog.genesu.me/tags/learning/</link>
       <pubDate>Mon, 21 Jun 2021 18:51:53 +0800</pubDate>
@@ -31,6 +49,24 @@
       <pubDate>Mon, 21 Jun 2021 18:51:53 +0800</pubDate>
       
       <guid>https://blog.genesu.me/tags/prototype/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ab</title>
+      <link>https://blog.genesu.me/tags/ab/</link>
+      <pubDate>Fri, 18 Jun 2021 12:01:41 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/tags/ab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jmeter</title>
+      <link>https://blog.genesu.me/tags/jmeter/</link>
+      <pubDate>Fri, 18 Jun 2021 12:01:41 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/tags/jmeter/</guid>
       <description></description>
     </item>
     
@@ -62,6 +98,33 @@
     </item>
     
     <item>
+      <title>cors</title>
+      <link>https://blog.genesu.me/tags/cors/</link>
+      <pubDate>Mon, 14 Jun 2021 16:23:19 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/tags/cors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>csrf</title>
+      <link>https://blog.genesu.me/tags/csrf/</link>
+      <pubDate>Mon, 14 Jun 2021 16:23:19 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/tags/csrf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xss</title>
+      <link>https://blog.genesu.me/tags/xss/</link>
+      <pubDate>Mon, 14 Jun 2021 16:23:19 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/tags/xss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>laravel</title>
       <link>https://blog.genesu.me/tags/laravel/</link>
       <pubDate>Sat, 12 Jun 2021 13:35:43 +0800</pubDate>
@@ -80,11 +143,20 @@
     </item>
     
     <item>
-      <title>usage</title>
-      <link>https://blog.genesu.me/tags/usage/</link>
+      <title>userstory</title>
+      <link>https://blog.genesu.me/tags/userstory/</link>
+      <pubDate>Sun, 06 Jun 2021 14:39:39 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/tags/userstory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>valet</title>
+      <link>https://blog.genesu.me/tags/valet/</link>
       <pubDate>Fri, 04 Jun 2021 16:07:22 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/tags/usage/</guid>
+      <guid>https://blog.genesu.me/tags/valet/</guid>
       <description></description>
     </item>
     
