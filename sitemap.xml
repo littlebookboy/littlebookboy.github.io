@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.genesu.me/post/</loc>
+    <lastmod>2021-06-26T15:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/tags/</loc>
+    <lastmod>2021-06-26T15:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/tags/tdd/</loc>
+    <lastmod>2021-06-26T15:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/2021/06/tdd-daily-001-tdd-cycle-practice/</loc>
+    <lastmod>2021-06-26T15:48:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/</loc>
+    <lastmod>2021-06-26T15:48:39+08:00</lastmod>
+  </url><url>
     <loc>https://blog.genesu.me/tags/composer/</loc>
     <lastmod>2021-06-22T09:03:21+08:00</lastmod>
   </url><url>
@@ -9,15 +24,6 @@
     <lastmod>2021-06-22T09:03:21+08:00</lastmod>
   </url><url>
     <loc>https://blog.genesu.me/tags/memory/</loc>
-    <lastmod>2021-06-22T09:03:21+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.genesu.me/post/</loc>
-    <lastmod>2021-06-22T09:03:21+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.genesu.me/tags/</loc>
-    <lastmod>2021-06-22T09:03:21+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.genesu.me/</loc>
     <lastmod>2021-06-22T09:03:21+08:00</lastmod>
   </url><url>
     <loc>https://blog.genesu.me/tags/balsamiq/</loc>
