@@ -6,14 +6,27 @@
     <description>Recent content on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Jun 2021 15:48:39 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jul 2021 21:45:05 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TDD 002 - 寫單元測試心得</title>
+      <link>https://blog.genesu.me/2021/07/tdd-daily-002-tdd-unit-test-note/</link>
+      <pubDate>Sun, 04 Jul 2021 21:45:05 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/2021/07/tdd-daily-002-tdd-unit-test-note/</guid>
+      <description>&lt;p&gt;本次課題是「取得部落格文章 API」，撰寫 &lt;code&gt;api/articles&lt;/code&gt; API 功能，並實作 api 路由測試、service 測試、repository 測試，及 mock 相依隔離練習。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>TDD 001 - 從 Kata 練習 TDD 循環</title>
       <link>https://blog.genesu.me/2021/06/tdd-daily-001-tdd-cycle-practice/</link>
       <pubDate>Sat, 26 Jun 2021 15:48:39 +0800</pubDate>
       
       <guid>https://blog.genesu.me/2021/06/tdd-daily-001-tdd-cycle-practice/</guid>
-      <description></description>
+      <description>&lt;p&gt;本次課題為透過「
+    
+    &lt;a href=&#34;https://osherove.com/tdd-kata-1&#34; target=&#34;_blank&#34;&gt;String Calculator - osherove.com&lt;/a&gt;
+    
+」這道 Kata，練習 TDD 循環。&lt;/p&gt;</description>
     </item>
     
     <item>
