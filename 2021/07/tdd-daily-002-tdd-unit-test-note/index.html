@@ -355,7 +355,13 @@ if (!doNotTrack) {
 
 <p>測試場景為<span class="highlight-text yellow">確認呼叫 service 本身的邏輯是否正確</span>，但並不想受到 repository interface 這段過程中邏輯所影響，則直接用 mock 模擬這段劇本。</p>
 
-<p>另一個場景為，不想真的用工廠方法寫資料到資料庫，在去撈出來做斷言，只是為了要測試「我若符合某種條件去呼叫方法」，則「應該會有某個方法會被呼叫」，例如：</p>
+<p>另一個場景為，不想真的用 
+    
+    <a href="https://laravel.com/docs/8.x/database-testing#instantiating-models" target="_blank">factory</a>
+    
+ 寫資料到資料庫，在去呼叫方法，判斷返回資料下斷言；</p>
+
+<p>應該要專注測試「我若符合某種條件去呼叫方法」，則「應該會有某個特定方法也會被呼叫」，例如：</p>
 
 <ul>
 <li>mock Article shouldReceive find once</li>
