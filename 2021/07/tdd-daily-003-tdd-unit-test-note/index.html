@@ -337,6 +337,10 @@ if (!doNotTrack) {
 - 開發(+重構) 是先把功能寫對，通過測試，在把剛剛寫的功能重構，在通過一樣的測試
 - 設計 ILoggerService 時，一下子寫了過多的 code，沒有遵循 baby step 的方式開發，導致一下子太多設計沒寫好，太多測試壞掉
 - 應該先把 add() 重構好，決定要在哪邊插入寫 log 的動作，以及要如何觸發，但先不要真的去設計寫 log 的相關介面與實作</code></pre>
+<div class="alert info ">
+  <p>注意，測試的 setUp() 中的 parent::setUp() 永遠記得要放在第一行，application 是在此被重新初始化的，背後會跑 <code>refreshApplication();</code>。</p>
+</div>
+
 <h1 id="最後">最後</h1>
 
 <p>過程中有另外再看了
