@@ -3,21 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.genesu.me/post/</loc>
-    <lastmod>2021-07-04T21:45:05+08:00</lastmod>
+    <lastmod>2021-07-11T15:13:33+08:00</lastmod>
   </url><url>
     <loc>https://blog.genesu.me/tags/</loc>
-    <lastmod>2021-07-04T21:45:05+08:00</lastmod>
+    <lastmod>2021-07-11T15:13:33+08:00</lastmod>
   </url><url>
     <loc>https://blog.genesu.me/tags/tdd/</loc>
-    <lastmod>2021-07-04T21:45:05+08:00</lastmod>
+    <lastmod>2021-07-11T15:13:33+08:00</lastmod>
   </url><url>
-    <loc>https://blog.genesu.me/2021/07/tdd-daily-002-tdd-unit-test-note/</loc>
-    <lastmod>2021-07-04T21:45:05+08:00</lastmod>
+    <loc>https://blog.genesu.me/2021/07/tdd-daily-003-tdd-unit-test-note/</loc>
+    <lastmod>2021-07-11T15:13:33+08:00</lastmod>
   </url><url>
     <loc>https://blog.genesu.me/tags/test/</loc>
-    <lastmod>2021-07-04T21:45:05+08:00</lastmod>
+    <lastmod>2021-07-11T15:13:33+08:00</lastmod>
   </url><url>
     <loc>https://blog.genesu.me/</loc>
+    <lastmod>2021-07-11T15:13:33+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.genesu.me/2021/07/tdd-daily-002-tdd-unit-test-note/</loc>
     <lastmod>2021-07-04T21:45:05+08:00</lastmod>
   </url><url>
     <loc>https://blog.genesu.me/2021/06/tdd-daily-001-tdd-cycle-practice/</loc>
