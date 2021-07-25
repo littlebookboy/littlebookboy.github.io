@@ -301,9 +301,8 @@ if (!doNotTrack) {
 
 <ul>
 <li>What’s the difference between Mock and Stub?</li>
-<li>The biggest problem that people face is that they get so mired in the details of how to fake this and that, they end up faking too much, and not really testing anything.</li>
-<li>test case naming</li>
-<li>When you are lost, the test name becomes your map and guide, to make sure your test follows what you wrote down in the test name, in each of its parts.</li>
+<li>Don&rsquo;t faking too much, otherwise not really testing anything.</li>
+<li>Testcase naming, 一個「好的測試案例命名」可以讓你更清楚<span class="highlight-text yellow">你正在測試什麼</span></li>
 </ul>
 
 <div class="alert info ">
@@ -313,9 +312,9 @@ if (!doNotTrack) {
 <h1 id="練習重點">練習重點</h1>
 
 <ul>
-<li>單元測試案例的命名，與對應的 scenery 是否貼切的描述了「該單元測試要測的場景」</li>
-<li>一個好的測試案例的命名，幫助你「聚焦」在「正在測什麼」，藉此符合這個「單元測試」要測試的場景</li>
-<li>data provider 的練習，多測幾組不同的案例，但不用新增重複的測試方法</li>
+<li>測試案例的命名</li>
+<li>聚焦正在測什麼，不要測試超過兩件事</li>
+<li>Data Provider 的練習，多測幾組不同的案例，但不用新增重複的測試方法</li>
 </ul>
 
 <h1 id="練習結果">練習結果</h1>
@@ -326,8 +325,14 @@ if (!doNotTrack) {
     
  過程。</p>
 
-<div class="alert warning ">
-  <p>只寫完第一題，待完成</p>
+<p>Data Provider 練習 
+    
+    <a href="https://github.com/littlebookboy/my-tdd-daily/commit/7ddeb44e6f95d09e40239120a7aab6427002a01e" target="_blank">commit</a>
+    
+</p>
+
+<div class="alert info ">
+  <p>最近有點忙，後續測試 console output 的題目先擱置，日後有緣再研究。</p>
 </div>
 
 <h1 id="筆記">筆記</h1>
@@ -337,6 +342,12 @@ if (!doNotTrack) {
 - 開發(+重構) 是先把功能寫對，通過測試，在把剛剛寫的功能重構，在通過一樣的測試
 - 設計 ILoggerService 時，一下子寫了過多的 code，沒有遵循 baby step 的方式開發，導致一下子太多設計沒寫好，太多測試壞掉
 - 應該先把 add() 重構好，決定要在哪邊插入寫 log 的動作，以及要如何觸發，但先不要真的去設計寫 log 的相關介面與實作</code></pre>
+<p>寫 
+    
+    <a href="https://github.com/littlebookboy/my-tdd-daily/commit/2a42dac67bc99609e0ccf57513111a5070bb31ca" target="_blank">CallAdd_LogFailAndThrowException_GetExceptionMessageLogFail</a>
+    
+ 時，mock 就直接過了？但是 AppServiceProvider 還沒綁定對的 INotify 對應的實例，這樣實作的部分還是有問題? 這樣是對的? ~&rdquo;~</p>
+
 <div class="alert info ">
   <p>注意，測試的 setUp() 中的 parent::setUp() 永遠記得要放在第一行，application 是在此被重新初始化的，背後會跑 <code>refreshApplication();</code>。</p>
 </div>
