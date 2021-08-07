@@ -7,26 +7,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
-<meta name="keywords" content="tdd, test, tdd-kata, mock, stub, phpstorm, develop, backend">
-<meta name="description" content="TDD 003 - String Calculator Interactions">
+<meta name="keywords" content="tdd, test, tdd-kata, develop, backend">
+<meta name="description" content="TDD 004 - Password verifications">
 
 
-<meta property="og:description" content="TDD 003 - String Calculator Interactions">
+<meta property="og:description" content="TDD 004 - Password verifications">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TDD 003 - String Calculator Interactions">
-<meta name="twitter:title" content="TDD 003 - String Calculator Interactions">
-<meta property="og:url" content="https://blog.genesu.me/2021/07/tdd-daily-003-tdd-unit-test-note/">
-<meta property="twitter:url" content="https://blog.genesu.me/2021/07/tdd-daily-003-tdd-unit-test-note/">
+<meta property="og:title" content="TDD 004 - Password verifications">
+<meta name="twitter:title" content="TDD 004 - Password verifications">
+<meta property="og:url" content="https://blog.genesu.me/2021/08/tdd-daily-004-tdd-kata-password-verification/">
+<meta property="twitter:url" content="https://blog.genesu.me/2021/08/tdd-daily-004-tdd-kata-password-verification/">
 <meta property="og:site_name" content="高級伴讀書僮">
-<meta property="og:description" content="TDD 003 - String Calculator Interactions">
-<meta name="twitter:description" content="TDD 003 - String Calculator Interactions">
+<meta property="og:description" content="TDD 004 - Password verifications">
+<meta name="twitter:description" content="TDD 004 - Password verifications">
 <meta property="og:locale" content="zh-tw">
 
   
-    <meta property="article:published_time" content="2021-07-11T15:13:33">
+    <meta property="article:published_time" content="2021-08-07T22:06:43">
   
   
-    <meta property="article:modified_time" content="2021-07-11T15:13:33">
+    <meta property="article:modified_time" content="2021-08-07T22:06:43">
   
   
   
@@ -48,8 +48,8 @@
 
 
 
-  <meta property="og:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/sam-moqadam-HQw-mmkLZEQ-unsplash.jpg">
-  <meta property="twitter:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/sam-moqadam-HQw-mmkLZEQ-unsplash.jpg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/milky-way-1030765_1280.jpg">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/milky-way-1030765_1280.jpg">
 
 
 
@@ -58,14 +58,14 @@
   <meta property="twitter:image" content="https://blog.genesu.me/images/avataaars.png">
 
 
-    <title>TDD 003 - String Calculator Interactions</title>
+    <title>TDD 004 - Password verifications</title>
 
     <link rel="icon" href="images/favicon.png?v=1">
     
 
     
 
-    <link rel="canonical" href="https://blog.genesu.me/2021/07/tdd-daily-003-tdd-unit-test-note/">
+    <link rel="canonical" href="https://blog.genesu.me/2021/08/tdd-daily-004-tdd-kata-password-verification/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -225,7 +225,7 @@ if (!doNotTrack) {
   <div class="post-header-cover
               text-center
               post-header-cover--partial"
-       style="background-image:url('https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/sam-moqadam-HQw-mmkLZEQ-unsplash.jpg')"
+       style="background-image:url('https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/milky-way-1030765_1280.jpg')"
        data-behavior="4">
     
   </div>
@@ -241,175 +241,68 @@ if (!doNotTrack) {
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      TDD 003 - String Calculator Interactions
+      TDD 004 - Password verifications
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-07-11T15:13:33&#43;08:00">
+      <time itemprop="datePublished" datetime="2021-08-07T22:06:43&#43;08:00">
         
   
   
   
   
-    2021-07-11 15:13:33 UTC&#43;8
+    2021-08-07 22:06:43 UTC&#43;8
   
 
       </time>
     
     
-    約 5 分鐘
+    約 1 分鐘
   </div>
 
 </div>
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>練習 TDD, 紀錄題目中提到的一些值得思考研究的東西，以及參考到的一些 Mock 與 Stub 的文章。</p>
-
-<h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
+              <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
 <ul>
 <li><a href="#前言">前言</a></li>
-<li><a href="#環境">環境</a></li>
-<li><a href="#題目重點">題目重點</a></li>
 <li><a href="#練習重點">練習重點</a></li>
 <li><a href="#練習結果">練習結果</a></li>
-<li><a href="#筆記">筆記</a></li>
 <li><a href="#最後">最後</a></li>
-<li><a href="#參考連結">參考連結</a></li>
 </ul>
 </nav>
 
 <h1 id="前言">前言</h1>
 
-<p>本次課題為透過「
+<p>本次 Kata 為「
     
-    <a href="https://osherove.com/tdd-kata-2" target="_blank">TDD Kata 2</a>
+    <a href="https://osherove.com/tdd-kata-3" target="_blank">TDD Kata 3 - Password verifications</a>
     
-」練習 TDD，此題目為 <a href="https://blog.genesu.me/2021/06/tdd-daily-001-tdd-cycle-practice/">TDD Kata 1</a> 的延續題。</p>
-
-<p>到目前「單元測試的藝術」已看到第三章後半段 (進度落後中)，除了書之外，這段時間也有在網路上，看一些很厲害的人分享他們的測試經驗，若本次練習有遇到適用的部分，會試著在練習過程中實作，並筆記在這邊。</p>
-
-<p>另外，這系列本質上還是在刷題練習 TDD，方便日後回過頭來看，若日後有心得可以針對某個議題集中討論時 (例如 Mock 使用案例與心得)，就交給日後的我去寫了。</p>
-
-<h1 id="環境">環境</h1>
-
-<p>環境同 <a href="https://blog.genesu.me/2021/06/tdd-daily-001-tdd-cycle-practice/">TDD Kata 1</a>。</p>
-
-<h1 id="題目重點">題目重點</h1>
-
-<ul>
-<li>What’s the difference between Mock and Stub?</li>
-<li>Don&rsquo;t faking too much, otherwise not really testing anything.</li>
-<li>Testcase naming, 一個「好的測試案例命名」可以讓你更清楚<span class="highlight-text yellow">你正在測試什麼</span></li>
-</ul>
-
-<div class="alert info ">
-  <p>TODO: 關於「測試案例的命名」會另外寫一篇文章</p>
-</div>
+」。</p>
 
 <h1 id="練習重點">練習重點</h1>
 
 <ul>
-<li>測試案例的命名</li>
-<li>聚焦正在測什麼，不要測試超過兩件事</li>
-<li>Data Provider 的練習，多測幾組不同的案例，但不用新增重複的測試方法</li>
+<li>不要一次寫過多的邏輯</li>
+<li>測試先行、測試先行、測試先行</li>
 </ul>
 
 <h1 id="練習結果">練習結果</h1>
 
-<p>請參考 
+<p>練習結果放在 
     
-    <a href="https://github.com/littlebookboy/my-tdd-daily/commits/2021-07-11-Interactions-kata" target="_blank">commit</a>
+    <a href="https://github.com/littlebookboy/my-tdd-daily/tree/2021-08-07-password-verification" target="_blank">此分支 - Commits on Aug 7, 2021</a>
     
- 過程。</p>
-
-<p>Data Provider 練習 
-    
-    <a href="https://github.com/littlebookboy/my-tdd-daily/commit/7ddeb44e6f95d09e40239120a7aab6427002a01e" target="_blank">commit</a>
-    
-</p>
-
-<div class="alert info ">
-  <p>最近有點忙，後續測試 console output 的題目先擱置，日後有緣再研究。</p>
-</div>
-
-<h1 id="筆記">筆記</h1>
-
-<p>記錄一下遇到的問題</p>
-<pre><code>- 「重構 &gt; 測試 &gt; 開發(+重構) &gt; 通過測試」的節奏沒有掌握好
-- 開發(+重構) 是先把功能寫對，通過測試，在把剛剛寫的功能重構，在通過一樣的測試
-- 設計 ILoggerService 時，一下子寫了過多的 code，沒有遵循 baby step 的方式開發，導致一下子太多設計沒寫好，太多測試壞掉
-- 應該先把 add() 重構好，決定要在哪邊插入寫 log 的動作，以及要如何觸發，但先不要真的去設計寫 log 的相關介面與實作</code></pre>
-<p>寫 
-    
-    <a href="https://github.com/littlebookboy/my-tdd-daily/commit/2a42dac67bc99609e0ccf57513111a5070bb31ca" target="_blank">CallAdd_LogFailAndThrowException_GetExceptionMessageLogFail</a>
-    
- 時，mock 就直接過了？但是 AppServiceProvider 還沒綁定對的 INotify 對應的實例，這樣實作的部分還是有問題? 這樣是對的? ~&rdquo;~</p>
-
-<div class="alert info ">
-  <p>注意，測試的 setUp() 中的 parent::setUp() 永遠記得要放在第一行，application 是在此被重新初始化的，背後會跑 <code>refreshApplication();</code>。</p>
-</div>
+。</p>
 
 <h1 id="最後">最後</h1>
 
-<p>過程中有另外再看了
-    
-    <a href="https://blog.turn.tw/?p=3347" target="_blank">這篇</a>
-    
-關於 Laravel 如何實作 Service Container 的部分：</p>
-<pre><code>1. alias 中存放的 abstract =&gt; values，是讓 bindings 查表的地方，表示同一個「字串 (abstract)」同時對應到不同的「類別、介面 (string values)」名稱，這樣在實際 new 時，他才可以透過不同名字，找到同一個類別 (<span class="highlight-text yellow">實現 Binding Interfaces To Implementations</span>)
-2. service container 中除了存放 bindings 之外，還存放了 instances，這樣 bind 的會去 bindings 對照要 new 什麼，而 instances 則提供 singleton 總是同樣的實例不會再重新 new
-3. (作者說得對)有些東西很難在當下都搞清楚弄明白，就先去睡覺，或許醒來就通了</code></pre>
+<p>接著會試著從「過去實務中找題目」練習 TDD；不是在真的工作中使用，如果還不熟，建議先不要在實際工作中使用，還是要顧慮現實情況，例如時程。</p>
+
 <p>有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
-
-<h1 id="參考連結">參考連結</h1>
-
-<p>這邊列出比較多的連結，主要是把這幾天有印象的、有看過的連結都列舉在這，方便自己以後可以回顧。</p>
-
-<ul>
-<li>
-    
-    <a href="https://osherove.com/tdd-kata-2" target="_blank">TDD Kata 2: Interactions - Roy Osherove Agile & XP Consulting & Training</a>
-    
-</li>
-<li>
-    
-    <a href="https://phpunit.de/manual/6.5/en/textui.html" target="_blank">The Command-Line Test Runner</a>
-    
-</li>
-<li>
-    
-    <a href="https://osherove.com/blog/2007/9/16/mocks-and-stubs-the-difference-is-in-the-flow-of-information.html" target="_blank">Mocks and Stubs - The difference is in the flow of information</a>
-    
-</li>
-<li>
-    
-    <a href="https://callistaenterprise.se/blogg/teknik/2010/11/12/stubs-n-mocks/" target="_blank">Difference between Stubs 'n' Mocks</a>
-    
-</li>
-<li>
-    
-    <a href="https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs" target="_blank">The Difference Between Mocks and Stubs - Mocks Aren't Stubs by Martin Fowler</a>
-    
-</li>
-<li>
-    
-    <a href="https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html" target="_blank">Naming standards for unit tests</a>
-    
-</li>
-<li>
-    
-    <a href="https://www.youtube.com/watch?v=aJkO2aDLbbI" target="_blank">PHP 也有 Day #55</a>
-    
-</li>
-<li>
-    
-    <a href="https://blog.turn.tw/?p=3347" target="_blank">讀 SOURCE CODE 研究 LARAVEL IOC CONTAINER 實作的一點心得</a>
-    
-</li>
-</ul>
 
 <hr />
 
@@ -419,7 +312,7 @@ if (!doNotTrack) {
 文章作者: 
 <a href="https://blog.genesu.me/archives">littlebookboy</a>
 <br>
-永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2021/07/tdd-daily-003-tdd-unit-test-note/" target="_blank">https://blog.genesu.me/2021/07/tdd-daily-003-tdd-unit-test-note/</a><br>
+永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2021/08/tdd-daily-004-tdd-kata-password-verification/" target="_blank">https://blog.genesu.me/2021/08/tdd-daily-004-tdd-kata-password-verification/</a><br>
 許可協議: 
     
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
@@ -461,7 +354,7 @@ if (!doNotTrack) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/07/tdd-daily-002-tdd-unit-test-note/" data-tooltip="TDD 002 - 寫單元測試心得">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/07/tdd-daily-003-tdd-kata-string-calculator/" data-tooltip="TDD 003 - String Calculator Interactions">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -479,13 +372,13 @@ if (!doNotTrack) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/07/tdd-daily-003-tdd-unit-test-note/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/08/tdd-daily-004-tdd-kata-password-verification/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/07/tdd-daily-003-tdd-unit-test-note/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/08/tdd-daily-004-tdd-kata-password-verification/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -541,7 +434,7 @@ if (!doNotTrack) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/07/tdd-daily-002-tdd-unit-test-note/" data-tooltip="TDD 002 - 寫單元測試心得">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2021/07/tdd-daily-003-tdd-kata-string-calculator/" data-tooltip="TDD 003 - String Calculator Interactions">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -559,13 +452,13 @@ if (!doNotTrack) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/07/tdd-daily-003-tdd-unit-test-note/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2021/08/tdd-daily-004-tdd-kata-password-verification/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/07/tdd-daily-003-tdd-unit-test-note/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2021/08/tdd-daily-004-tdd-kata-password-verification/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -595,13 +488,13 @@ if (!doNotTrack) {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2021%2F07%2Ftdd-daily-003-tdd-unit-test-note%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2021%2F08%2Ftdd-daily-004-tdd-kata-password-verification%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2021%2F07%2Ftdd-daily-003-tdd-unit-test-note%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2021%2F08%2Ftdd-daily-004-tdd-kata-password-verification%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
@@ -693,9 +586,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/blog.genesu.me\/2021\/07\/tdd-daily-003-tdd-unit-test-note\/';
+          this.page.url = 'https:\/\/blog.genesu.me\/2021\/08\/tdd-daily-004-tdd-kata-password-verification\/';
           
-            this.page.identifier = '\/2021\/07\/tdd-daily-003-tdd-unit-test-note\/'
+            this.page.identifier = '\/2021\/08\/tdd-daily-004-tdd-kata-password-verification\/'
           
         };
         (function() {
