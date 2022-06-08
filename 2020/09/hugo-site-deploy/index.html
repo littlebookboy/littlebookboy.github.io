@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="hugo, github, godaddy, develop, backend">
 <meta name="description" content="架設好 Hugo 部落格，接著要把它放到網路上公開 (GitHub Page) 讓人瀏覽">
@@ -130,7 +130,7 @@ if (!doNotTrack) {
         </a>
         <h4 class="sidebar-profile-name">Gene (Littlebookboy)</h4>
         
-          <h5 class="sidebar-profile-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</h5>
+          <h5 class="sidebar-profile-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</h5>
         
       </div>
     
@@ -273,27 +273,8 @@ if (!doNotTrack) {
     <a href="https://pages.github.com/" target="_blank">GitHub Page</a>
     
 ) 讓人瀏覽。</p>
-
-<h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
-<ul>
-<li><a href="#introduction-說在前面">Introduction 說在前面</a></li>
-<li><a href="#github-page-介紹">GitHub Page 介紹</a></li>
-<li><a href="#github-page-部署">GitHub Page 部署</a></li>
-<li><a href="#瀏覽網站">瀏覽網站</a></li>
-<li><a href="#github-page-cname">GitHub Page CNAME</a>
-<ul>
-<li><a href="#public-底下新增文字檔案-cname">public 底下新增文字檔案 CNAME</a></li>
-<li><a href="#設置-config-toml-baseurl">設置 config.toml baseURL</a></li>
-<li><a href="#設置-github-repository-setting">設置 GitHub Repository Setting</a></li>
-<li><a href="#設置-godaddy-dns">設置 GoDaddy DNS</a></li>
-</ul></li>
-<li><a href="#references-參考連結">References 參考連結</a></li>
-<li><a href="#series-系列文章">Series 系列文章</a></li>
-</ul>
-</nav>
-
+<!-- raw HTML omitted -->
 <h1 id="introduction-說在前面">Introduction 說在前面</h1>
-
 <p>這次要介紹如何把 Hugo 整包丟到 
     
     <a href="https://pages.github.com/" target="_blank">GitHub Page</a>
@@ -307,24 +288,22 @@ if (!doNotTrack) {
     <a href="https://analytics.google.com/analytics/web/" target="_blank">Google Analytics</a>
     
  我怎麼設置都讀不到，避免花太多時間研究就先擱著，先用我比較熟悉的 GitHub Page。</p>
-
 <div class="alert info ">
   <p><p>之後可能會轉到 GitLab 也說不定，我就可以把腳本透過</p>
-<pre><code>&lt;a href=&#34;https://docs.gitlab.com/ee/ci/&#34; target=&#34;_blank&#34;&gt;GitLab-CI&lt;/a&gt;</code></pre>
+<pre><code>&lt;a href=&quot;https://docs.gitlab.com/ee/ci/&quot; target=&quot;_blank&quot;&gt;GitLab-CI&lt;/a&gt;
+</code></pre>
 <p>自動化，透過 <code>git push</code> 做更新 trigger，你說為什麼不用</p>
-<pre><code>&lt;a href=&#34;https://github.com/features/actions&#34; target=&#34;_blank&#34;&gt;Action&lt;/a&gt;</code></pre>
+<pre><code>&lt;a href=&quot;https://github.com/features/actions&quot; target=&quot;_blank&quot;&gt;Action&lt;/a&gt;
+</code></pre>
 <p>，因為一來 Action 我沒用過，而且聽說</p>
-<pre><code>&lt;a href=&#34;https://blog.wu-boy.com/2019/05/introduction-to-github-actions/&#34; target=&#34;_blank&#34;&gt;有待加強&lt;/a&gt;</code></pre>
+<pre><code>&lt;a href=&quot;https://blog.wu-boy.com/2019/05/introduction-to-github-actions/&quot; target=&quot;_blank&quot;&gt;有待加強&lt;/a&gt;
+</code></pre>
 <p>，二來 GitLab-CI 我比較常用。</p>
 </p>
 </div>
-
 <h1 id="github-page-介紹">GitHub Page 介紹</h1>
-
 <p>對於沒有使用過 <code>git</code>，甚至是對程式碼、版本控制這些東西都很陌生的人，在此我會盡量用較為淺白的方式，搭配「跟著做就能完成」的步驟說明。</p>
-
 <h1 id="github-page-部署">GitHub Page 部署</h1>
-
 <ul>
 <li>首先，你得要有 GitHub 的帳號，可以點
     
@@ -337,17 +316,14 @@ if (!doNotTrack) {
     
 ，在 <code>Repository name</code> 的地方輸入 <code>{your-user-name}.github.io</code>，如下圖:</li>
 </ul>
-
 </div>
 <div class="figure figure--fullWidth">
   <img class="figure-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-09-08%20%E4%B8%8A%E5%8D%888.44.36.png" alt="圖 1. create a new repository example" /><span class="caption">圖 1. create a new repository example</span>
 </div>
 <div class="main-content-wrap">
-
 <ul>
 <li>創建好之後，複製你的 repository url</li>
 </ul>
-
 
  
   
@@ -384,15 +360,13 @@ if (!doNotTrack) {
 
   <div style="clear:both;"></div>
 
-
 <ul>
-<li>把你的 repository url 貼到以下腳本: (修改自官方提供的
+<li>
+<p>把你的 repository url 貼到以下腳本: (修改自官方提供的
     
     <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script" target="_blank">script</a>
     
-)</li>
-</ul>
-
+)</p>
 
   
     
@@ -468,14 +442,13 @@ if (!doNotTrack) {
     </tbody>
   </table>
 </figure>
-
-<ul>
-<li><p>執行 shell 發布網站</p>
-<pre><code class="language-shell_script" data-lang="shell_script">sh deploy.sh</code></pre></li>
+</li>
+<li>
+<p>執行 shell 發布網站</p>
+</li>
 </ul>
-
-<p>以下是執行後可能的輸出訊息:</p>
-
+<pre tabindex="0"><code class="language-shell_script" data-lang="shell_script">sh deploy.sh
+</code></pre><p>以下是執行後可能的輸出訊息:</p>
 
  
   
@@ -512,37 +485,28 @@ if (!doNotTrack) {
 
   <div style="clear:both;"></div>
 
-
 <div class="alert warning ">
   <p>請注意，你必須在你的 hugo site 目錄底下執行此腳本</p>
 </div>
-
 <h1 id="瀏覽網站">瀏覽網站</h1>
-
 <p>執行腳本之後，可透過 https://{your-user-name}.github.io 瀏覽你的網站，這是 GitHub 提供給每個帳戶唯一的一組網址，例如 <a href="https://littlebookboy.github.io">https://littlebookboy.github.io</a>。</p>
-
 <h1 id="github-page-cname">GitHub Page CNAME</h1>
-
 <p>如果你想使用自己的網址，可以到 domain 提供商買一個，我是在 
     
     <a href="https://tw.godaddy.com/" target="_blank">GoDaddy</a>
     
  買的，設置步驟如下:</p>
-
 <h2 id="public-底下新增文字檔案-cname">public 底下新增文字檔案 CNAME</h2>
-
 <p>內容如下</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">blog.genesu.me</span></code></pre></div>
-<p>內容是放你自己買的網址，這邊我有包含子域名多跳一層，或許你不需要，可只用 <code>genesu.me</code> 即可。</p>
-
-<h2 id="設置-config-toml-baseurl">設置 config.toml baseURL</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># 使用 GitHub Page 預設網址</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#ae81ff">blog.genesu.me</span>
+</code></pre></div><p>內容是放你自己買的網址，這邊我有包含子域名多跳一層，或許你不需要，可只用 <code>genesu.me</code> 即可。</p>
+<h2 id="設置-configtoml-baseurl">設置 config.toml baseURL</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># 使用 GitHub Page 預設網址</span>
 <span style="color:#ae81ff">baseURL = &#34;https://littlebookboy.github.io/&#34;</span>
 
 <span style="color:#75715e"># or 有自訂購買的網址</span>
-<span style="color:#ae81ff">baseURL = &#34;https://blog.genesu.me/&#34;</span></code></pre></div>
-<h2 id="設置-github-repository-setting">設置 GitHub Repository Setting</h2>
-
+<span style="color:#ae81ff">baseURL = &#34;https://blog.genesu.me/&#34;</span>
+</code></pre></div><h2 id="設置-github-repository-setting">設置 GitHub Repository Setting</h2>
 
  
   
@@ -580,7 +544,6 @@ if (!doNotTrack) {
   <div style="clear:both;"></div>
 
 
-
  
   
   
@@ -616,17 +579,13 @@ if (!doNotTrack) {
 
   <div style="clear:both;"></div>
 
-
 <div class="alert info ">
   <p>BTW, 這邊 Enforce HTTPS 要等設置完 CNAME 一陣子後再回來看才能打勾啟用 (請記得啟用)。</p>
 </div>
-
 <h2 id="設置-godaddy-dns">設置 GoDaddy DNS</h2>
-
 <p>先在本地終端機下</p>
-<pre><code>dig littlebookboy.github.io</code></pre>
-<p>會得到四組 IP，把這四組依據下圖所示設置 A 紀錄:</p>
-
+<pre tabindex="0"><code>dig littlebookboy.github.io
+</code></pre><p>會得到四組 IP，把這四組依據下圖所示設置 A 紀錄:</p>
 
  
   
@@ -663,19 +622,15 @@ if (!doNotTrack) {
 
   <div style="clear:both;"></div>
 
-
 <p>我是使用子域 <code>blog</code> 對到部落格，若你不需要可直接把 CNAME 設置你買的網址即可，依照此例我買的網址是 genesu.me，我想要 blog.genesu.me 作為我的部落格網址，所以需要設置兩組 CNAME:</p>
-<pre><code>CNAME www blog.genesu.me
-CNAME blog littlebookboy.github.io</code></pre>
-<p>或是把買來的網址直接對到部落格:</p>
-<pre><code>CNAME www littlebookboy.github.io</code></pre>
-<p>以上，有問題歡迎留言討論。</p>
-
+<pre tabindex="0"><code>CNAME www blog.genesu.me
+CNAME blog littlebookboy.github.io
+</code></pre><p>或是把買來的網址直接對到部落格:</p>
+<pre tabindex="0"><code>CNAME www littlebookboy.github.io
+</code></pre><p>以上，有問題歡迎留言討論。</p>
 <h1 id="references-參考連結">References 參考連結</h1>
-
-<p>我盡量把我準備過程中，造訪過的連結都放在這，建議若你現在不需要，不一定要全都看懂才開始。
-<p></p>
-
+<p>我盡量把我準備過程中，造訪過的連結都放在這，建議若你現在不需要，不一定要全都看懂才開始。</p>
+<!-- raw HTML omitted -->
 <ul>
 <li>
     
@@ -698,17 +653,13 @@ CNAME blog littlebookboy.github.io</code></pre>
     
 </li>
 </ul>
-
 <h1 id="series-系列文章">Series 系列文章</h1>
-
 <ul>
 <li><a href="https://blog.genesu.me/2020/08/hugo-installation/">貼身打造個人部落格 - 01. 安裝</a></li>
 <li><a href="https://blog.genesu.me/2020/09/hugo-front-matter/">貼身打造個人部落格 - 02. 文章 Front Matter</a></li>
 <li>貼身打造個人部落格 - 03. 網站發布 (本篇)</li>
 </ul>
-
-<hr />
-
+<hr>
 <multiple-line-output>
     
 <br>
@@ -794,7 +745,7 @@ CNAME blog littlebookboy.github.io</code></pre>
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -874,7 +825,7 @@ CNAME blog littlebookboy.github.io</code></pre>
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -915,7 +866,7 @@ CNAME blog littlebookboy.github.io</code></pre>
     
     <h4 id="about-card-name">Gene (Littlebookboy)</h4>
     
-      <div id="about-card-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</div>
+      <div id="about-card-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</div>
     
     
       <div id="about-card-job">

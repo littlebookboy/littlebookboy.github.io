@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="javascript, develop, backend">
 <meta name="description" content="JavaScript 學習筆記 - 5 個不為人知的特性">
@@ -134,7 +134,7 @@ if (!doNotTrack) {
         </a>
         <h4 class="sidebar-profile-name">Gene (Littlebookboy)</h4>
         
-          <h5 class="sidebar-profile-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</h5>
+          <h5 class="sidebar-profile-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</h5>
         
       </div>
     
@@ -274,28 +274,14 @@ if (!doNotTrack) {
 </a>
     
  整理紀錄下內容所說的東西。</p>
-
-<h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
-<ul>
-<li><a href="#nullish-coalescing">Nullish Coalescing</a></li>
-<li><a href="#styling-console-log">Styling Console Log</a></li>
-<li><a href="#optional-chaining">Optional Chaining</a></li>
-<li><a href="#object-shorthand">Object Shorthand</a></li>
-<li><a href="#defer-async-loading">Defer/Async Loading</a></li>
-<li><a href="#最後">最後</a></li>
-</ul>
-</nav>
-
+<!-- raw HTML omitted -->
 <h1 id="nullish-coalescing">Nullish Coalescing</h1>
-
 
     
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator" target="_blank">參考連結：Nullish coalescing operator (??)</a>
     
 
-
 <p>當前者為 null 或是 undefined 時，使用後面的值做為預設值</p>
-
 
 
   
@@ -347,9 +333,7 @@ console.log(bar);
     
   </div>
 </figure>
-
 <p>若想使用 true or false 決定是否要使用預設值，(??) 就不適用，可改用 ||</p>
-
 
 
   
@@ -402,21 +386,15 @@ console.log(boom);
     
   </div>
 </figure>
-
 <h1 id="styling-console-log">Styling Console Log</h1>
-
 <p>為你的 <code>consloe.log</code> 添加 css 樣式，有興趣請參考影片試試，不詳述。</p>
-
 <h1 id="optional-chaining">Optional Chaining</h1>
-
 
     
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining" target="_blank">參考連結：Optional chaining (?.)</a>
     
 
-
 <p>當你需要取用物件成員值，例如 smallming.mobile_phone[0].number，或者是某個 js 字串方法，例如 smallming.contact.address.toUpperCase()，但因為可能該成員、元素不存在，須事先判斷是否存在，以避免拋出例外，舉例如下：</p>
-
 
 
   
@@ -482,17 +460,13 @@ console.log(smallming.home.country?.toUpperCase()); // undefined</code></pre>
     
   </div>
 </figure>
-
 <h1 id="object-shorthand">Object Shorthand</h1>
-
 
     
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer" target="_blank">參考連結：Object initializer</a>
     
 
-
 <p>物件成員的 key 若沒有給值，會去匹配同名變數值，若該變數不存在，則拋出例外</p>
-
 
 
   
@@ -554,9 +528,7 @@ console.log(hohahe3.he);
     
   </div>
 </figure>
-
 <p>另外，也蠻常用在 <code>$.ajax</code> 傳遞參數寫成這樣，比較簡潔</p>
-
 
 
   
@@ -612,24 +584,20 @@ console.log(hohahe3.he);
     
   </div>
 </figure>
-
-<h1 id="defer-async-loading">Defer/Async Loading</h1>
-
+<h1 id="deferasync-loading">Defer/Async Loading</h1>
 <p>
     
     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script" target="_blank">參考連結：＜script＞: The Script element</a>
     
 
-<br>
+<!-- raw HTML omitted -->
 
     
     <a href="https://html.spec.whatwg.org/multipage/scripting.html" target="_blank">參考連結：HTML
 Living Standard</a>
     
 </p>
-
 <p>加載 <code>script</code> 可宣告 <code>defer</code> 在所有 <code>DOM</code> 載入完成後才執行 script。</p>
-
 
  
   
@@ -666,21 +634,14 @@ Living Standard</a>
 
   <div style="clear:both;"></div>
 
-
 <p>Defer 常用來解決以下場景</p>
-
 <blockquote>
 <p>你不確定你操作的 DOM 是否已經被 HTML 解析渲染完成，若 sciprt 搶先載入並執行，很有可能因為找不到 element / DOM 而拋出例外。</p>
 </blockquote>
-
 <p>Async 目前實務上還沒使用過，哪天有使用再來補充。</p>
-
 <h1 id="最後">最後</h1>
-
 <p>有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
-
-<hr />
-
+<hr>
 <multiple-line-output>
     
 <br>
@@ -770,7 +731,7 @@ Living Standard</a>
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -850,7 +811,7 @@ Living Standard</a>
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -891,7 +852,7 @@ Living Standard</a>
     
     <h4 id="about-card-name">Gene (Littlebookboy)</h4>
     
-      <div id="about-card-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</div>
+      <div id="about-card-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</div>
     
     
       <div id="about-card-job">

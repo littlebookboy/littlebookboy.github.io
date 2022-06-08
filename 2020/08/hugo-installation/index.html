@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="hugo, 佈景, develop, backend">
 <meta name="description" content="分享我使用 Hugo 架設個人部落格的過程，本篇主要講安裝、基本使用，以及一些新手(我)可能會經歷到的細節">
@@ -130,7 +130,7 @@ if (!doNotTrack) {
         </a>
         <h4 class="sidebar-profile-name">Gene (Littlebookboy)</h4>
         
-          <h5 class="sidebar-profile-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</h5>
+          <h5 class="sidebar-profile-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</h5>
         
       </div>
     
@@ -269,74 +269,41 @@ if (!doNotTrack) {
     <a href="https://gohugo.io/" target="_blank">Hugo</a>
     
  架設個人部落格的歷程，主要會講安裝，與基本使用，還有身為 Hugo 小白的我的一些心得。</p>
-
 <p>另外，因個人需要有調整一些佈景 (Theme) 的 config 設置，我覺得另外寫一篇文章會比較詳細。</p>
-
-<h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
-<ul>
-<li><a href="#introduction-說在前面">Introduction 說在前面</a></li>
-<li><a href="#install-安裝">Install 安裝</a>
-<ul>
-<li><a href="#安裝-hugo-cli">安裝 Hugo (CLI)</a></li>
-<li><a href="#建立站點-site">建立站點 (Site)</a></li>
-<li><a href="#安裝佈景-themes">安裝佈景 (Themes)</a></li>
-</ul></li>
-<li><a href="#usage-基本使用">Usage 基本使用</a>
-<ul>
-<li><a href="#create-post-新增文章">Create Post 新增文章</a></li>
-<li><a href="#edit-post-編寫文章">Edit Post 編寫文章</a></li>
-<li><a href="#delete-post-刪除文章">Delete Post 刪除文章</a></li>
-<li><a href="#local-running-本地執行">Local Running 本地執行</a></li>
-<li><a href="#本地打包-hugo">本地打包 Hugo</a></li>
-<li><a href="#發佈到線上-web-server">發佈到線上 Web Server</a></li>
-</ul></li>
-<li><a href="#references-參考連結">References 參考連結</a></li>
-<li><a href="#modification-修訂內容">Modification 修訂內容</a></li>
-<li><a href="#series-系列文章">Series 系列文章</a></li>
-</ul>
-</nav>
-
+<!-- raw HTML omitted -->
 <h1 id="introduction-說在前面">Introduction 說在前面</h1>
-
 <p>文中有些超連結文字，可能會導致你一直想點開往外查看，建議可以放到需要在更進一步了解在點過去看，因為我從來沒使用過 Hugo，所以從開始到架設完成的經歷會比較多<code>參考</code>。</p>
-
 <h1 id="install-安裝">Install 安裝</h1>
-
 <p>這邊的安裝說明是以 Mac 為主，我的作業系統是 <code>macOS Catalina</code>，若需其他系統環境的安裝方式，請參考 
     
     <a href="https://gohugo.io/getting-started/installing" target="_blank">Hugo Getting Started - Installing</a>
     
 。</p>
-
 <p>安裝步驟如下:</p>
-
 <h2 id="安裝-hugo-cli">安裝 Hugo (CLI)</h2>
-
 <p>我選擇透過 
     
     <a href="https://brew.sh/index_zh-tw" target="_blank">Homebrew</a>
     
  安裝 Hugo。平常我習慣盡量統一用同一種方式、途徑安裝新東西，除非有其他考量(或是 brew 沒有)；安裝習慣一致後，日後遇到工作環境重置，要查找原本是如何安裝某指令時，不會忘記我曾經是怎麼安裝的，遇到的雜症會少一點。</p>
-<pre><code class="language-shell script" data-lang="shell script">brew install hugo</code></pre>
-<p>安裝成功後，執行以下指令，測試一下 hugo 指令是否可正常運作:</p>
-<pre><code class="language-shell script" data-lang="shell script">hugo version
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew install hugo
+</code></pre></div><p>安裝成功後，執行以下指令，測試一下 hugo 指令是否可正常運作:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo version
 
-# output: 
-# Hugo Static Site Generator v0.74.3/extended darwin/amd64 BuildDate: unknown
-# 這邊你可以看到我裝好的版本是 v0.74.3，若你有一天遇到新版有問題時，也歡迎留言跟我分享。</code></pre>
-<h2 id="建立站點-site">建立站點 (Site)</h2>
-<pre><code class="language-shell script" data-lang="shell script"># hugo new site your-site-name
-# for example
-hugo new site my-hugo-blog</code></pre>
-<h2 id="安裝佈景-themes">安裝佈景 (Themes)</h2>
-
+<span style="color:#75715e"># output: </span>
+<span style="color:#75715e"># Hugo Static Site Generator v0.74.3/extended darwin/amd64 BuildDate: unknown</span>
+<span style="color:#75715e"># 這邊你可以看到我裝好的版本是 v0.74.3，若你有一天遇到新版有問題時，也歡迎留言跟我分享。</span>
+</code></pre></div><h2 id="建立站點-site">建立站點 (Site)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># hugo new site your-site-name</span>
+<span style="color:#75715e"># for example</span>
+hugo new site my-hugo-blog
+</code></pre></div><h2 id="安裝佈景-themes">安裝佈景 (Themes)</h2>
 <p>你可以到 
     
     <a href="https://themes.gohugo.io/" target="_blank">Hugo Themes</a>
     
- 選幾個看起來 ok 的佈景；我習慣是要先選到一個比較符合我想要的感覺的佈景，才會決定使用這個工具，所以在還沒開始做這些動作時，光是佈景就挑了好幾天，為節省正在觀看文章的你一點時間，在此提供幾個方向做參考:
-<p></p>
-
+ 選幾個看起來 ok 的佈景；我習慣是要先選到一個比較符合我想要的感覺的佈景，才會決定使用這個工具，所以在還沒開始做這些動作時，光是佈景就挑了好幾天，為節省正在觀看文章的你一點時間，在此提供幾個方向做參考:</p>
+<!-- raw HTML omitted -->
 <ol>
 <li>整體樣式: 你曾經看過的部落格樣式，你想要用跟他相似的，或是想用成一樣的</li>
 <li>文章風格: 例如你要專寫技術文章，可以透過 Hugo Theme 右側列出的 
@@ -366,13 +333,10 @@ hugo new site my-hugo-blog</code></pre>
     
 、評論系統等</li>
 </ol>
-
 <div class="alert info ">
   <p>此處的連結參考都是以佈景 hugo-theme-tranquilpeak 為主。</p>
 </div>
-
 <p>在你備選的幾個佈景輪流試用中，根據每種佈景作者提供的參數，去切換參數設置看看，你才知道哪些是可隨你意思做動的部分，而哪些是你以後寫文章會需要常用到的。</p>
-
 <p>我是從「佈局」與「整體感覺」先挑出幾個候選，然後每種我覺得會用到的工具都設定試試看；在還沒決定工具之前，我先用了 
     
     <a href="https://jekyllrb.com/" target="_blank">jekyll</a>
@@ -386,40 +350,33 @@ hugo new site my-hugo-blog</code></pre>
     <a href="https://themes.gohugo.io/hugo-tranquilpeak-theme/" target="_blank">Tranquilpeak</a>
     
  之後，才決定用後者。</p>
-
 <p>以我自己使用的佈景為例，我沒有透過 git submodule 的方式安裝，而是直接 clone 到本地，將 clone 下來的專案放到 hugo site 資料夾 themes 底下，跟透過 submodule 設置是同樣意思。</p>
-<pre><code class="language-shell script" data-lang="shell script"># 在專案資料夾底下
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 在專案資料夾底下</span>
 git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranquilpeak
 
-# themes 資料夾是用來專門放置佈景的
-# 特地將 hugo-tranquilpeak-theme 重命名為 tranquilpeak，在設置 config 時指定佈景名稱比較方便</code></pre>
-<div class="alert info ">
+<span style="color:#75715e"># themes 資料夾是用來專門放置佈景的</span>
+<span style="color:#75715e"># 特地將 hugo-tranquilpeak-theme 重命名為 tranquilpeak，在設置 config 時指定佈景名稱比較方便</span>
+</code></pre></div><div class="alert info ">
   <p>通常每個佈景都會有自己的配置方式，你可以先讀一下佈景的 README.md 後，在跟著佈景的安裝方式走一遍，也可看看佈景有哪些東西供你做調整配置 (config.toml)。</p>
 </div>
-
 <h1 id="usage-基本使用">Usage 基本使用</h1>
-
 <p>hugo 指令搞定後，site 建立完成，佈景設置好，基本的就剩「文章操作」、「發布上線」這兩件事。</p>
-
 <h2 id="create-post-新增文章">Create Post 新增文章</h2>
-<pre><code class="language-shell script" data-lang="shell script">hugo new post/my-first-post.md</code></pre>
-<p>稍微說明一下，<code>post/xxx.md</code> 這個結構是: <code>資料夾/檔案名稱+markdown 副檔名</code>，指令執行之後，檔案會長在 <code>/content</code> 底下，例如 <code>/content/post/filename.md</code></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new post/my-first-post.md
+</code></pre></div><p>稍微說明一下，<code>post/xxx.md</code> 這個結構是: <code>資料夾/檔案名稱+markdown 副檔名</code>，指令執行之後，檔案會長在 <code>/content</code> 底下，例如 <code>/content/post/filename.md</code></p>
 <div class="alert info ">
   <p><p>官方使用 posts，如果佈景沒有特別限制，依個人偏好自訂即可 (記得</p>
-<pre><code>&lt;a href=&#34;https://github.com/olOwOlo/hugo-theme-even#installation&#34; target=&#34;_blank&#34;&gt;Even&lt;/a&gt;</code></pre>
+<pre><code>&lt;a href=&quot;https://github.com/olOwOlo/hugo-theme-even#installation&quot; target=&quot;_blank&quot;&gt;Even&lt;/a&gt;
+</code></pre>
 <p>有限制不能用 posts)，例如 post/my-post.md。</p>
 </p>
 </div>
-
 <h2 id="edit-post-編寫文章">Edit Post 編寫文章</h2>
-
 <p>文章內容主要是由 Markdown 語法編寫的，可參考 
     
     <a href="https://gohugo.io/content-management/front-matter/" target="_blank">Markdown 語法說明</a>
     
 ，我較常用的有:</p>
-
 <ul>
 <li><code>H1</code> - <code>H6</code> 標題: 運用此語法來產生 toc 目錄</li>
 <li><code>&gt;</code> 區塊引言: 我都使用佈景提供的 hl shortcode，比較少用 markdown 的 <code>&gt;</code></li>
@@ -432,60 +389,48 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
     
 </li>
 </ul>
-
 <p>蠻多的就不在此一一列舉。</p>
-
 <h2 id="delete-post-刪除文章">Delete Post 刪除文章</h2>
-
 <p>Hugo 刪除文章的方式就是<span class="highlight-text yellow">直接把檔案給移除</span>就好。</p>
-
 <div class="alert warning ">
   <p>若是已經發布 public 資料包到線上的話，且你的 public 是使用 GitHub Page (有版本控制)，則你 clone 下來的 public 會存有舊的文章，需移除乾淨再重新打包，這會在 Hugo 發佈到 GitHub Page 說明。</p>
 </div>
-
 <h2 id="local-running-本地執行">Local Running 本地執行</h2>
-
 <p>在你尚未把網站發布公開，或是文章還沒完成發表 (Publish) 前，通常會在本地寫文章、修修改改，直到吿一個段落；你可以透過執行以下指令，並打開 
     
     <a href="http://localhost:1313" target="_blank">localhost:1313</a>
     
  查看網站發表後的樣子:</p>
-<pre><code class="language-shell script" data-lang="shell script">hugo server -D
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo server -D
 
-# or `hugo server` running without `draft: true` post</code></pre>
-<p>hugo 目前版本都已有 
+<span style="color:#75715e"># or `hugo server` running without `draft: true` post</span>
+</code></pre></div><p>hugo 目前版本都已有 
     
     <a href="https://gohugo.io/getting-started/usage/" target="_blank">Live Reload</a>
     
  模式，我們不用特別下指令 (舊版貌似要用 watch 還是啥)，也就是 server running 期間，修改配置、文章，都會馬上渲染生效。</p>
-
 <h2 id="本地打包-hugo">本地打包 Hugo</h2>
-
 <p>本地打包就是把你當前的 Hugo 專案，包成一整個可被訪問的靜態資源，產出到資料夾 <code>public</code>，日後你要把網站整個發布到線上時，就是把 <code>public</code> 整包丟到你的 web server 上，不用在另行編譯；你也可以透過指定 <code>publishdir</code> 來變更產出的資料夾名稱。</p>
-<pre><code class="language-shell script" data-lang="shell script">hugo
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo
 
-# output (like):
-#                     | ZH-TW
-#  -------------------+--------
-#    Pages            |     2
-#    Paginator pages  |     0
-#    Non-page files   |     0
-#    Static files     |     9
-#    Processed images |     0
-#    Aliases          |     2
-#    Sitemaps         |     1
-#    Cleaned          |     0
-#  
-#  Total in 72 ms</code></pre>
-<h2 id="發佈到線上-web-server">發佈到線上 Web Server</h2>
-
+<span style="color:#75715e"># output (like):</span>
+<span style="color:#75715e">#                     | ZH-TW</span>
+<span style="color:#75715e">#  -------------------+--------</span>
+<span style="color:#75715e">#    Pages            |     2</span>
+<span style="color:#75715e">#    Paginator pages  |     0</span>
+<span style="color:#75715e">#    Non-page files   |     0</span>
+<span style="color:#75715e">#    Static files     |     9</span>
+<span style="color:#75715e">#    Processed images |     0</span>
+<span style="color:#75715e">#    Aliases          |     2</span>
+<span style="color:#75715e">#    Sitemaps         |     1</span>
+<span style="color:#75715e">#    Cleaned          |     0</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Total in 72 ms</span>
+</code></pre></div><h2 id="發佈到線上-web-server">發佈到線上 Web Server</h2>
 <p>最後，關於要把網站放到線上、公開讓別人閱覽，以及設置個人網址這部分，會另外在寫一篇文章說明。</p>
-
 <h1 id="references-參考連結">References 參考連結</h1>
-
-<p>我盡量把我準備過程中，造訪過的連結都放在這，建議若你現在不需要，不一定要全都看懂才開始。
-<p></p>
-
+<p>我盡量把我準備過程中，造訪過的連結都放在這，建議若你現在不需要，不一定要全都看懂才開始。</p>
+<!-- raw HTML omitted -->
 <ul>
 <li>
     
@@ -528,28 +473,22 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
     
 </li>
 </ul>
-
 <h1 id="modification-修訂內容">Modification 修訂內容</h1>
-
 <ul>
 <li>2020-09-02 新增「文章分類」與「文章標籤」用法</li>
 <li>2020-09-02 把「文章」部分內容拆出去「文章操作</li>
 <li>2020-09-04 修改排版，把小項目標題改為 H2 方便從目錄去選擇</li>
-<li>2020-09-04 新增 <a href="https://blog.genesu.me/2020/08/hugo-installation/#series-系列文章">Series 系列文章</a></li>
+<li>2020-09-04 新增 <a href="https://blog.genesu.me/2020/08/hugo-installation/#series-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0">Series 系列文章</a></li>
 <li>2020-09-08 新增 Series 系列文章 <a href="https://blog.genesu.me/2020/09/hugo-site-deploy/">貼身打造個人部落格 - 03. 網站發布</a></li>
 <li>2020-09-08 暫時把坑移除</li>
 </ul>
-
 <h1 id="series-系列文章">Series 系列文章</h1>
-
 <ul>
 <li>貼身打造個人部落格 - 01. 安裝 (本篇)</li>
 <li><a href="https://blog.genesu.me/2020/09/hugo-front-matter/">貼身打造個人部落格 - 02. 文章 Front Matter</a></li>
 <li><a href="https://blog.genesu.me/2020/09/hugo-site-deploy/">貼身打造個人部落格 - 03. 網站發布</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <multiple-line-output>
     
 <br>
@@ -635,7 +574,7 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -715,7 +654,7 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -756,7 +695,7 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git themes/tranqui
     
     <h4 id="about-card-name">Gene (Littlebookboy)</h4>
     
-      <div id="about-card-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</div>
+      <div id="about-card-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</div>
     
     
       <div id="about-card-job">

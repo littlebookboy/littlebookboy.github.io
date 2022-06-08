@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="csrf, laravel, Cross-Site Request Forgery, develop, backend">
 <meta name="description" content="CSRF 觀念筆記">
@@ -138,7 +138,7 @@ if (!doNotTrack) {
         </a>
         <h4 class="sidebar-profile-name">Gene (Littlebookboy)</h4>
         
-          <h5 class="sidebar-profile-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</h5>
+          <h5 class="sidebar-profile-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</h5>
         
       </div>
     
@@ -272,45 +272,26 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
-<ul>
-<li><a href="#認識-csrf-攻擊">認識 CSRF 攻擊</a></li>
-<li><a href="#事情是這樣的">事情是這樣的</a></li>
-<li><a href="#如何防止-csrf-攻擊">如何防止 CSRF 攻擊</a></li>
-<li><a href="#laravel-提供的-csrf-作法">Laravel 提供的 CSRF 作法</a></li>
-<li><a href="#最後">最後</a></li>
-<li><a href="#參考連結">參考連結</a></li>
-</ul>
-</nav>
-
+              <!-- raw HTML omitted -->
 <h1 id="認識-csrf-攻擊">認識 CSRF 攻擊</h1>
-
 <blockquote>
 <p>CSRF 為 Cross-Site Request Forgery 縮寫，意指「跨站點偽造請求」</p>
 </blockquote>
-
 <p>CSRF 也被稱為 one-click attack 或者 session riding，通常縮寫為 CSRF 或者 XSRF，是一種挾制使用者在當前已登錄的 Web 應用程式上執行非本意的操作的攻擊方法。跟跨網站指令碼（XSS）相比，XSS 利用的是使用者對指定網站的信任，CSRF 利用的是網站對使用者網頁瀏覽器的信任 (
     
     <a href="https://zh.wikipedia.org/wiki/%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0" target="_blank">出自維基百科</a>
     
 )。</p>
-
 <h1 id="事情是這樣的">事情是這樣的</h1>
-
 <p>有一天，小明使用瀏覽器登入網站 (例如：<code>http://foo.bar</code>)，登入成功之後，在瀏覽器上會把小明受驗證過的資料，記在 cookies，讓小明之後的訪問操作，不用在重新登入驗證。</p>
-
 <p>此時，有個壞人寫個了網站，裡面全是小明有興趣的內容，吸引小明去瀏覽，網站背後的原始碼卻埋藏了「自動訪問 <code>http://foo.bar</code> 的請求，例如請求變更密碼」，這樣小明就不知道自己送了這些請求，而已經通過身份驗證的 cookies 也被一併送去給伺服器，在 cookies 還是有效的情況下，請求會被驗證通過，導致「因為被惡意網站偽造的頁面內容載入，或假按鈕被點擊，不被小明發覺的請求操作被發出去，而且還能請求成功」，這就是所謂的 CSRF。</p>
-
 <p>簡單來說，就是「在非本人預期的情況下，訪問其他(惡意)網頁內容，送出非預期的請求且成功」。</p>
-
 <h1 id="如何防止-csrf-攻擊">如何防止 CSRF 攻擊</h1>
-
 <p>參考文章「
     
     <a href="https://blog.techbridge.cc/2017/02/25/csrf-introduction/" target="_blank">讓我們來談談 CSRF</a>
     
 」這篇講得蠻詳細的，在此僅用自己的話紀錄一下，以在系統架構為前後端分離時：</p>
-
 <ol>
 <li>在「客端」生成<span class="highlight-text yellow">暗號, token</span> (此 token 只有小明才知道，而偽造網站不知道/不能生成)，記在 cookies 中</li>
 <li>暗號會在每次請求完之後刷新</li>
@@ -318,33 +299,23 @@ if (!doNotTrack) {
 <li>因為偽造網站「沒辦法在瀏覽器寫入不同網址的 cookies」，因此伺服器可以得知請求中的暗號是不是同源產生的</li>
 <li>若是偽造網站，他只能隨便塞一個自己建的暗號給伺服器 (取不到 cookies)，透過 form 或 ajax 送出，when form.暗號 != request.cookies.暗號 表示這個請求是偽造的請求</li>
 </ol>
-
 <p>當然也可以單純把 token 寫在伺服器端 (用 session)，讓前端去塞入到每個請求中，這樣也可以驗證暗號是不是對的，也就是説「只要這暗號，是別人沒辦法建立的，只有我能用」的前提之下才有效。</p>
-
 <h1 id="laravel-提供的-csrf-作法">Laravel 提供的 CSRF 作法</h1>
-
 <p>Laravel 提供你可輕鬆在原始碼中，加入 csrf token (暗號)，以防止 CSRF 攻擊發生，以下是幾種產生 token 的方式：</p>
-
 <ul>
 <li>透過 helper <code>csrf_token()</code> 產生 csrf token</li>
 <li>透過 blade 語法 <code>@csrf</code> 產生 csrf token</li>
 <li>透過寫一個 api，去跟伺服器要回 csrf token (有點怪，請求數量會變成兩倍)</li>
 <li>客端產生隨機數，當成 token，由 cookies 同源機制去判斷是不是「我家的客端」(題外話，若 cookies 有辦法被第三者寫入，或透過 CORS 取用，則無法真正防止 CSRF 攻擊發生)</li>
 </ul>
-
 <h1 id="最後">最後</h1>
-
 <p>這兩天看了很多篇關於 CORS、CSRF 的說明，大致上能理解其描述的案例、場景、以及大概是如何實作的。有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
-
 <p>另外，筆者一併整理了討論到 CSRF 時，可一併吸收研讀的主題</p>
-
 <ul>
 <li><a href="https://blog.genesu.me/2021/06/learn-about-cors/">CORS 觀念筆記</a></li>
 <li><a href="https://blog.genesu.me/2021/06/learn-about-xss/">XSS 觀念筆記</a></li>
 </ul>
-
 <h1 id="參考連結">參考連結</h1>
-
 <ul>
 <li>
     
@@ -362,9 +333,7 @@ if (!doNotTrack) {
     
 </li>
 </ul>
-
-<hr />
-
+<hr>
 <multiple-line-output>
     
 <br>
@@ -458,7 +427,7 @@ if (!doNotTrack) {
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -538,7 +507,7 @@ if (!doNotTrack) {
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -579,7 +548,7 @@ if (!doNotTrack) {
     
     <h4 id="about-card-name">Gene (Littlebookboy)</h4>
     
-      <div id="about-card-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</div>
+      <div id="about-card-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</div>
     
     
       <div id="about-card-job">

@@ -6,7 +6,16 @@
     <description>Recent content in laravel on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Jun 2021 13:35:43 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jun 2022 13:20:04 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laravel tinker include 指令用法</title>
+      <link>https://blog.genesu.me/2022/06/laravel-tinker-including-php-way/</link>
+      <pubDate>Wed, 08 Jun 2022 13:20:04 +0800</pubDate>
+      
+      <guid>https://blog.genesu.me/2022/06/laravel-tinker-including-php-way/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CSRF 觀念筆記</title>
       <link>https://blog.genesu.me/2021/06/learn-about-csrf/</link>

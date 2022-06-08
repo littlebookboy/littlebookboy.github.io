@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="composer, Fatal error, allowed memory, develop, backend">
 <meta name="description" content="Composer 跑到記憶體不足問題解法">
@@ -132,7 +132,7 @@ if (!doNotTrack) {
         </a>
         <h4 class="sidebar-profile-name">Gene (Littlebookboy)</h4>
         
-          <h5 class="sidebar-profile-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</h5>
+          <h5 class="sidebar-profile-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</h5>
         
       </div>
     
@@ -266,77 +266,51 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
-<ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#記憶體用去哪了">記憶體用去哪了</a></li>
-<li><a href="#解法-1-改-php-ini">解法 1 - 改 php.ini</a></li>
-<li><a href="#解法-2-透過-php-指令加大記憶體">解法 2 - 透過 php 指令加大記憶體</a></li>
-<li><a href="#解法-3-透過-composer-指令加大記憶體-推">解法 3 - 透過 composer 指令加大記憶體 (推)</a></li>
-<li><a href="#再次別名-以-mac-為例">再次別名 (以 Mac 為例)</a></li>
-<li><a href="#最後">最後</a></li>
-<li><a href="#參考連結">參考連結</a></li>
-</ul>
-</nav>
-
+              <!-- raw HTML omitted -->
 <h1 id="前言">前言</h1>
-
 <p>近期發現在使用
     
     <a href="https://getcomposer.org/" target="_blank">Composer</a>
     
 時，都會跑到</p>
-<pre><code>PHP Fatal error: Allowed memory size of XXXXXX bytes exhausted &lt;...&gt;</code></pre>
-<p>於是上網找了一些資料，這邊做個整理</p>
-
+<pre tabindex="0"><code>PHP Fatal error: Allowed memory size of XXXXXX bytes exhausted &lt;...&gt;
+</code></pre><p>於是上網找了一些資料，這邊做個整理</p>
 <h1 id="記憶體用去哪了">記憶體用去哪了</h1>
-
 <p>在下指令時，補上 <code>-vvv</code> 可以看到執行過程，例如：</p>
-<pre><code>composer install -vvv</code></pre>
-<p>(不過在 mac 好像不會 show memory 用了多少，在 centos 裏面記得是有 show)</p>
-
-<h1 id="解法-1-改-php-ini">解法 1 - 改 php.ini</h1>
-
+<pre tabindex="0"><code>composer install -vvv
+</code></pre><p>(不過在 mac 好像不會 show memory 用了多少，在 centos 裏面記得是有 show)</p>
+<h1 id="解法-1---改-phpini">解法 1 - 改 php.ini</h1>
 <p>追加以下設定到 <code>php.ini</code> 中 (
     
     <a href="https://getcomposer.org/doc/articles/troubleshooting.md#memory-limit-errors" target="_blank">出處</a>
     
 )：</p>
-<pre><code>; Use -1 for unlimited or define an explicit value like 2G
-memory_limit = -1</code></pre>
-<div class="alert warning ">
+<pre tabindex="0"><code>; Use -1 for unlimited or define an explicit value like 2G
+memory_limit = -1
+</code></pre><div class="alert warning ">
   <p>不推薦此做法，這樣本地整個環境的 php 都會被影響。</p>
 </div>
-
-<h1 id="解法-2-透過-php-指令加大記憶體">解法 2 - 透過 php 指令加大記憶體</h1>
-
+<h1 id="解法-2---透過-php-指令加大記憶體">解法 2 - 透過 php 指令加大記憶體</h1>
 <p>透過 <code>php</code> 宣告，臨時加大記憶體配置，例如：</p>
-<pre><code>php -d memory_limit=-1 composer.phar &lt;...&gt;</code></pre>
-<div class="alert info ">
+<pre tabindex="0"><code>php -d memory_limit=-1 composer.phar &lt;...&gt;
+</code></pre><div class="alert info ">
   <p>個人不使用此做法，與平常直接使用 <code>composer</code> 習慣有差，還要多打 <code>php -d ...</code>。</p>
 </div>
-
-<h1 id="解法-3-透過-composer-指令加大記憶體-推">解法 3 - 透過 composer 指令加大記憶體 (推)</h1>
-
+<h1 id="解法-3---透過-composer-指令加大記憶體-推">解法 3 - 透過 composer 指令加大記憶體 (推)</h1>
 <p>透過 <code>composer</code> 宣告，臨時加大記憶體配置，例如：</p>
-<pre><code>COMPOSER_MEMORY_LIMIT=-1 composer.phar &lt;...&gt;</code></pre>
-<h1 id="再次別名-以-mac-為例">再次別名 (以 Mac 為例)</h1>
-
+<pre tabindex="0"><code>COMPOSER_MEMORY_LIMIT=-1 composer.phar &lt;...&gt;
+</code></pre><h1 id="再次別名-以-mac-為例">再次別名 (以 Mac 為例)</h1>
 <p>可透過 <code>aliases</code> 再次別名，讓記憶體加大這件事不用每次打，例如：</p>
-<pre><code>echo &#34;alias composer=\&#34;COMPOSER_MEMORY_LIMIT=4G composer\&#34;&#34; &gt;&gt; ~/.aliases</code></pre>
-<p>重開終端機，即可正常使用：</p>
-<pre><code>composer install &lt;...&gt; # 這樣下記憶體已經加大過了</code></pre>
-<h1 id="最後">最後</h1>
-
+<pre tabindex="0"><code>echo &quot;alias composer=\&quot;COMPOSER_MEMORY_LIMIT=4G composer\&quot;&quot; &gt;&gt; ~/.aliases
+</code></pre><p>重開終端機，即可正常使用：</p>
+<pre tabindex="0"><code>composer install &lt;...&gt; # 這樣下記憶體已經加大過了
+</code></pre><h1 id="最後">最後</h1>
 <ol>
 <li>前述解法中提到的 <code>composer.phar</code> 若有設置過軟連結，則改為 <code>composer</code></li>
 <li>臨時加大的記憶體，不要設置成 <code>-1</code> (開到最大)，我通常設定成 <code>4G</code> (夠用就好)，例如 <code>COMPOSER_MEMORY_LIMIT=4G composer &lt;...&gt;</code>，避免記憶體爆掉</li>
 </ol>
-
 <p>有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
-
 <h1 id="參考連結">參考連結</h1>
-
 <ul>
 <li>
     
@@ -344,9 +318,7 @@ memory_limit = -1</code></pre>
     
 </li>
 </ul>
-
-<hr />
-
+<hr>
 <multiple-line-output>
     
 <br>
@@ -434,7 +406,7 @@ memory_limit = -1</code></pre>
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -514,7 +486,7 @@ memory_limit = -1</code></pre>
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -555,7 +527,7 @@ memory_limit = -1</code></pre>
     
     <h4 id="about-card-name">Gene (Littlebookboy)</h4>
     
-      <div id="about-card-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</div>
+      <div id="about-card-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</div>
     
     
       <div id="about-card-job">

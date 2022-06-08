@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="tdd, test, tdd-kata, mock, stub, phpstorm, develop, backend">
 <meta name="description" content="TDD 003 - String Calculator Interactions">
@@ -132,7 +132,7 @@ if (!doNotTrack) {
         </a>
         <h4 class="sidebar-profile-name">Gene (Littlebookboy)</h4>
         
-          <h5 class="sidebar-profile-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</h5>
+          <h5 class="sidebar-profile-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</h5>
         
       </div>
     
@@ -267,107 +267,72 @@ if (!doNotTrack) {
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>練習 TDD, 紀錄題目中提到的一些值得思考研究的東西，以及參考到的一些 Mock 與 Stub 的文章。</p>
-
-<h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
-<ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#環境">環境</a></li>
-<li><a href="#題目重點">題目重點</a></li>
-<li><a href="#練習重點">練習重點</a></li>
-<li><a href="#練習結果">練習結果</a></li>
-<li><a href="#筆記">筆記</a></li>
-<li><a href="#最後">最後</a></li>
-<li><a href="#參考連結">參考連結</a></li>
-</ul>
-</nav>
-
+<!-- raw HTML omitted -->
 <h1 id="前言">前言</h1>
-
 <p>本次課題為透過「
     
     <a href="https://osherove.com/tdd-kata-2" target="_blank">TDD Kata 2</a>
     
 」練習 TDD，此題目為 <a href="https://blog.genesu.me/2021/06/tdd-daily-001-tdd-cycle-practice/">TDD Kata 1</a> 的延續題。</p>
-
 <p>到目前「單元測試的藝術」已看到第三章後半段 (進度落後中)，除了書之外，這段時間也有在網路上，看一些很厲害的人分享他們的測試經驗，若本次練習有遇到適用的部分，會試著在練習過程中實作，並筆記在這邊。</p>
-
 <p>另外，這系列本質上還是在刷題練習 TDD，方便日後回過頭來看，若日後有心得可以針對某個議題集中討論時 (例如 Mock 使用案例與心得)，就交給日後的我去寫了。</p>
-
 <h1 id="環境">環境</h1>
-
 <p>環境同 <a href="https://blog.genesu.me/2021/06/tdd-daily-001-tdd-cycle-practice/">TDD Kata 1</a>。</p>
-
 <h1 id="題目重點">題目重點</h1>
-
 <ul>
 <li>What’s the difference between Mock and Stub?</li>
 <li>Don&rsquo;t faking too much, otherwise not really testing anything.</li>
 <li>Testcase naming, 一個「好的測試案例命名」可以讓你更清楚<span class="highlight-text yellow">你正在測試什麼</span></li>
 </ul>
-
 <div class="alert info ">
   <p>TODO: 關於「測試案例的命名」會另外寫一篇文章</p>
 </div>
-
 <h1 id="練習重點">練習重點</h1>
-
 <ul>
 <li>測試案例的命名</li>
 <li>聚焦正在測什麼，不要測試超過兩件事</li>
 <li>Data Provider 的練習，多測幾組不同的案例，但不用新增重複的測試方法</li>
 </ul>
-
 <h1 id="練習結果">練習結果</h1>
-
 <p>請參考 
     
     <a href="https://github.com/littlebookboy/my-tdd-daily/commits/2021-07-11-Interactions-kata" target="_blank">commit</a>
     
  過程。</p>
-
 <p>Data Provider 練習 
     
     <a href="https://github.com/littlebookboy/my-tdd-daily/commit/7ddeb44e6f95d09e40239120a7aab6427002a01e" target="_blank">commit</a>
     
 </p>
-
 <div class="alert info ">
   <p>最近有點忙，後續測試 console output 的題目先擱置，日後有緣再研究。</p>
 </div>
-
 <h1 id="筆記">筆記</h1>
-
 <p>記錄一下遇到的問題</p>
-<pre><code>- 「重構 &gt; 測試 &gt; 開發(+重構) &gt; 通過測試」的節奏沒有掌握好
+<pre tabindex="0"><code>- 「重構 &gt; 測試 &gt; 開發(+重構) &gt; 通過測試」的節奏沒有掌握好
 - 開發(+重構) 是先把功能寫對，通過測試，在把剛剛寫的功能重構，在通過一樣的測試
 - 設計 ILoggerService 時，一下子寫了過多的 code，沒有遵循 baby step 的方式開發，導致一下子太多設計沒寫好，太多測試壞掉
-- 應該先把 add() 重構好，決定要在哪邊插入寫 log 的動作，以及要如何觸發，但先不要真的去設計寫 log 的相關介面與實作</code></pre>
-<p>寫 
+- 應該先把 add() 重構好，決定要在哪邊插入寫 log 的動作，以及要如何觸發，但先不要真的去設計寫 log 的相關介面與實作
+</code></pre><p>寫 
     
     <a href="https://github.com/littlebookboy/my-tdd-daily/commit/2a42dac67bc99609e0ccf57513111a5070bb31ca" target="_blank">CallAdd_LogFailAndThrowException_GetExceptionMessageLogFail</a>
     
- 時，mock 就直接過了？但是 AppServiceProvider 還沒綁定對的 INotify 對應的實例，這樣實作的部分還是有問題? 這樣是對的? ~&rdquo;~</p>
-
+ 時，mock 就直接過了？但是 AppServiceProvider 還沒綁定對的 INotify 對應的實例，這樣實作的部分還是有問題? 這樣是對的? ~''~</p>
 <div class="alert info ">
   <p>注意，測試的 setUp() 中的 parent::setUp() 永遠記得要放在第一行，application 是在此被重新初始化的，背後會跑 <code>refreshApplication();</code>。</p>
 </div>
-
 <h1 id="最後">最後</h1>
-
 <p>過程中有另外再看了
     
     <a href="https://blog.turn.tw/?p=3347" target="_blank">這篇</a>
     
 關於 Laravel 如何實作 Service Container 的部分：</p>
-<pre><code>1. alias 中存放的 abstract =&gt; values，是讓 bindings 查表的地方，表示同一個「字串 (abstract)」同時對應到不同的「類別、介面 (string values)」名稱，這樣在實際 new 時，他才可以透過不同名字，找到同一個類別 (<span class="highlight-text yellow">實現 Binding Interfaces To Implementations</span>)
+<pre tabindex="0"><code>1. alias 中存放的 abstract =&gt; values，是讓 bindings 查表的地方，表示同一個「字串 (abstract)」同時對應到不同的「類別、介面 (string values)」名稱，這樣在實際 new 時，他才可以透過不同名字，找到同一個類別 (<span class="highlight-text yellow">實現 Binding Interfaces To Implementations</span>)
 2. service container 中除了存放 bindings 之外，還存放了 instances，這樣 bind 的會去 bindings 對照要 new 什麼，而 instances 則提供 singleton 總是同樣的實例不會再重新 new
-3. (作者說得對)有些東西很難在當下都搞清楚弄明白，就先去睡覺，或許醒來就通了</code></pre>
-<p>有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
-
+3. (作者說得對)有些東西很難在當下都搞清楚弄明白，就先去睡覺，或許醒來就通了
+</code></pre><p>有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
 <h1 id="參考連結">參考連結</h1>
-
 <p>這邊列出比較多的連結，主要是把這幾天有印象的、有看過的連結都列舉在這，方便自己以後可以回顧。</p>
-
 <ul>
 <li>
     
@@ -410,9 +375,7 @@ if (!doNotTrack) {
     
 </li>
 </ul>
-
-<hr />
-
+<hr>
 <multiple-line-output>
     
 <br>
@@ -500,7 +463,7 @@ if (!doNotTrack) {
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -580,7 +543,7 @@ if (!doNotTrack) {
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -621,7 +584,7 @@ if (!doNotTrack) {
     
     <h4 id="about-card-name">Gene (Littlebookboy)</h4>
     
-      <div id="about-card-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</div>
+      <div id="about-card-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</div>
     
     
       <div id="about-card-job">

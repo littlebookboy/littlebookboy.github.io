@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="ab, 壓力測試, testing, stress testing, develop, backend">
 <meta name="description" content="了解壓力測試">
@@ -136,7 +136,7 @@ if (!doNotTrack) {
         </a>
         <h4 class="sidebar-profile-name">Gene (Littlebookboy)</h4>
         
-          <h5 class="sidebar-profile-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</h5>
+          <h5 class="sidebar-profile-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</h5>
         
       </div>
     
@@ -270,26 +270,10 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
-<ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#何謂壓力測試">何謂壓力測試</a></li>
-<li><a href="#需要壓測的場景">需要壓測的場景</a></li>
-<li><a href="#壓力測試計畫">壓力測試計畫</a></li>
-<li><a href="#效能指標">效能指標</a></li>
-<li><a href="#相關工具">相關工具</a></li>
-<li><a href="#題外話-如何優化">題外話：如何優化</a></li>
-<li><a href="#最後">最後</a></li>
-<li><a href="#參考連結">參考連結</a></li>
-</ul>
-</nav>
-
+              <!-- raw HTML omitted -->
 <h1 id="前言">前言</h1>
-
 <p>嗯&hellip;因為近期有被問到說，我會怎麼做壓力測試，覺得自己答的沒有很好，花了一個下午吃了幾篇文章，把目前看到的東西整理一下。</p>
-
 <h1 id="何謂壓力測試">何謂壓力測試</h1>
-
 <blockquote>
 <p>軟體測試中的壓力測試，是在超過正常運作條件以外的條件下運作系統，以確認軟體體質、可用性的一種測試驗證方式。一般來說，壓力測試會看軟體在高負載下的 Robustness、可用性及異常處理，以及哪些在一般使用環境下算是正常行為。例如一個網站頁面預期是 100 個人同時點擊訪問，壓力測試就要是採用 120 個 (略高) 同時點擊的條件測試。 &mdash; 
     
@@ -297,17 +281,12 @@ if (!doNotTrack) {
     
 </p>
 </blockquote>
-
 <p>根據維基百科的說明，我們可以透過壓力測試，得知軟體 (網站 / API 等) 在一般情況、異常情況下，能夠被多少人訪問存取，系統能承受到多少，反應速度如何，系統是否會發生異常，系統承載量是不是符合預期等，藉由不同的假設，來確認我們設計的軟體，足以應對各種使用場景，讓使用者有良好的體驗。</p>
-
 <div class="alert info ">
   <p>簡言之，透過壓測，了解系統正常最多可吃多少的訪問量 (不會慢)，異常時多少會掛掉。</p>
 </div>
-
 <h1 id="需要壓測的場景">需要壓測的場景</h1>
-
 <p>現實生活中，有很多實務場景，常常需要為系統做好「承受能力」的測試，例如：</p>
-
 <ul>
 <li>演唱會搶票</li>
 <li>遊戲上線公測</li>
@@ -316,31 +295,22 @@ if (!doNotTrack) {
 <li>雙 11 整點下殺一折商品搶購</li>
 <li><del>Twitter 巴魯斯季</del></li>
 </ul>
-
 <p>若沒有妥善預估好服務應承受合理的人次/訪問次數，做好規劃，等到使用者同時擠進來，則可能會造成服務中斷，背後損失的成本難以預估。</p>
-
 <h1 id="壓力測試計畫">壓力測試計畫</h1>
-
 <p>先確認好「測試目標場景」，在制定壓測的方式，如何打到有效的數據；記得，我們要的是「壓測 &gt; 改善 &gt; 壓測」，也就是說，壓測的最終目的就是：藉由<span class="highlight-text yellow">壓測結果</span>，取得<span class="highlight-text yellow">系統可改善的標的</span>。</p>
-
 <p>舉例來說，系統即將於早上 10:00 開放線上預約施打疫苗，預估總預約人數為 10,000 人，假設使用者怕預約不到，全部都很準時想要搶在 10:00 馬上登入預約，則可預期：</p>
-
 <ul>
 <li>瞬間訪問請求數為 10,000 次 (每人 1 次) (正常情況下)</li>
 <li>瞬間訪問請求數為 20,000 次 (每人 2 次) (進不來 F5 重整)</li>
 <li>瞬間訪問請求數為 40,000 次 (極端條件/最差情況，可能為預估次數的數倍)</li>
 </ul>
-
 <p>在可預期的情況下，我們希望：</p>
-
 <ol>
 <li>正常情況下，系統應一路順暢，每個請求回應都是低延遲，快速反應</li>
 <li>比正常情況更頻繁的訪問下，雖然每個請求回應可能比正常情況下，延遲略高一點，但不會讓使用者等待過久</li>
 <li>極端情況下，系統不能直接噴/掛掉給使用者看</li>
 </ol>
-
 <p>依據「反應時間」制定測試計畫 (舉例)：</p>
-
 <ol>
 <li>在 2 秒內，模擬達到 10,000 人次訪問，其平均反應時間應在 0.05 秒，且請求成功率為 100%</li>
 <li>在 2 秒內，模擬達到 20,000 人次訪問，其平均反應時間應在 0.12 秒，且請求成功率為 100%</li>
@@ -348,15 +318,10 @@ if (!doNotTrack) {
 <li>嘗試更高的極限條件，讓反應速度慢到會讓使用者感到不高興 (例如反應時間 5 秒)，並針對此情況設計如何優化</li>
 <li>嘗試更高的極限條件，把系統打到掛掉，紀錄極限值，並針對此情況設計如何恢復系統</li>
 </ol>
-
 <p>上述 1~4 又稱為<span class="highlight-text yellow">負載測試</span>，這類測試只是為了知道系統可承受的量，所制定的測試計畫；</p>
-
 <p>而 5 可稱為<span class="highlight-text yellow">壓力測試</span>，這類測試會制定極端條件，找出系統故障之後的行為，才能知道如果真的發生了，要如何恢復系統。</p>
-
 <h1 id="效能指標">效能指標</h1>
-
 <p>這邊列舉幾個指標供參考：</p>
-
 <ul>
 <li>1 分鐘內，每秒可載入多少頁面</li>
 <li>1 分鐘內，可接受完成幾次 API 請求</li>
@@ -365,7 +330,6 @@ if (!doNotTrack) {
 <li>請求失敗次數/失敗率</li>
 <li>模擬的客戶人數，與分散訪問時間，例如 10 秒內，每秒幾人訪問，共幾次請求，請參考下圖。</li>
 </ul>
-
 
  
   
@@ -402,9 +366,7 @@ if (!doNotTrack) {
 
   <div style="clear:both;"></div>
 
-
 <h1 id="相關工具">相關工具</h1>
-
 <ul>
 <li>Apache Bench 適合用於負載測試，比起 JMeter 較為陽春，但速度較快 (日後認真用過再補充)</li>
 <li>Apache JMeter 支援終端機指令，同時提供 GUI 介面，測試功能較齊全，但要學習使用也比較花時間 (用過一次，但沒有很熟，日後再補充)</li>
@@ -416,9 +378,7 @@ if (!doNotTrack) {
     
  這個不是壓測工具，但也可用於分析網頁載入效能</li>
 </ul>
-
-<h1 id="題外話-如何優化">題外話：如何優化</h1>
-
+<h1 id="題外話如何優化">題外話：如何優化</h1>
 <ul>
 <li>後端程式方面，可使用 
     
@@ -428,21 +388,15 @@ if (!doNotTrack) {
 <li>承上，從觀測到慢的地方著手改善，例如替不用每次都返回最新的資料加上快取、靜態資源透過 cdn 快取、慢查詢透過優化 SQL Query 、設索引等方式優化調整</li>
 <li>後端機器方面，可藉由垂直擴展 (加大 CPU、Memory)，或是水平擴展 (新增服務作 LB 分流) 等課金手段優化效能</li>
 </ul>
-
 <h1 id="最後">最後</h1>
-
 <p>大力推薦可以去看一下 
     
     <a href="https://medium.com/@harrietty/load-testing-an-api-with-apache-benchmark-or-jmeter-24cfe39d3a23" target="_blank">這篇文章</a>
     
 ，令我收穫良多。</p>
-
 <p>此篇文章標題原本定調為「如何壓力測試」，主軸會是如何使用工具進行壓力測試，但網路上已經有很多篇文章介紹如何使用，因此推翻重寫，主題改為「了解壓力測試」，試著把他搞清楚，這樣之後才不會只是為了測試而測試，卻始終不知到底為何而測試，而是理解「明確知道何為測試的目標、目的」，才去進行壓力測試。</p>
-
 <p>目前覺得寫得還不是很理想，覺得還有很多沒有講到或是寫得太淺<del>我就廢</del>，日後會再使用過工具後，另寫一篇關於工具使用的文章，順便認真看一下 ab 跟 JMeter 有何差別；有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
-
 <h1 id="參考連結">參考連結</h1>
-
 <ul>
 <li>
     
@@ -470,9 +424,7 @@ if (!doNotTrack) {
     
  (結論的部分可參考一下)</li>
 </ul>
-
-<hr />
-
+<hr>
 <multiple-line-output>
     
 <br>
@@ -564,7 +516,7 @@ if (!doNotTrack) {
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -644,7 +596,7 @@ if (!doNotTrack) {
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -685,7 +637,7 @@ if (!doNotTrack) {
     
     <h4 id="about-card-name">Gene (Littlebookboy)</h4>
     
-      <div id="about-card-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</div>
+      <div id="about-card-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</div>
     
     
       <div id="about-card-job">

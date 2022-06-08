@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="tdd, test, develop, backend">
 <meta name="description" content="TDD 001 - 從 Kata 練習 TDD 循環">
@@ -132,7 +132,7 @@ if (!doNotTrack) {
         </a>
         <h4 class="sidebar-profile-name">Gene (Littlebookboy)</h4>
         
-          <h5 class="sidebar-profile-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</h5>
+          <h5 class="sidebar-profile-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</h5>
         
       </div>
     
@@ -271,47 +271,24 @@ if (!doNotTrack) {
     <a href="https://osherove.com/tdd-kata-1" target="_blank">String Calculator - osherove.com</a>
     
 」這道 Kata，練習 TDD 循環。</p>
-
-<h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
-<ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#tdd-循環">TDD 循環</a></li>
-<li><a href="#練習環境">練習環境</a></li>
-<li><a href="#練習重點">練習重點</a></li>
-<li><a href="#練習題-kata">練習題 (Kata)</a></li>
-<li><a href="#練習結果">練習結果</a></li>
-<li><a href="#筆記">筆記</a></li>
-<li><a href="#最後">最後</a></li>
-<li><a href="#參考連結">參考連結</a></li>
-</ul>
-</nav>
-
+<!-- raw HTML omitted -->
 <h1 id="前言">前言</h1>
-
 <p>本系列為 TDD 測試驅動開發的練習文，會持續寫一段時間，並把過程透過日記形式寫下來。</p>
-
 <h1 id="tdd-循環">TDD 循環</h1>
-
 </div>
 <div class="figure figure--fullWidth">
   <img class="figure-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/TDD_Global_Lifecycle.png" alt="https://upload.wikimedia.org/wikipedia/commons/0/0b/TDD_Global_Lifecycle.png - 維基百科" /><span class="caption">https://upload.wikimedia.org/wikipedia/commons/0/0b/TDD_Global_Lifecycle.png - 維基百科</span>
 </div>
 <div class="main-content-wrap">
-
 <h1 id="練習環境">練習環境</h1>
-
 <ul>
 <li>PHP 7.3.28</li>
 <li>Laravel 8.48.2 開個新的專案用來練習寫測試</li>
 <li>composer 裝的 <code>phpunit/phpunit</code> 為 <code>9.5.6</code></li>
 </ul>
-
 <h1 id="練習重點">練習重點</h1>
-
 <p><span class="highlight-text yellow">練習 TDD 的思考方式，與實作的順序</span>。</p>
-
 <p>遵循以下順序開發：</p>
-
 <ul>
 <li>寫測試(只測一件事) &gt;</li>
 <li>測試執行得到<span class="highlight-text red">紅燈</span> &gt;</li>
@@ -323,44 +300,32 @@ if (!doNotTrack) {
 <li>commit &gt;</li>
 <li>寫測試 (只測一件事，或新的測試案例)</li>
 </ul>
-
 <div class="alert info ">
   <p>練習「快速反應下一步」應該要做的事是什麼</p>
 </div>
-
 <h1 id="練習題-kata">練習題 (Kata)</h1>
-
 <p>這題為單元測試的藝術作者提供的 Kata: 
     
     <a href="https://osherove.com/tdd-kata-1" target="_blank">String Calculator - osherove.com</a>
     
 </p>
-
 <h1 id="練習結果">練習結果</h1>
-
 <p>請參考 
     
     <a href="https://github.com/littlebookboy/my-tdd-daily/commits/2021-06-27-string-calculator-kata" target="_blank">commit</a>
     
  過程。</p>
-
 <h1 id="筆記">筆記</h1>
-
 <p>記錄一下遇到的問題</p>
-
 <ul>
 <li>如果往下測試 &gt; 實作，遇到設計上不容易測試的話，可先退回重構，完成重構，才重新繼續下一個紅燈</li>
 <li>除了<span class="highlight-text yellow">TDD 的順序</span>要注意外，記得測試通過就先看要不要重構，並遵守 SRP (重構觀念也要持續學習)</li>
 <li>若有覆寫 <code>setUp()</code> 不可省略 <code>parent::setUp()</code></li>
 <li>實作到 pdf 中的第 11 個測試案例時，重構了一大段，直到綠燈，但覺得應該有更好的寫法，目前寫法都是把 <code>delimiter</code> 改為 <code>,</code> 在去切開 <code>numbers</code></li>
 </ul>
-
 <h1 id="最後">最後</h1>
-
 <p>透過這種有題目的方式練習 TDD，會比純看書或看網路文章還要來得，更有心得；有任何問題或想法，歡迎留言交流，如果寫的內容有錯誤的地方，希望能不吝指點，感謝。</p>
-
 <h1 id="參考連結">參考連結</h1>
-
 <ul>
 <li>
     
@@ -378,9 +343,7 @@ if (!doNotTrack) {
     
 </li>
 </ul>
-
-<hr />
-
+<hr>
 <multiple-line-output>
     
 <br>
@@ -468,7 +431,7 @@ if (!doNotTrack) {
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -548,7 +511,7 @@ if (!doNotTrack) {
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -589,7 +552,7 @@ if (!doNotTrack) {
     
     <h4 id="about-card-name">Gene (Littlebookboy)</h4>
     
-      <div id="about-card-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</div>
+      <div id="about-card-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</div>
     
     
       <div id="about-card-job">

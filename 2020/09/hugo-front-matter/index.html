@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="hugo, front matter, develop, backend">
 <meta name="description" content="介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明">
@@ -130,7 +130,7 @@ if (!doNotTrack) {
         </a>
         <h4 class="sidebar-profile-name">Gene (Littlebookboy)</h4>
         
-          <h5 class="sidebar-profile-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</h5>
+          <h5 class="sidebar-profile-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</h5>
         
       </div>
     
@@ -269,36 +269,17 @@ if (!doNotTrack) {
     <a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
     
 ，包括模板、分類、標籤，與我目前的用法及設置參數說明。</p>
-
-<h1 id="table-of-contents">目錄</h1><nav id="TableOfContents">
-<ul>
-<li><a href="#front-matter">Front Matter</a>
-<ul>
-<li><a href="#我的-front-matter">我的 Front Matter</a></li>
-<li><a href="#post-archetypes-文章模板">Post Archetypes 文章模板</a></li>
-<li><a href="#post-status-文章狀態">Post Status 文章狀態</a></li>
-<li><a href="#post-categories-and-tags-文章分類與標籤">Post Categories and Tags 文章分類與標籤</a></li>
-</ul></li>
-<li><a href="#references-參考連結">References 參考連結</a></li>
-<li><a href="#modification-修訂內容">Modification 修訂內容</a></li>
-<li><a href="#series-系列文章">Series 系列文章</a></li>
-</ul>
-</nav>
-
+<!-- raw HTML omitted -->
 <h1 id="front-matter">Front Matter</h1>
-
 <p>Front Matter 指的是: 每篇文章檔案內容中，放在檔案內容最前面那塊以 <span class="highlight-text cyan">---</span> 分隔的區塊內容。</p>
-
 <p>當你每次在產生新文章 (create new post.md) 時，Hugo 會從 <code>./archetypes</code> 找尋對應的文章模板，複製模板新建文章；被建置的每篇文章的 Front Matter 中的這些參數 {Params} 讓我們可以很方便去客製化每篇文章要長成什麼樣子，或是做其他運用，例如文章網址設置，SEO 關鍵字設置等。</p>
-
 <h2 id="我的-front-matter">我的 Front Matter</h2>
-
 <p>此篇文章我使用的 
     
     <a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
     
  設置如下:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">title: &#34;貼身打造個人部落格 - 02. 文章 Front Matter&#34;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">title: &#34;貼身打造個人部落格 - 02. 文章 Front Matter&#34;
 description: &#34;介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明&#34;
 slug: &#34;hugo-front-matter&#34;
 author: littlebookboy
@@ -311,19 +292,19 @@ keywords: [&#34;tutorials&#34;, &#34;hugo&#34;, &#34;mac&#34;, &#34;文章&#34;,
 coverImage: https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/pexels-pixabay-207662.jpg
 metaAlignment: center
 coverMeta: out
-coverSize: partial</code></pre></div>
-<p>在開始說明每項參數前，以下若有提到關於 <code>config</code> setting 的部分一併列在此處 (為了排版)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">[permalinks]
+coverSize: partial
+</code></pre></div><p>在開始說明每項參數前，以下若有提到關於 <code>config</code> setting 的部分一併列在此處 (為了排版)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">[permalinks]
   post = &#34;/:year/:month/:slug/&#34;
   page = &#34;/:slug/&#34;
 
 [params]
   # 請注意，時間格式日期的 {數字} 不可變更，不然生成文章時，當前時間會秀逗
   # 請參考 https://www.jianshu.com/p/c7f7fbb16932
-  dateFormat = &#34;2006-01-02 15:04:05 UTC+8&#34;</code></pre></div>
-<ul>
-<li><p>title 文章標題</p>
-
+  dateFormat = &#34;2006-01-02 15:04:05 UTC+8&#34;
+</code></pre></div><ul>
+<li>
+<p>title 文章標題</p>
 <ul>
 <li>在 <code>config</code> 中設置 
     
@@ -333,69 +314,69 @@ coverSize: partial</code></pre></div>
 <li><code>confit</code> 設置 <code>post = &quot;/:year...&quot;</code> 此處的 <code>post</code> 需對應文章 front matter 的 <code>type: post</code></li>
 <li>若 front matter 中沒有設置 <code>slug</code> 而 <code>permalinks</code> 指定用 <code>:slug</code> 時，預設會去抓 <code>title</code> (官方預設機制，非佈景實作)</li>
 <li>我的習慣是用 <code>slug</code> 決定網址，格式為英文烤肉串 <code>foo-bar-baz</code> 表示，而文章的 <code>filename</code> 與 <code>title</code> 取一樣 (檔案好找)，這樣<span class="highlight-text yellow">不會影響網址</span>，且 Google 建立索引貌似比較快 (體感速度)。</li>
-</ul></li>
-
-<li><p>description 文章概要</p>
-
+</ul>
+</li>
+<li>
+<p>description 文章概要</p>
 <ul>
 <li>標示文章的概要，這個會被抓去做 seo 塞在 HTML 的 header 中</li>
 <li>文章被轉貼時，會顯示在下面的那一小段文字</li>
 <li>通常我會把這段文字寫在「閱讀更多」之前，方便看看每篇文章內容是什麼，概念上是盡量用兩行講完整篇文章的重點或方向</li>
-</ul></li>
-
-<li><p>slug 文章網址</p>
-
+</ul>
+</li>
+<li>
+<p>slug 文章網址</p>
 <ul>
 <li>若 config 設置中 permalinks 指定 :slug 時，網址才會跟著轉換</li>
 <li>建議「建站之初」就要先定調，否則推上線又要改會有點小麻煩，主要是 sitemap 都提交後，若你有變更網址，要到 google search console 去重新提交索引，不然不知道要等多久以後才會在抓到你文章位址。</li>
-</ul></li>
-
-<li><p>author 文章作者</p>
-
+</ul>
+</li>
+<li>
+<p>author 文章作者</p>
 <ul>
 <li>標示文章的作者，這個會被抓去做 seo 塞在 HTML 的 header 中</li>
-</ul></li>
-
-<li><p>type 文章類別</p>
-
+</ul>
+</li>
+<li>
+<p>type 文章類別</p>
 <ul>
 <li>我目前有 <code>post</code>、<code>page</code>，以及 <code>draft</code> 三種類別</li>
-</ul></li>
-
-<li><p>date 文章創建日期</p>
-
+</ul>
+</li>
+<li>
+<p>date 文章創建日期</p>
 <ul>
 <li>目前是寫在模板中設置變數 <code>{{ .Date }}</code>，於每次生成文章時，會自動帶入當前時間</li>
-</ul></li>
-
-<li><p>draft 草稿狀態</p>
-
+</ul>
+</li>
+<li>
+<p>draft 草稿狀態</p>
 <ul>
 <li>設為 true 時為草稿，發布或本地預覽時，需要添加 <code>-D</code> 參數才能看到這類文章</li>
 <li>設為 false 為正式文章，當 <code>date</code> 超過現在時間，發布或本地預覽就算不帶其他參數，都會看到這類文章</li>
-<li>請參考 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#post-status-文章狀態">Post Status 文章狀態</a></li>
-</ul></li>
-
-<li><p>categories 文章分類</p>
-
+<li>請參考 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#post-status-%E6%96%87%E7%AB%A0%E7%8B%80%E6%85%8B">Post Status 文章狀態</a></li>
+</ul>
+</li>
+<li>
+<p>categories 文章分類</p>
 <ul>
-<li>請參考 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#post-categories-and-tags-文章分類與標籤">Post Categories and Tags 文章分類與標籤</a></li>
-</ul></li>
-
-<li><p>tags 文章標籤</p>
-
+<li>請參考 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#post-categories-and-tags-%E6%96%87%E7%AB%A0%E5%88%86%E9%A1%9E%E8%88%87%E6%A8%99%E7%B1%A4">Post Categories and Tags 文章分類與標籤</a></li>
+</ul>
+</li>
+<li>
+<p>tags 文章標籤</p>
 <ul>
-<li>請參考 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#post-categories-and-tags-文章分類與標籤">Post Categories and Tags 文章分類與標籤</a></li>
-</ul></li>
-
-<li><p>keywords 關鍵字</p>
-
+<li>請參考 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#post-categories-and-tags-%E6%96%87%E7%AB%A0%E5%88%86%E9%A1%9E%E8%88%87%E6%A8%99%E7%B1%A4">Post Categories and Tags 文章分類與標籤</a></li>
+</ul>
+</li>
+<li>
+<p>keywords 關鍵字</p>
 <ul>
 <li>標示文章的關鍵字，這個會被抓去做 seo 塞在 HTML 的 header 中</li>
-</ul></li>
-
-<li><p>其他參數</p>
-
+</ul>
+</li>
+<li>
+<p>其他參數</p>
 <ul>
 <li><code>coverImage</code> 佈景設置文章 cover image 的地方</li>
 <li><code>metaAlignment</code> 佈景設置文章 title 的位置</li>
@@ -406,13 +387,12 @@ coverSize: partial</code></pre></div>
     <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#front-matter-settings" target="_blank">Tranquilpeak - Front-matter settings</a>
     
 </li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="post-archetypes-文章模板">Post Archetypes 文章模板</h2>
-
 <p>我根據 post status 準備了各自的模板，模板文件會放在 <code>/archetypes</code> 中，以下是草稿模板範例:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
 title: &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;
 author: littlebookboy
 type: post
@@ -423,9 +403,8 @@ tags: [&#34;general&#34;]
 keywords: [&#34;post&#34;]
 ---
 
-<span style="color:#75715e">&lt;!--more--&gt;</span></code></pre></div>
-<p>當你新增文章 <code>hugo new draft/my-first-post.md</code> 後，可透過 <code>hugo server -D</code>，查看首頁:</p>
-
+<span style="color:#75715e">&lt;!--more--&gt;</span>
+</code></pre></div><p>當你新增文章 <code>hugo new draft/my-first-post.md</code> 後，可透過 <code>hugo server -D</code>，查看首頁:</p>
 
  
   
@@ -470,9 +449,7 @@ keywords: [&#34;post&#34;]
 
   <div style="clear:both;"></div>
 
-
 <p>這是點了繼續閱讀 (More) 查看內文的樣子:</p>
-
 
 
  
@@ -500,25 +477,20 @@ keywords: [&#34;post&#34;]
   
 </div>
 
-
 <h2 id="post-status-文章狀態">Post Status 文章狀態</h2>
-
 <p>以下列出
     
     <a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content" target="_blank">官方定義</a>
     
-文章的幾種滿足條件後可能的狀態，我目前只有用到 <code>草稿</code> 的部分:
-<p></p>
-
+文章的幾種滿足條件後可能的狀態，我目前只有用到 <code>草稿</code> 的部分:</p>
+<!-- raw HTML omitted -->
 <ul>
 <li>發布或未發布: Content with a future <code>publishdate</code> value</li>
 <li>草稿或已完成: Content with <code>draft: true or false</code> status</li>
 <li>有效或已過期: Content with a past <code>expirydate</code> value</li>
 </ul>
-
-<p>而我自己在寫文時，我把文章區分為 <code>page</code>、<code>post</code>，以及 <code>draft</code>:
-<p></p>
-
+<p>而我自己在寫文時，我把文章區分為 <code>page</code>、<code>post</code>，以及 <code>draft</code>:</p>
+<!-- raw HTML omitted -->
 <ul>
 <li>draft 草稿文章 - 尚未完成的文章，本地編譯時需帶參數 <code>-D</code> 才可以看到此類型文章</li>
 <li>post 已完成文章 - 將草稿改為已完成 (設置 
@@ -528,79 +500,72 @@ keywords: [&#34;post&#34;]
  <code>draft</code> 狀態 <code>true</code> -&gt; <code>false</code>)</li>
 <li>page 單頁面 - 例如關於我 (about-me)，履歷 (CV)，登陸頁 (Landing Page) 等等，這類頁面通常不掛分類 (category) 與標籤 (tag)</li>
 </ul>
-
 <h2 id="post-categories-and-tags-文章分類與標籤">Post Categories and Tags 文章分類與標籤</h2>
-
 <p>在 
     
     <a href="https://gohugo.io/content-management/front-matter/#front-matter-variables" target="_blank">Front Matter</a>
     
  區域中，有文章分類與文章標籤可設置，例如:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">categories: [&#34;Tech&#34;, &#34;Daily&#34;]
-tags: [&#34;Hugo&#34;, &#34;GitHub&#34;]</code></pre></div>
-<p>或是</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">categories: 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">categories: [&#34;Tech&#34;, &#34;Daily&#34;]
+tags: [&#34;Hugo&#34;, &#34;GitHub&#34;]
+</code></pre></div><p>或是</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">categories: 
   <span style="color:#66d9ef">-</span> Tech
   <span style="color:#66d9ef">-</span> Daily 
 tags: 
   <span style="color:#66d9ef">-</span> Hugo
-  - GitHub</code></pre></div>
-<p>透過設置分類與標籤，在查找某篇文章時，除了透過名稱之外，還可以用較為模糊的方式查找文章。那這些分類、標籤，甚至系列該如何運用呢？舉個例子:
-<p></p>
-
+  <span style="color:#66d9ef">-</span> GitHub
+</code></pre></div><p>透過設置分類與標籤，在查找某篇文章時，除了透過名稱之外，還可以用較為模糊的方式查找文章。那這些分類、標籤，甚至系列該如何運用呢？舉個例子:</p>
+<!-- raw HTML omitted -->
 <ul>
 <li>category: 最模糊、抽象的大方向，例如生活、工作、心得、迷因、行銷、技術、遊戲、開箱</li>
 <li>tags: 具體名詞(你最常用的檢索字)，例如 3C、課後心得、台北景點{專有名稱}、<del>西斯</del></li>
 <li>series: 可被歸類成一個系列的文章，例如「美食分享」、「攝影技巧」、「運動健身」</li>
 </ul>
-
-<p>在我看到官網「舉例」可以把 categories 移除時，我的看法是因為這東西「與 tags 太像」，但要怎麼分類使用，要<span class="highlight-text yellow">以你的習慣為主</span>，我的習慣是:
-<p></p>
-
+<p>在我看到官網「舉例」可以把 categories 移除時，我的看法是因為這東西「與 tags 太像」，但要怎麼分類使用，要<span class="highlight-text yellow">以你的習慣為主</span>，我的習慣是:</p>
+<!-- raw HTML omitted -->
 <ul>
 <li>category:
-
 <ul>
 <li><code>Talking</code> - 聊天，記錄比較偏「個人」的東西，例如成長、生活變化、紀錄雜事等</li>
 <li><code>Tech</code> - 科技、技術，也是聊天，但內容都是技術的東西，有時會把求解過程歸為此類</li>
 <li><code>Experience</code> - 此分類我偏向為「讀書」心得</li>
 <li><code>Tutorials</code> - 教學，把我會的東西整理成 step by step 的文章，若偏 <code>Tech</code> 技術相關，就看內容比例去定義用哪一個，如果分類不出來，可能要思考拆文，或改成加上標籤，我只有 tags 會一文多標。</li>
-</ul></li>
+</ul>
+</li>
 <li>tags:
-
 <ul>
 <li>Hugo</li>
 <li>Laravel</li>
 <li>MySQL</li>
 <li>PHP</li>
 <li>LineBot</li>
-</ul></li>
+</ul>
+</li>
 <li>series:
-
 <ul>
 <li>貼身打造個人部落格</li>
 <li>Laravel 源碼追追追(之類的)</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <div class="alert info ">
   <p><p>在</p>
-<pre><code>&lt;a href=&#34;https://gohugo.io/content-management/taxonomies/#default-taxonomies&#34; target=&#34;_blank&#34;&gt;Hugo Taxonomy&lt;/a&gt;</code></pre>
+<pre><code>&lt;a href=&quot;https://gohugo.io/content-management/taxonomies/#default-taxonomies&quot; target=&quot;_blank&quot;&gt;Hugo Taxonomy&lt;/a&gt;
+</code></pre>
 <p>有提到，你不需要額外設定你的 config，在 Hugo 目前版本中，已經預設替你啟用了 category 與 tags (不然其實是要自己啟用的)，你也可以透過 disableKinds 來停用 Taxonomy，或是透過</p>
-<pre><code>&lt;a href=&#34;https://gohugo.io/content-management/taxonomies/#example-removing-default-taxonomies&#34; target=&#34;_blank&#34;&gt;覆蓋設定&lt;/a&gt;</code></pre>
+<pre><code>&lt;a href=&quot;https://gohugo.io/content-management/taxonomies/#example-removing-default-taxonomies&quot; target=&quot;_blank&quot;&gt;覆蓋設定&lt;/a&gt;
+</code></pre>
 <p>的方式來自訂分類，或是</p>
-<pre><code>&lt;a href=&#34;https://gohugo.io/content-management/taxonomies/#example-adding-a-custom-taxonomy-named-series&#34; target=&#34;_blank&#34;&gt;新建&lt;/a&gt;</code></pre>
+<pre><code>&lt;a href=&quot;https://gohugo.io/content-management/taxonomies/#example-adding-a-custom-taxonomy-named-series&quot; target=&quot;_blank&quot;&gt;新建&lt;/a&gt;
+</code></pre>
 <p>一個你想要的分類。</p>
 </p>
 </div>
-
 <p>最後，如果你需要再更近一步分出:「category 類別 &gt; sub-category 子類別」，你可以透過設置 <code>hierarchicalCategories</code> 為 <code>true</code> (佈景提供)，佈景會自動幫你分出子類別。</p>
-
 <h1 id="references-參考連結">References 參考連結</h1>
-
-<p>我盡量把我準備過程中，造訪過的連結都放在這，建議若你現在不需要，不一定要全都看懂才開始。
-<p></p>
-
+<p>我盡量把我準備過程中，造訪過的連結都放在這，建議若你現在不需要，不一定要全都看懂才開始。</p>
+<!-- raw HTML omitted -->
 <ul>
 <li>
     
@@ -623,25 +588,19 @@ tags:
     
 </li>
 </ul>
-
 <h1 id="modification-修訂內容">Modification 修訂內容</h1>
-
 <ul>
 <li>2020-09-04 追加章節 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#front-matter">Front Matter</a></li>
-<li>2020-09-04 新增 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#series-系列文章">Series 系列文章</a></li>
+<li>2020-09-04 新增 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#series-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0">Series 系列文章</a></li>
 <li>2020-09-08 新增 Series 系列文章 <a href="https://blog.genesu.me/2020/09/hugo-site-deploy/">貼身打造個人部落格 - 03. 網站發布</a></li>
 </ul>
-
 <h1 id="series-系列文章">Series 系列文章</h1>
-
 <ul>
 <li><a href="https://blog.genesu.me/2020/08/hugo-installation/">貼身打造個人部落格 - 01. 安裝</a></li>
 <li>貼身打造個人部落格 - 02. 文章 Front Matter (本篇)</li>
 <li><a href="https://blog.genesu.me/2020/09/hugo-site-deploy/">貼身打造個人部落格 - 03. 網站發布</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <multiple-line-output>
     
 <br>
@@ -727,7 +686,7 @@ tags:
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -807,7 +766,7 @@ tags:
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -848,7 +807,7 @@ tags:
     
     <h4 id="about-card-name">Gene (Littlebookboy)</h4>
     
-      <div id="about-card-bio">Tell me and I forget.<br>Teach me and I remember.<br>Involve me and I learn.<br>- Benjamin Franklin -</div>
+      <div id="about-card-bio">Tell me and I forget.<!-- raw HTML omitted -->Teach me and I remember.<!-- raw HTML omitted -->Involve me and I learn.<!-- raw HTML omitted -->- Benjamin Franklin -</div>
     
     
       <div id="about-card-job">
