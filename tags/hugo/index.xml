@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on 高級伴讀書僮</title>
-    <link>https://blog.genesu.me/tags/hugo/</link>
+    <link>https://littlebookboy.github.io/tags/hugo/</link>
     <description>Recent content in hugo on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2020 13:15:56 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2020 13:15:56 +0800</lastBuildDate><atom:link href="https://littlebookboy.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>第 12 屆 IT 邦幫忙鐵人賽文章連結彙整</title>
-      <link>https://blog.genesu.me/2020/09/12th-ithelp/</link>
+      <link>https://littlebookboy.github.io/2020/09/12th-ithelp/</link>
       <pubDate>Mon, 28 Sep 2020 13:15:56 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/09/12th-ithelp/</guid>
+      <guid>https://littlebookboy.github.io/2020/09/12th-ithelp/</guid>
       <description>&lt;p&gt;今年因為一些機緣，&lt;del&gt;跳了個鐵人賽的坑&lt;/del&gt;參加了第 12 屆的 iT 邦幫忙鐵人賽，講「Hugo 貼身打造個人部落格」，本篇是文章連結列表。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>貼身打造個人部落格 - 03. 網站發布</title>
-      <link>https://blog.genesu.me/2020/09/hugo-site-deploy/</link>
+      <link>https://littlebookboy.github.io/2020/09/hugo-site-deploy/</link>
       <pubDate>Wed, 02 Sep 2020 21:02:03 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/09/hugo-site-deploy/</guid>
+      <guid>https://littlebookboy.github.io/2020/09/hugo-site-deploy/</guid>
       <description>&lt;p&gt;架設好 
     
     &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
@@ -35,10 +35,10 @@
     
     <item>
       <title>貼身打造個人部落格 - 02. 文章 Front Matter</title>
-      <link>https://blog.genesu.me/2020/09/hugo-front-matter/</link>
+      <link>https://littlebookboy.github.io/2020/09/hugo-front-matter/</link>
       <pubDate>Wed, 02 Sep 2020 20:28:23 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/09/hugo-front-matter/</guid>
+      <guid>https://littlebookboy.github.io/2020/09/hugo-front-matter/</guid>
       <description>&lt;p&gt;介紹 
     
     &lt;a href=&#34;https://gohugo.io/content-management/front-matter/&#34; target=&#34;_blank&#34;&gt;Hugo Front Matter&lt;/a&gt;
@@ -48,10 +48,10 @@
     
     <item>
       <title>貼身打造個人部落格 - 01. 安裝</title>
-      <link>https://blog.genesu.me/2020/08/hugo-installation/</link>
+      <link>https://littlebookboy.github.io/2020/08/hugo-installation/</link>
       <pubDate>Sat, 29 Aug 2020 11:02:39 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/08/hugo-installation/</guid>
+      <guid>https://littlebookboy.github.io/2020/08/hugo-installation/</guid>
       <description>&lt;p&gt;分享我使用 
     
     &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
@@ -61,19 +61,19 @@
     
     <item>
       <title>Hugo seo-autolink 測試結果 (Result)</title>
-      <link>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing-result/</link>
+      <link>https://littlebookboy.github.io/2020/08/hugo-seo-autolink-testing-result/</link>
       <pubDate>Sat, 22 Aug 2020 23:12:30 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing-result/</guid>
-      <description>&lt;p&gt;此篇為 &lt;a href=&#34;https://blog.genesu.me/2020/08/hugo-seo-autolink-testing/&#34;&gt;hugo seo-autolink 效果測試 (Test)&lt;/a&gt; 的測試結果，在本文內容中有提及另一篇文章的 seo 字眼時，會自動轉為文章連結。&lt;/p&gt;</description>
+      <guid>https://littlebookboy.github.io/2020/08/hugo-seo-autolink-testing-result/</guid>
+      <description>&lt;p&gt;此篇為 &lt;a href=&#34;https://littlebookboy.github.io/2020/08/hugo-seo-autolink-testing/&#34;&gt;hugo seo-autolink 效果測試 (Test)&lt;/a&gt; 的測試結果，在本文內容中有提及另一篇文章的 seo 字眼時，會自動轉為文章連結。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hugo seo-autolink 效果測試 (Test)</title>
-      <link>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing/</link>
+      <link>https://littlebookboy.github.io/2020/08/hugo-seo-autolink-testing/</link>
       <pubDate>Sat, 22 Aug 2020 22:34:30 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing/</guid>
+      <guid>https://littlebookboy.github.io/2020/08/hugo-seo-autolink-testing/</guid>
       <description>&lt;p&gt;今天要來測試一下 
     
     &lt;a href=&#34;https://gohugohq.com/partials/autolinking-shortcode-for-articles/&#34; target=&#34;_blank&#34;&gt;seo-autolink&lt;/a&gt;

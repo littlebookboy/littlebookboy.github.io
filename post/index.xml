@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 高級伴讀書僮</title>
-    <link>https://blog.genesu.me/post/</link>
+    <link>https://littlebookboy.github.io/post/</link>
     <description>Recent content in Posts on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jun 2022 13:20:04 +0800</lastBuildDate><atom:link href="https://blog.genesu.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jun 2022 13:20:04 +0800</lastBuildDate><atom:link href="https://littlebookboy.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laravel tinker include 指令用法</title>
-      <link>https://blog.genesu.me/2022/06/laravel-tinker-including-php-way/</link>
+      <link>https://littlebookboy.github.io/2022/06/laravel-tinker-including-php-way/</link>
       <pubDate>Wed, 08 Jun 2022 13:20:04 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2022/06/laravel-tinker-including-php-way/</guid>
+      <guid>https://littlebookboy.github.io/2022/06/laravel-tinker-including-php-way/</guid>
       <description></description>
     </item>
     
     <item>
       <title>平靜科技讀書筆記</title>
-      <link>https://blog.genesu.me/2022/02/reading-note-of-calm-technology-principles-and-patterns-for-non-intrusive-design/</link>
+      <link>https://littlebookboy.github.io/2022/02/reading-note-of-calm-technology-principles-and-patterns-for-non-intrusive-design/</link>
       <pubDate>Sun, 06 Feb 2022 08:50:07 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2022/02/reading-note-of-calm-technology-principles-and-patterns-for-non-intrusive-design/</guid>
+      <guid>https://littlebookboy.github.io/2022/02/reading-note-of-calm-technology-principles-and-patterns-for-non-intrusive-design/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TDD 004 - Password verifications</title>
-      <link>https://blog.genesu.me/2021/08/tdd-daily-004-tdd-kata-password-verification/</link>
+      <link>https://littlebookboy.github.io/2021/08/tdd-daily-004-tdd-kata-password-verification/</link>
       <pubDate>Sat, 07 Aug 2021 22:06:43 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/08/tdd-daily-004-tdd-kata-password-verification/</guid>
+      <guid>https://littlebookboy.github.io/2021/08/tdd-daily-004-tdd-kata-password-verification/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TDD 003 - String Calculator Interactions</title>
-      <link>https://blog.genesu.me/2021/07/tdd-daily-003-tdd-kata-string-calculator/</link>
+      <link>https://littlebookboy.github.io/2021/07/tdd-daily-003-tdd-kata-string-calculator/</link>
       <pubDate>Sun, 11 Jul 2021 15:13:33 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/07/tdd-daily-003-tdd-kata-string-calculator/</guid>
+      <guid>https://littlebookboy.github.io/2021/07/tdd-daily-003-tdd-kata-string-calculator/</guid>
       <description>&lt;p&gt;練習 TDD, 紀錄題目中提到的一些值得思考研究的東西，以及參考到的一些 Mock 與 Stub 的文章。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>TDD 002 - 寫單元測試心得</title>
-      <link>https://blog.genesu.me/2021/07/tdd-daily-002-tdd-unit-test-note/</link>
+      <link>https://littlebookboy.github.io/2021/07/tdd-daily-002-tdd-unit-test-note/</link>
       <pubDate>Sun, 04 Jul 2021 21:45:05 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/07/tdd-daily-002-tdd-unit-test-note/</guid>
+      <guid>https://littlebookboy.github.io/2021/07/tdd-daily-002-tdd-unit-test-note/</guid>
       <description>&lt;p&gt;本次課題是「取得部落格文章 API」，撰寫 &lt;code&gt;api/articles&lt;/code&gt; API 功能，並實作 api 路由測試、service 測試、repository 測試，及 mock 相依隔離練習。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>TDD 001 - 從 Kata 練習 TDD 循環</title>
-      <link>https://blog.genesu.me/2021/06/tdd-daily-001-tdd-cycle-practice/</link>
+      <link>https://littlebookboy.github.io/2021/06/tdd-daily-001-tdd-cycle-practice/</link>
       <pubDate>Sat, 26 Jun 2021 15:48:39 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/06/tdd-daily-001-tdd-cycle-practice/</guid>
+      <guid>https://littlebookboy.github.io/2021/06/tdd-daily-001-tdd-cycle-practice/</guid>
       <description>&lt;p&gt;本次課題為透過「
     
     &lt;a href=&#34;https://osherove.com/tdd-kata-1&#34; target=&#34;_blank&#34;&gt;String Calculator - osherove.com&lt;/a&gt;
@@ -67,37 +67,37 @@
     
     <item>
       <title>Composer 跑到記憶體不足問題解法</title>
-      <link>https://blog.genesu.me/2021/06/how-to-solve-memory-issue-when-using-composer/</link>
+      <link>https://littlebookboy.github.io/2021/06/how-to-solve-memory-issue-when-using-composer/</link>
       <pubDate>Tue, 22 Jun 2021 09:03:21 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/06/how-to-solve-memory-issue-when-using-composer/</guid>
+      <guid>https://littlebookboy.github.io/2021/06/how-to-solve-memory-issue-when-using-composer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>練習製作 Web Prototype</title>
-      <link>https://blog.genesu.me/2021/06/learn-about-drawing-web-prototype-using-balsamiq/</link>
+      <link>https://littlebookboy.github.io/2021/06/learn-about-drawing-web-prototype-using-balsamiq/</link>
       <pubDate>Mon, 21 Jun 2021 18:51:53 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/06/learn-about-drawing-web-prototype-using-balsamiq/</guid>
+      <guid>https://littlebookboy.github.io/2021/06/learn-about-drawing-web-prototype-using-balsamiq/</guid>
       <description></description>
     </item>
     
     <item>
       <title>了解壓力測試</title>
-      <link>https://blog.genesu.me/2021/06/learn-about-stress-testing/</link>
+      <link>https://littlebookboy.github.io/2021/06/learn-about-stress-testing/</link>
       <pubDate>Fri, 18 Jun 2021 12:01:41 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/06/learn-about-stress-testing/</guid>
+      <guid>https://littlebookboy.github.io/2021/06/learn-about-stress-testing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JavaScript 學習筆記 - 5 個不為人知的特性</title>
-      <link>https://blog.genesu.me/2021/06/learn-javascript-5-features-you-dont-know/</link>
+      <link>https://littlebookboy.github.io/2021/06/learn-javascript-5-features-you-dont-know/</link>
       <pubDate>Tue, 15 Jun 2021 20:50:55 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/06/learn-javascript-5-features-you-dont-know/</guid>
+      <guid>https://littlebookboy.github.io/2021/06/learn-javascript-5-features-you-dont-know/</guid>
       <description>&lt;p&gt;看完影片 
     
     &lt;a href=&#34;https://www.youtube.com/watch?v=v2tJ3nzXh8I&#34; target=&#34;_blank&#34;&gt;youtube - 5 Must Know JavaScript Features That Almost Nobody Knows
@@ -108,73 +108,73 @@
     
     <item>
       <title>XSS 觀念筆記</title>
-      <link>https://blog.genesu.me/2021/06/learn-about-xss/</link>
+      <link>https://littlebookboy.github.io/2021/06/learn-about-xss/</link>
       <pubDate>Mon, 14 Jun 2021 16:23:19 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/06/learn-about-xss/</guid>
+      <guid>https://littlebookboy.github.io/2021/06/learn-about-xss/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CSRF 觀念筆記</title>
-      <link>https://blog.genesu.me/2021/06/learn-about-csrf/</link>
+      <link>https://littlebookboy.github.io/2021/06/learn-about-csrf/</link>
       <pubDate>Sat, 12 Jun 2021 13:35:43 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/06/learn-about-csrf/</guid>
+      <guid>https://littlebookboy.github.io/2021/06/learn-about-csrf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CORS 觀念筆記</title>
-      <link>https://blog.genesu.me/2021/06/learn-about-cors/</link>
+      <link>https://littlebookboy.github.io/2021/06/learn-about-cors/</link>
       <pubDate>Thu, 10 Jun 2021 22:52:05 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/06/learn-about-cors/</guid>
+      <guid>https://littlebookboy.github.io/2021/06/learn-about-cors/</guid>
       <description></description>
     </item>
     
     <item>
       <title>使用者故事對照讀書筆記</title>
-      <link>https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/</link>
+      <link>https://littlebookboy.github.io/2021/06/reading-note-of-user-story-mapping/</link>
       <pubDate>Sun, 06 Jun 2021 14:39:39 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/06/reading-note-of-user-story-mapping/</guid>
+      <guid>https://littlebookboy.github.io/2021/06/reading-note-of-user-story-mapping/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Laravel Valet Share 使用筆記</title>
-      <link>https://blog.genesu.me/2021/06/laravel-valet-share-note-20210604/</link>
+      <link>https://littlebookboy.github.io/2021/06/laravel-valet-share-note-20210604/</link>
       <pubDate>Fri, 04 Jun 2021 16:07:22 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/06/laravel-valet-share-note-20210604/</guid>
+      <guid>https://littlebookboy.github.io/2021/06/laravel-valet-share-note-20210604/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PHP Unicode 編解碼筆記</title>
-      <link>https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/</link>
+      <link>https://littlebookboy.github.io/2021/02/php-unicode-encode-and-decode/</link>
       <pubDate>Thu, 25 Feb 2021 21:12:56 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2021/02/php-unicode-encode-and-decode/</guid>
+      <guid>https://littlebookboy.github.io/2021/02/php-unicode-encode-and-decode/</guid>
       <description>&lt;p&gt;記錄一下當接收到第三方返回的「中文漢字」是已經經過 Unicode 編碼時，如何還原成「正常漢字」去顯示的解法。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>第 12 屆 IT 邦幫忙鐵人賽文章連結彙整</title>
-      <link>https://blog.genesu.me/2020/09/12th-ithelp/</link>
+      <link>https://littlebookboy.github.io/2020/09/12th-ithelp/</link>
       <pubDate>Mon, 28 Sep 2020 13:15:56 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/09/12th-ithelp/</guid>
+      <guid>https://littlebookboy.github.io/2020/09/12th-ithelp/</guid>
       <description>&lt;p&gt;今年因為一些機緣，&lt;del&gt;跳了個鐵人賽的坑&lt;/del&gt;參加了第 12 屆的 iT 邦幫忙鐵人賽，講「Hugo 貼身打造個人部落格」，本篇是文章連結列表。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>貼身打造個人部落格 - 03. 網站發布</title>
-      <link>https://blog.genesu.me/2020/09/hugo-site-deploy/</link>
+      <link>https://littlebookboy.github.io/2020/09/hugo-site-deploy/</link>
       <pubDate>Wed, 02 Sep 2020 21:02:03 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/09/hugo-site-deploy/</guid>
+      <guid>https://littlebookboy.github.io/2020/09/hugo-site-deploy/</guid>
       <description>&lt;p&gt;架設好 
     
     &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
@@ -188,10 +188,10 @@
     
     <item>
       <title>貼身打造個人部落格 - 02. 文章 Front Matter</title>
-      <link>https://blog.genesu.me/2020/09/hugo-front-matter/</link>
+      <link>https://littlebookboy.github.io/2020/09/hugo-front-matter/</link>
       <pubDate>Wed, 02 Sep 2020 20:28:23 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/09/hugo-front-matter/</guid>
+      <guid>https://littlebookboy.github.io/2020/09/hugo-front-matter/</guid>
       <description>&lt;p&gt;介紹 
     
     &lt;a href=&#34;https://gohugo.io/content-management/front-matter/&#34; target=&#34;_blank&#34;&gt;Hugo Front Matter&lt;/a&gt;
@@ -201,10 +201,10 @@
     
     <item>
       <title>貼身打造個人部落格 - 01. 安裝</title>
-      <link>https://blog.genesu.me/2020/08/hugo-installation/</link>
+      <link>https://littlebookboy.github.io/2020/08/hugo-installation/</link>
       <pubDate>Sat, 29 Aug 2020 11:02:39 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/08/hugo-installation/</guid>
+      <guid>https://littlebookboy.github.io/2020/08/hugo-installation/</guid>
       <description>&lt;p&gt;分享我使用 
     
     &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
@@ -214,19 +214,19 @@
     
     <item>
       <title>Hugo seo-autolink 測試結果 (Result)</title>
-      <link>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing-result/</link>
+      <link>https://littlebookboy.github.io/2020/08/hugo-seo-autolink-testing-result/</link>
       <pubDate>Sat, 22 Aug 2020 23:12:30 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing-result/</guid>
-      <description>&lt;p&gt;此篇為 &lt;a href=&#34;https://blog.genesu.me/2020/08/hugo-seo-autolink-testing/&#34;&gt;hugo seo-autolink 效果測試 (Test)&lt;/a&gt; 的測試結果，在本文內容中有提及另一篇文章的 seo 字眼時，會自動轉為文章連結。&lt;/p&gt;</description>
+      <guid>https://littlebookboy.github.io/2020/08/hugo-seo-autolink-testing-result/</guid>
+      <description>&lt;p&gt;此篇為 &lt;a href=&#34;https://littlebookboy.github.io/2020/08/hugo-seo-autolink-testing/&#34;&gt;hugo seo-autolink 效果測試 (Test)&lt;/a&gt; 的測試結果，在本文內容中有提及另一篇文章的 seo 字眼時，會自動轉為文章連結。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hugo seo-autolink 效果測試 (Test)</title>
-      <link>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing/</link>
+      <link>https://littlebookboy.github.io/2020/08/hugo-seo-autolink-testing/</link>
       <pubDate>Sat, 22 Aug 2020 22:34:30 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/08/hugo-seo-autolink-testing/</guid>
+      <guid>https://littlebookboy.github.io/2020/08/hugo-seo-autolink-testing/</guid>
       <description>&lt;p&gt;今天要來測試一下 
     
     &lt;a href=&#34;https://gohugohq.com/partials/autolinking-shortcode-for-articles/&#34; target=&#34;_blank&#34;&gt;seo-autolink&lt;/a&gt;
@@ -236,10 +236,10 @@
     
     <item>
       <title>為何我要寫文章</title>
-      <link>https://blog.genesu.me/2020/08/why-do-i-write-articles/</link>
+      <link>https://littlebookboy.github.io/2020/08/why-do-i-write-articles/</link>
       <pubDate>Fri, 21 Aug 2020 22:19:22 +0800</pubDate>
       
-      <guid>https://blog.genesu.me/2020/08/why-do-i-write-articles/</guid>
+      <guid>https://littlebookboy.github.io/2020/08/why-do-i-write-articles/</guid>
       <description>&lt;p&gt;記錄一下我曾經想寫文的起點，與目前我認為算是「真正開始寫文的起點」。&lt;/p&gt;</description>
     </item>
     

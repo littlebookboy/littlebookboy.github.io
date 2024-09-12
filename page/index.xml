@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on 高級伴讀書僮</title>
-    <link>https://blog.genesu.me/page/</link>
+    <link>https://littlebookboy.github.io/page/</link>
     <description>Recent content in Pages on 高級伴讀書僮</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://blog.genesu.me/page/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://littlebookboy.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>關於我</title>
-      <link>https://blog.genesu.me/about-me/</link>
+      <link>https://littlebookboy.github.io/about-me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.genesu.me/about-me/</guid>
+      <guid>https://littlebookboy.github.io/about-me/</guid>
       <description>文章已關閉留言功能，若有問題請留 issue ，感謝。
- Back-end   PHP, Laravel MySQL Test Docker CICD Shell script      喜歡的食物  咖啡 無糖綠 雞腿飯 咖喱飯 牛肉麵 麻醬麵      特效出處 </description>
+Back-end PHP, Laravel MySQL Test Docker CICD Shell script 喜歡的食物 咖啡 無糖綠 雞腿飯 咖喱飯 牛肉麵 麻醬麵 特效出處 </description>
     </item>
     
   </channel>

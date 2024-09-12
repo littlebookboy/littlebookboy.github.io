@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.117.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Gene (Littlebookboy)">
 <meta name="keywords" content="hugo, front matter, develop, backend">
 <meta name="description" content="介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明">
@@ -15,8 +15,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="貼身打造個人部落格 - 02. 文章 Front Matter">
 <meta name="twitter:title" content="貼身打造個人部落格 - 02. 文章 Front Matter">
-<meta property="og:url" content="https://blog.genesu.me/2020/09/hugo-front-matter/">
-<meta property="twitter:url" content="https://blog.genesu.me/2020/09/hugo-front-matter/">
+<meta property="og:url" content="https://littlebookboy.github.io/2020/09/hugo-front-matter/">
+<meta property="twitter:url" content="https://littlebookboy.github.io/2020/09/hugo-front-matter/">
 <meta property="og:site_name" content="高級伴讀書僮">
 <meta property="og:description" content="介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明">
 <meta name="twitter:description" content="介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明">
@@ -45,15 +45,15 @@
 
 
 
+  <meta property="og:image" content="https://littlebookboy.github.io/images/avataaars.png">
+  <meta property="twitter:image" content="https://littlebookboy.github.io/images/avataaars.png">
+
+
+
 
   <meta property="og:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/pexels-pixabay-207662.jpg">
   <meta property="twitter:image" content="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/pexels-pixabay-207662.jpg">
 
-
-
-
-  <meta property="og:image" content="https://blog.genesu.me/images/avataaars.png">
-  <meta property="twitter:image" content="https://blog.genesu.me/images/avataaars.png">
 
 
     <title>貼身打造個人部落格 - 02. 文章 Front Matter</title>
@@ -63,7 +63,7 @@
 
     
 
-    <link rel="canonical" href="https://blog.genesu.me/2020/09/hugo-front-matter/">
+    <link rel="canonical" href="https://littlebookboy.github.io/2020/09/hugo-front-matter/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -71,29 +71,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://blog.genesu.me/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    <link rel="stylesheet" href="https://littlebookboy.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
-        <link rel="stylesheet"  href="https://blog.genesu.me/css/mystyle.css">
+        <link rel="stylesheet"  href="https://littlebookboy.github.io/css/mystyle.css">
       
     
 
     
       
         
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-176081577-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
       
     
     
@@ -104,17 +92,17 @@ if (!doNotTrack) {
       <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="https://blog.genesu.me/">高級伴讀書僮</a>
+    <a class="header-title-link" href="https://littlebookboy.github.io/" aria-label="去首頁">高級伴讀書僮</a>
   </div>
   
     
       <a class="header-right-picture "
-         href="https://blog.genesu.me/#about">
+         href="https://littlebookboy.github.io/#about" aria-label="打開鏈接: /#about">
     
     
     
       
-        <img class="header-picture" src="https://blog.genesu.me/images/avataaars.png" alt="作者的圖片" />
+        <img class="header-picture" src="https://littlebookboy.github.io/images/avataaars.png" alt="作者的圖片" />
       
     
     </a>
@@ -125,8 +113,8 @@ if (!doNotTrack) {
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
-        <a href="https://blog.genesu.me/#about">
-          <img class="sidebar-profile-picture" src="https://blog.genesu.me/images/avataaars.png" alt="作者的圖片" />
+        <a href="https://littlebookboy.github.io/#about" aria-label="閱讀有關作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://littlebookboy.github.io/images/avataaars.png" alt="作者的圖片" />
         </a>
         <h4 class="sidebar-profile-name">Gene (Littlebookboy)</h4>
         
@@ -138,7 +126,7 @@ if (!doNotTrack) {
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.genesu.me/">
+      <a class="sidebar-button-link " href="https://littlebookboy.github.io/" title="Home">
     
       <i class="sidebar-button-icon fa fa-lg fa-home"></i>
       
@@ -148,7 +136,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.genesu.me/tags">
+      <a class="sidebar-button-link " href="https://littlebookboy.github.io/tags" title="Tags">
     
       <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
       
@@ -158,7 +146,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.genesu.me/about-me">
+      <a class="sidebar-button-link " href="https://littlebookboy.github.io/about-me" title="About Me">
     
       <i class="sidebar-button-icon fa fa-lg fa-question"></i>
       
@@ -168,7 +156,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.genesu.me/index.xml">
+      <a class="sidebar-button-link " href="https://littlebookboy.github.io/index.xml" title="RSS">
     
       <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
       
@@ -182,7 +170,7 @@ if (!doNotTrack) {
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.genesu.me/archives">
+      <a class="sidebar-button-link " href="https://littlebookboy.github.io/archives" title="Archives">
     
       <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
       
@@ -192,7 +180,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://github.com/littlebookboy" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://github.com/littlebookboy" target="_blank" rel="noopener" title="GitHub">
     
       <i class="sidebar-button-icon fa fa-lg fa-github"></i>
       
@@ -202,7 +190,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://kevin2pig.medium.com/" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://kevin2pig.medium.com/" target="_blank" rel="noopener" title="Medium">
     
       <i class="sidebar-button-icon fa fa-lg fa-medium"></i>
       
@@ -233,12 +221,12 @@ if (!doNotTrack) {
         class="hasCover
                hasCoverMetaOut
                ">
-        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+        <article class="post" id="top">
           
           
             <div class="post-header main-content-wrap text-center">
   
-    <h1 class="post-title" itemprop="headline">
+    <h1 class="post-title">
       貼身打造個人部落格 - 02. 文章 Front Matter
     </h1>
   
@@ -262,7 +250,7 @@ if (!doNotTrack) {
 
 </div>
           
-          <div class="post-content markdown" itemprop="articleBody">
+          <div class="post-content markdown">
             <div class="main-content-wrap">
               <p>介紹 
     
@@ -279,30 +267,30 @@ if (!doNotTrack) {
     <a href="https://gohugo.io/content-management/front-matter/" target="_blank">Hugo Front Matter</a>
     
  設置如下:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">title: &#34;貼身打造個人部落格 - 02. 文章 Front Matter&#34;
-description: &#34;介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明&#34;
-slug: &#34;hugo-front-matter&#34;
-author: littlebookboy
-type: post
-date: 2020-09-02T20:28:23+08:00
-draft: false
-categories: [&#34;Tutorials&#34;]
-tags: [&#34;Hugo&#34;]
-keywords: [&#34;tutorials&#34;, &#34;hugo&#34;, &#34;mac&#34;, &#34;文章&#34;, &#34;post&#34;, &#34;front matter&#34;, &#34;config setting&#34;]
-coverImage: https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/pexels-pixabay-207662.jpg
-metaAlignment: center
-coverMeta: out
-coverSize: partial
-</code></pre></div><p>在開始說明每項參數前，以下若有提到關於 <code>config</code> setting 的部分一併列在此處 (為了排版)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">[permalinks]
-  post = &#34;/:year/:month/:slug/&#34;
-  page = &#34;/:slug/&#34;
-
-[params]
-  # 請注意，時間格式日期的 {數字} 不可變更，不然生成文章時，當前時間會秀逗
-  # 請參考 https://www.jianshu.com/p/c7f7fbb16932
-  dateFormat = &#34;2006-01-02 15:04:05 UTC+8&#34;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>title: &#34;貼身打造個人部落格 - 02. 文章 Front Matter&#34;
+</span></span><span style="display:flex;"><span>description: &#34;介紹 Hugo Front Matter，包括模板、分類、標籤，與我目前的用法及設置參數說明&#34;
+</span></span><span style="display:flex;"><span>slug: &#34;hugo-front-matter&#34;
+</span></span><span style="display:flex;"><span>author: littlebookboy
+</span></span><span style="display:flex;"><span>type: post
+</span></span><span style="display:flex;"><span>date: 2020-09-02T20:28:23+08:00
+</span></span><span style="display:flex;"><span>draft: false
+</span></span><span style="display:flex;"><span>categories: [&#34;Tutorials&#34;]
+</span></span><span style="display:flex;"><span>tags: [&#34;Hugo&#34;]
+</span></span><span style="display:flex;"><span>keywords: [&#34;tutorials&#34;, &#34;hugo&#34;, &#34;mac&#34;, &#34;文章&#34;, &#34;post&#34;, &#34;front matter&#34;, &#34;config setting&#34;]
+</span></span><span style="display:flex;"><span>coverImage: https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/pexels-pixabay-207662.jpg
+</span></span><span style="display:flex;"><span>metaAlignment: center
+</span></span><span style="display:flex;"><span>coverMeta: out
+</span></span><span style="display:flex;"><span>coverSize: partial
+</span></span></code></pre></div><p>在開始說明每項參數前，以下若有提到關於 <code>config</code> setting 的部分一併列在此處 (為了排版)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[permalinks]
+</span></span><span style="display:flex;"><span>  post = &#34;/:year/:month/:slug/&#34;
+</span></span><span style="display:flex;"><span>  page = &#34;/:slug/&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[params]
+</span></span><span style="display:flex;"><span>  # 請注意，時間格式日期的 {數字} 不可變更，不然生成文章時，當前時間會秀逗
+</span></span><span style="display:flex;"><span>  # 請參考 https://www.jianshu.com/p/c7f7fbb16932
+</span></span><span style="display:flex;"><span>  dateFormat = &#34;2006-01-02 15:04:05 UTC+8&#34;
+</span></span></code></pre></div><ul>
 <li>
 <p>title 文章標題</p>
 <ul>
@@ -354,19 +342,19 @@ coverSize: partial
 <ul>
 <li>設為 true 時為草稿，發布或本地預覽時，需要添加 <code>-D</code> 參數才能看到這類文章</li>
 <li>設為 false 為正式文章，當 <code>date</code> 超過現在時間，發布或本地預覽就算不帶其他參數，都會看到這類文章</li>
-<li>請參考 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#post-status-%E6%96%87%E7%AB%A0%E7%8B%80%E6%85%8B">Post Status 文章狀態</a></li>
+<li>請參考 <a href="https://littlebookboy.github.io/2020/09/hugo-front-matter/#post-status-%E6%96%87%E7%AB%A0%E7%8B%80%E6%85%8B">Post Status 文章狀態</a></li>
 </ul>
 </li>
 <li>
 <p>categories 文章分類</p>
 <ul>
-<li>請參考 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#post-categories-and-tags-%E6%96%87%E7%AB%A0%E5%88%86%E9%A1%9E%E8%88%87%E6%A8%99%E7%B1%A4">Post Categories and Tags 文章分類與標籤</a></li>
+<li>請參考 <a href="https://littlebookboy.github.io/2020/09/hugo-front-matter/#post-categories-and-tags-%E6%96%87%E7%AB%A0%E5%88%86%E9%A1%9E%E8%88%87%E6%A8%99%E7%B1%A4">Post Categories and Tags 文章分類與標籤</a></li>
 </ul>
 </li>
 <li>
 <p>tags 文章標籤</p>
 <ul>
-<li>請參考 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#post-categories-and-tags-%E6%96%87%E7%AB%A0%E5%88%86%E9%A1%9E%E8%88%87%E6%A8%99%E7%B1%A4">Post Categories and Tags 文章分類與標籤</a></li>
+<li>請參考 <a href="https://littlebookboy.github.io/2020/09/hugo-front-matter/#post-categories-and-tags-%E6%96%87%E7%AB%A0%E5%88%86%E9%A1%9E%E8%88%87%E6%A8%99%E7%B1%A4">Post Categories and Tags 文章分類與標籤</a></li>
 </ul>
 </li>
 <li>
@@ -392,19 +380,19 @@ coverSize: partial
 </ul>
 <h2 id="post-archetypes-文章模板">Post Archetypes 文章模板</h2>
 <p>我根據 post status 準備了各自的模板，模板文件會放在 <code>/archetypes</code> 中，以下是草稿模板範例:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
-title: &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;
-author: littlebookboy
-type: post
-date: {{ .Date }}
-draft: true
-categories: [&#34;dev&#34;]
-tags: [&#34;general&#34;]
-keywords: [&#34;post&#34;]
----
-
-<span style="color:#75715e">&lt;!--more--&gt;</span>
-</code></pre></div><p>當你新增文章 <code>hugo new draft/my-first-post.md</code> 後，可透過 <code>hugo server -D</code>，查看首頁:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;
+</span></span><span style="display:flex;"><span>author: littlebookboy
+</span></span><span style="display:flex;"><span>type: post
+</span></span><span style="display:flex;"><span>date: {{ .Date }}
+</span></span><span style="display:flex;"><span>draft: true
+</span></span><span style="display:flex;"><span>categories: [&#34;dev&#34;]
+</span></span><span style="display:flex;"><span>tags: [&#34;general&#34;]
+</span></span><span style="display:flex;"><span>keywords: [&#34;post&#34;]
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!--more--&gt;</span>
+</span></span></code></pre></div><p>當你新增文章 <code>hugo new draft/my-first-post.md</code> 後，可透過 <code>hugo server -D</code>，查看首頁:</p>
 
  
   
@@ -436,7 +424,7 @@ keywords: [&#34;post&#34;]
 
 <div class="figure fig-100" >
   
-    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.42.14.png" title="首頁" data-fancybox-group="">
+    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.42.14.png" title="首頁" data-fancybox="">
   
     <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.42.14.png"  alt="首頁">
   
@@ -466,7 +454,7 @@ keywords: [&#34;post&#34;]
 
 <div class="figure fig-100" >
   
-    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.43.27.png" title="內文" data-fancybox-group="">
+    <a class="fancybox" href="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.43.27.png" title="內文" data-fancybox="">
   
     <img class="fig-img" src="https://raw.githubusercontent.com/littlebookboy/hugo-blog-images/master/%E6%88%AA%E5%9C%96%202020-08-31%20%E4%B8%8A%E5%8D%887.43.27.png"  alt="內文">
   
@@ -506,16 +494,16 @@ keywords: [&#34;post&#34;]
     <a href="https://gohugo.io/content-management/front-matter/#front-matter-variables" target="_blank">Front Matter</a>
     
  區域中，有文章分類與文章標籤可設置，例如:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">categories: [&#34;Tech&#34;, &#34;Daily&#34;]
-tags: [&#34;Hugo&#34;, &#34;GitHub&#34;]
-</code></pre></div><p>或是</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">categories: 
-  <span style="color:#66d9ef">-</span> Tech
-  <span style="color:#66d9ef">-</span> Daily 
-tags: 
-  <span style="color:#66d9ef">-</span> Hugo
-  <span style="color:#66d9ef">-</span> GitHub
-</code></pre></div><p>透過設置分類與標籤，在查找某篇文章時，除了透過名稱之外，還可以用較為模糊的方式查找文章。那這些分類、標籤，甚至系列該如何運用呢？舉個例子:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>categories: [&#34;Tech&#34;, &#34;Daily&#34;]
+</span></span><span style="display:flex;"><span>tags: [&#34;Hugo&#34;, &#34;GitHub&#34;]
+</span></span></code></pre></div><p>或是</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>categories: 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> Tech
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> Daily 
+</span></span><span style="display:flex;"><span>tags: 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> Hugo
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> GitHub
+</span></span></code></pre></div><p>透過設置分類與標籤，在查找某篇文章時，除了透過名稱之外，還可以用較為模糊的方式查找文章。那這些分類、標籤，甚至系列該如何運用呢？舉個例子:</p>
 <!-- raw HTML omitted -->
 <ul>
 <li>category: 最模糊、抽象的大方向，例如生活、工作、心得、迷因、行銷、技術、遊戲、開箱</li>
@@ -590,24 +578,24 @@ tags:
 </ul>
 <h1 id="modification-修訂內容">Modification 修訂內容</h1>
 <ul>
-<li>2020-09-04 追加章節 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#front-matter">Front Matter</a></li>
-<li>2020-09-04 新增 <a href="https://blog.genesu.me/2020/09/hugo-front-matter/#series-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0">Series 系列文章</a></li>
-<li>2020-09-08 新增 Series 系列文章 <a href="https://blog.genesu.me/2020/09/hugo-site-deploy/">貼身打造個人部落格 - 03. 網站發布</a></li>
+<li>2020-09-04 追加章節 <a href="https://littlebookboy.github.io/2020/09/hugo-front-matter/#front-matter">Front Matter</a></li>
+<li>2020-09-04 新增 <a href="https://littlebookboy.github.io/2020/09/hugo-front-matter/#series-%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0">Series 系列文章</a></li>
+<li>2020-09-08 新增 Series 系列文章 <a href="https://littlebookboy.github.io/2020/09/hugo-site-deploy/">貼身打造個人部落格 - 03. 網站發布</a></li>
 </ul>
 <h1 id="series-系列文章">Series 系列文章</h1>
 <ul>
-<li><a href="https://blog.genesu.me/2020/08/hugo-installation/">貼身打造個人部落格 - 01. 安裝</a></li>
+<li><a href="https://littlebookboy.github.io/2020/08/hugo-installation/">貼身打造個人部落格 - 01. 安裝</a></li>
 <li>貼身打造個人部落格 - 02. 文章 Front Matter (本篇)</li>
-<li><a href="https://blog.genesu.me/2020/09/hugo-site-deploy/">貼身打造個人部落格 - 03. 網站發布</a></li>
+<li><a href="https://littlebookboy.github.io/2020/09/hugo-site-deploy/">貼身打造個人部落格 - 03. 網站發布</a></li>
 </ul>
 <hr>
 <multiple-line-output>
     
 <br>
 文章作者: 
-<a href="https://blog.genesu.me/archives">littlebookboy</a>
+<a href="https://littlebookboy.github.io/archives">littlebookboy</a>
 <br>
-永久鏈結: <a class="link-word-wrap-break-word" href="https://blog.genesu.me//2020/09/hugo-front-matter/" target="_blank">https://blog.genesu.me/2020/09/hugo-front-matter/</a><br>
+永久鏈結: <a class="link-word-wrap-break-word" href="https://littlebookboy.github.io//2020/09/hugo-front-matter/" target="_blank">https://littlebookboy.github.io//2020/09/hugo-front-matter/</a><br>
 許可協議: 
     
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商業性使用-相同方式共享 4.0 國際(CC BY-NC-SA 4.0)</a>
@@ -616,6 +604,8 @@ tags:
 
 </multiple-line-output>
               
+
+
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
@@ -626,168 +616,172 @@ tags:
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">標籤</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://blog.genesu.me/tags/hugo/">hugo</a>
+  <a class="tag tag--primary tag--small" href="https://littlebookboy.github.io/tags/hugo/">hugo</a>
 
                   </div>
                 
               
             
-            <div class="post-actions-wrap">
-  
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/09/hugo-site-deploy/" data-tooltip="貼身打造個人部落格 - 03. 網站發布">
-              
-                  <i class="fa fa-angle-left"></i>
-                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/08/hugo-installation/" data-tooltip="貼身打造個人部落格 - 01. 安裝">
-              
-                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
       
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://littlebookboy.github.io/2020/09/hugo-site-deploy/" data-tooltip="貼身打造個人部落格 - 03. 網站發布" aria-label="下一篇: 貼身打造個人部落格 - 03. 網站發布">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
         </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2020/09/hugo-front-matter/">
-              <i class="fa fa-facebook-official"></i>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://littlebookboy.github.io/2020/08/hugo-installation/" data-tooltip="貼身打造個人部落格 - 01. 安裝" aria-label="上一篇: 貼身打造個人部落格 - 01. 安裝">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
             </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2020/09/hugo-front-matter/">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-        
+        </li>
       
-      
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享這個帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://littlebookboy.github.io/2020/09/hugo-front-matter/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fa-facebook-official" aria-hidden="true"></i>
         </a>
       </li>
-    </ul>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://littlebookboy.github.io/2020/09/hugo-front-matter/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
   
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到頂部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
 </div>
 
+
             
-              
-            
+  
+
+
           </div>
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 Gene (Littlebookboy). All Rights Reserved
+    &copy; 2024 Gene (Littlebookboy). All Rights Reserved
   </span>
 </footer>
 
       </div>
       <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-        <div class="post-actions-wrap">
-  
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/09/hugo-site-deploy/" data-tooltip="貼身打造個人部落格 - 03. 網站發布">
-              
-                  <i class="fa fa-angle-left"></i>
-                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.genesu.me/2020/08/hugo-installation/" data-tooltip="貼身打造個人部落格 - 01. 安裝">
-              
-                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
       
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://littlebookboy.github.io/2020/09/hugo-site-deploy/" data-tooltip="貼身打造個人部落格 - 03. 網站發布" aria-label="下一篇: 貼身打造個人部落格 - 03. 網站發布">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
         </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://blog.genesu.me/2020/09/hugo-front-matter/">
-              <i class="fa fa-facebook-official"></i>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://littlebookboy.github.io/2020/08/hugo-installation/" data-tooltip="貼身打造個人部落格 - 01. 安裝" aria-label="上一篇: 貼身打造個人部落格 - 01. 安裝">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
             </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.genesu.me/2020/09/hugo-front-matter/">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-        
+        </li>
       
-      
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享這個帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https://littlebookboy.github.io/2020/09/hugo-front-matter/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fa-facebook-official" aria-hidden="true"></i>
         </a>
       </li>
-    </ul>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://littlebookboy.github.io/2020/09/hugo-front-matter/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
   
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到頂部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
 </div>
 
+
       </div>
-      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Fblog.genesu.me%2F2020%2F09%2Fhugo-front-matter%2F">
-          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?href=https%3A%2F%2Flittlebookboy.github.io%2F2020%2F09%2Fhugo-front-matter%2F" aria-label="分享到 Facebook">
+          <i class="fa-facebook-official" aria-hidden="true"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.genesu.me%2F2020%2F09%2Fhugo-front-matter%2F">
-          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flittlebookboy.github.io%2F2020%2F09%2Fhugo-front-matter%2F" aria-label="分享到 Twitter">
+          <i class="fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
   </ul>
 </div>
 <div id="share-options-mask" class="share-options-mask"></div>
+
+
     </div>
     
     <div id="about">
   <div id="about-card">
     <div id="about-btn-close">
-      <i class="fa fa-remove"></i>
+      <i class="fa fa-times"></i>
     </div>
     
-      <img id="about-card-picture" src="https://blog.genesu.me/images/avataaars.png" alt="作者的圖片" />
+      <img id="about-card-picture" src="https://littlebookboy.github.io/images/avataaars.png" alt="作者的圖片" />
     
     <h4 id="about-card-name">Gene (Littlebookboy)</h4>
     
@@ -797,12 +791,12 @@ tags:
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        <a href="https://blog.genesu.me/about-me/">Backend Engineer</a>
+        <a href="https://littlebookboy.github.io/about-me/">Backend Engineer</a>
       </div>
     
     
       <div id="about-card-location">
-        <i class="fa fa-map-marker"></i>
+        <i class="fa fa-map-marker-alt"></i>
         <br/>
         Taichung, Taiwan
       </div>
@@ -815,36 +809,22 @@ tags:
     
   
     
-      <div id="cover" style="background-image:url('https://blog.genesu.me/images/cover2.jpg');"></div>
+      <div id="cover" style="background-image:url('https://littlebookboy.github.io/images/cover2.jpg');"></div>
     
   
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
-
-
-<script src="https://blog.genesu.me/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script lang="javascript">
-window.onload = updateMinWidth;
-window.onresize = updateMinWidth;
-document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
-function updateMinWidth() {
-  var sidebar = document.getElementById("sidebar");
-  var main = document.getElementById("main");
-  main.style.minWidth = "";
-  var w1 = getComputedStyle(main).getPropertyValue("min-width");
-  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
-  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
-  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
-}
-</script>
+<script src="https://littlebookboy.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
 
 <script>
 $(document).ready(function() {
@@ -857,11 +837,6 @@ $(document).ready(function() {
   });
 });
 </script>
-
-
-  
-    
-  
 
 
 
